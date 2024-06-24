@@ -32,49 +32,6 @@
         "env": []
     },
     {
-        "id": "72b0edfdd7ea636f",
-        "type": "subflow",
-        "name": "Detector de flancos",
-        "info": "",
-        "category": "",
-        "in": [
-            {
-                "x": 160,
-                "y": 200,
-                "wires": [
-                    {
-                        "id": "4e3de2824b7dafd1"
-                    }
-                ]
-            }
-        ],
-        "out": [
-            {
-                "x": 660,
-                "y": 140,
-                "wires": [
-                    {
-                        "id": "9b0e069f6b901de5",
-                        "port": 0
-                    }
-                ]
-            },
-            {
-                "x": 660,
-                "y": 260,
-                "wires": [
-                    {
-                        "id": "9b0e069f6b901de5",
-                        "port": 1
-                    }
-                ]
-            }
-        ],
-        "env": [],
-        "meta": {},
-        "color": "#DDAA99"
-    },
-    {
         "id": "e3ce149a6a583c48",
         "type": "junction",
         "z": "a4a07f451bd4dad9",
@@ -745,51 +702,6 @@
         "usercert": false,
         "usercertificate": "",
         "userprivatekey": ""
-    },
-    {
-        "id": "4e3de2824b7dafd1",
-        "type": "rbe",
-        "z": "72b0edfdd7ea636f",
-        "name": "Flanco",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload",
-        "topi": "topic",
-        "x": 310,
-        "y": 200,
-        "wires": [
-            [
-                "9b0e069f6b901de5"
-            ]
-        ]
-    },
-    {
-        "id": "9b0e069f6b901de5",
-        "type": "switch",
-        "z": "72b0edfdd7ea636f",
-        "name": "FP (1) o FN (0)",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 520,
-        "y": 200,
-        "wires": [
-            [],
-            []
-        ]
     },
     {
         "id": "eabb9ee36b27428c",
