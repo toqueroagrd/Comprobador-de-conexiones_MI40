@@ -1,0 +1,12 @@
+{
+    "name": "TFM_MI40_Raspberry",
+    "description": "TFM MI4.0",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "Comprobador de conexiones_MI40.json",
+            "credentialsFile": "Comprobador de conexiones_MI40_cred.json"
+        }
+    }
+}
