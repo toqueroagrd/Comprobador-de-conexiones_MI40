@@ -5,7 +5,8 @@
     "dependencies": {
         "node-red-contrib-aedes": "0.13.0",
         "node-red-contrib-hostip": "0.0.3",
-        "node-red-contrib-iiot-opcua": "4.1.2"
+        "node-red-contrib-iiot-opcua": "4.1.2",
+        "node-red-contrib-modbus": "5.40.0"
     },
     "node-red": {
         "settings": {
