@@ -279,24 +279,6 @@
         "hidden": false
     },
     {
-        "id": "eaa395ff.8b6348",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "order": 6,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "64be35cd.7831bc",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "order": 7,
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "2c349bb1f9208683",
         "type": "ui_tab",
         "name": "MODBUS",
@@ -3293,7 +3275,7 @@
         "name": "Server Modbus",
         "logEnabled": false,
         "hostname": "127.0.0.1",
-        "serverPort": "10502",
+        "serverPort": "502",
         "responseDelay": 100,
         "delayUnit": "ms",
         "coilsBufferSize": 10000,
@@ -3301,6 +3283,7 @@
         "inputBufferSize": 10000,
         "discreteBufferSize": 10000,
         "showErrors": false,
+        "showStatusActivities": false,
         "x": 380,
         "y": 320,
         "wires": [
