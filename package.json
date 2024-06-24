@@ -3,7 +3,8 @@
     "description": "TFM MI4.0",
     "version": "0.0.1",
     "dependencies": {
-        "node-red-contrib-aedes": "0.13.0"
+        "node-red-contrib-aedes": "0.13.0",
+        "node-red-contrib-hostip": "0.0.3"
     },
     "node-red": {
         "settings": {
