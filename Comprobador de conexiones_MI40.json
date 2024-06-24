@@ -323,7 +323,7 @@
         "tab": "6d55cce7882dc712",
         "order": 1,
         "disp": false,
-        "width": 30,
+        "width": 24,
         "collapse": false,
         "className": ""
     },
@@ -388,7 +388,7 @@
         "tab": "6d55cce7882dc712",
         "order": 2,
         "disp": true,
-        "width": 7,
+        "width": 6,
         "collapse": false,
         "className": ""
     },
@@ -399,7 +399,7 @@
         "tab": "6d55cce7882dc712",
         "order": 3,
         "disp": true,
-        "width": 7,
+        "width": 6,
         "collapse": false,
         "className": ""
     },
@@ -410,7 +410,7 @@
         "tab": "6d55cce7882dc712",
         "order": 4,
         "disp": true,
-        "width": 7,
+        "width": 6,
         "collapse": false,
         "className": ""
     },
@@ -421,7 +421,7 @@
         "tab": "6d55cce7882dc712",
         "order": 5,
         "disp": true,
-        "width": 7,
+        "width": 6,
         "collapse": false,
         "className": ""
     },
@@ -474,16 +474,6 @@
         "group": "9ba0ed5ba846c5e9",
         "order": 5,
         "width": 6,
-        "height": 1
-    },
-    {
-        "id": "ada4364d7b21999e",
-        "type": "ui_spacer",
-        "z": "c3367d12564d11c6",
-        "name": "spacer",
-        "group": "7b8a04e92de7a63b",
-        "order": 2,
-        "width": 30,
         "height": 1
     },
     {
@@ -702,6 +692,16 @@
         "usercert": false,
         "usercertificate": "",
         "userprivatekey": ""
+    },
+    {
+        "id": "d4f57c1045c20e7d",
+        "type": "ui_spacer",
+        "z": "c3367d12564d11c6",
+        "name": "spacer",
+        "group": "7b8a04e92de7a63b",
+        "order": 2,
+        "width": 24,
+        "height": 1
     },
     {
         "id": "eabb9ee36b27428c",
@@ -1668,8 +1668,8 @@
         "z": "a4a07f451bd4dad9",
         "group": "7b8a04e92de7a63b",
         "order": 3,
-        "width": 10,
-        "height": 1,
+        "width": "8",
+        "height": "1",
         "name": "",
         "label": "IP Maestro (Adaptador 1)",
         "format": "{{msg.Ipv4}}",
@@ -1689,8 +1689,8 @@
         "z": "a4a07f451bd4dad9",
         "group": "7b8a04e92de7a63b",
         "order": 4,
-        "width": 10,
-        "height": 1,
+        "width": "8",
+        "height": "1",
         "name": "",
         "label": "IP Maestro (Adaptador 2)",
         "format": "{{msg.Ipv4}}",
@@ -1732,8 +1732,8 @@
         "z": "a4a07f451bd4dad9",
         "group": "7b8a04e92de7a63b",
         "order": 5,
-        "width": 10,
-        "height": 1,
+        "width": "8",
+        "height": "1",
         "name": "",
         "label": "IP Maestro (Adaptador 3)",
         "format": "{{msg.Ipv4}}",
