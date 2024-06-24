@@ -1,1 +1,3616 @@
-[]
+[
+    {
+        "id": "c3367d12564d11c6",
+        "type": "tab",
+        "label": "Inicio",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a4a07f451bd4dad9",
+        "type": "tab",
+        "label": "MQTT",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e340100c9b9fe682",
+        "type": "tab",
+        "label": "OPCUA",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4e702d50e851e07d",
+        "type": "tab",
+        "label": "MODBUS",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "72b0edfdd7ea636f",
+        "type": "subflow",
+        "name": "Detector de flancos",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 160,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "4e3de2824b7dafd1"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 660,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "9b0e069f6b901de5",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 660,
+                "y": 260,
+                "wires": [
+                    {
+                        "id": "9b0e069f6b901de5",
+                        "port": 1
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "e3ce149a6a583c48",
+        "type": "junction",
+        "z": "a4a07f451bd4dad9",
+        "x": 1020,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "89d8e7aa0691b761",
+        "type": "junction",
+        "z": "a4a07f451bd4dad9",
+        "x": 1020,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "12fc471dcc5f019d",
+        "type": "mqtt-broker",
+        "name": "Open broker - 1883",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "389b7dfe828d514b",
+        "type": "mqtt-broker",
+        "name": "Security broker 1884",
+        "broker": "127.0.0.1",
+        "port": "1884",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "3b81367c79146636",
+        "type": "modbus-client",
+        "name": "Servidor MI40",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "10502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "368bc8971bfe8515",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Comprobador de conexiones",
+            "hideToolbar": "true",
+            "allowSwipe": "mouse",
+            "lockMenu": "true",
+            "allowTempTheme": "none",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 1,
+                "gy": 6,
+                "cx": 1,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "b746f9e569c9a43f",
+        "type": "ui_tab",
+        "name": "Inicio",
+        "icon": "sync",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6d55cce7882dc712",
+        "type": "ui_tab",
+        "name": "MQTT",
+        "icon": "settings_input_antenna",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3649639cae32096a",
+        "type": "ui_tab",
+        "name": "OPC UA Público",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": true
+    },
+    {
+        "id": "a7e30670fb6576fa",
+        "type": "ui_tab",
+        "name": "OPC UA Privado",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": true
+    },
+    {
+        "id": "f79b5f573c8cbbb4",
+        "type": "ui_tab",
+        "name": "OPC UA Selector",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "eaa395ff.8b6348",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": 6,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "64be35cd.7831bc",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": 7,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2c349bb1f9208683",
+        "type": "ui_tab",
+        "name": "MODBUS",
+        "icon": "dashboard",
+        "order": 6,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "77fcbd12336f9e8f",
+        "type": "ui_group",
+        "name": "Inicio",
+        "tab": "b746f9e569c9a43f",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7b8a04e92de7a63b",
+        "type": "ui_group",
+        "name": "Botones de control",
+        "tab": "6d55cce7882dc712",
+        "order": 1,
+        "disp": false,
+        "width": 30,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2caf7620b7cbd0b2",
+        "type": "ui_group",
+        "name": "Control OPC UA Público",
+        "tab": "3649639cae32096a",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f52f7f9d7057398e",
+        "type": "ui_group",
+        "name": "Tipo de servidor",
+        "tab": "f79b5f573c8cbbb4",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9ba0ed5ba846c5e9",
+        "type": "ui_group",
+        "name": "Control OPC UA Privado",
+        "tab": "a7e30670fb6576fa",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "95b70233.1d5dc",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "eaa395ff.8b6348",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "fb4ca7c3.864058",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "64be35cd.7831bc",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8ad9d437f110e9ee",
+        "type": "ui_group",
+        "name": "Señales fija",
+        "tab": "6d55cce7882dc712",
+        "order": 2,
+        "disp": true,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9a95326a83745020",
+        "type": "ui_group",
+        "name": "Señal de texto",
+        "tab": "6d55cce7882dc712",
+        "order": 3,
+        "disp": true,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fd47dcad5a2ee79a",
+        "type": "ui_group",
+        "name": "Señal continua valor elegible",
+        "tab": "6d55cce7882dc712",
+        "order": 4,
+        "disp": true,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e67c7bc1b7f7b417",
+        "type": "ui_group",
+        "name": "Señal periódica",
+        "tab": "6d55cce7882dc712",
+        "order": 5,
+        "disp": true,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c1fd1f778554d218",
+        "type": "ui_group",
+        "name": "Botones de control",
+        "tab": "2c349bb1f9208683",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1378c63775b22143",
+        "type": "ui_spacer",
+        "z": "c3367d12564d11c6",
+        "name": "spacer",
+        "group": "",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8a9341283c7819b6",
+        "type": "ui_spacer",
+        "z": "e340100c9b9fe682",
+        "name": "spacer",
+        "group": "2caf7620b7cbd0b2",
+        "order": 9,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "6468c59753704e65",
+        "type": "ui_spacer",
+        "z": "e340100c9b9fe682",
+        "name": "spacer",
+        "group": "2caf7620b7cbd0b2",
+        "order": 15,
+        "width": "1",
+        "height": "1"
+    },
+    {
+        "id": "88b7fb90bc57b09b",
+        "type": "ui_spacer",
+        "z": "e340100c9b9fe682",
+        "name": "spacer",
+        "group": "9ba0ed5ba846c5e9",
+        "order": 5,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "ada4364d7b21999e",
+        "type": "ui_spacer",
+        "z": "c3367d12564d11c6",
+        "name": "spacer",
+        "group": "7b8a04e92de7a63b",
+        "order": 2,
+        "width": 30,
+        "height": 1
+    },
+    {
+        "id": "72c53e6776aa658f",
+        "type": "ui_spacer",
+        "z": "4e702d50e851e07d",
+        "name": "spacer",
+        "group": "c1fd1f778554d218",
+        "order": 5,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "2a260c924acc1491",
+        "type": "ui_spacer",
+        "z": "4e702d50e851e07d",
+        "name": "spacer",
+        "group": "c1fd1f778554d218",
+        "order": 8,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "418bda6ef9e835e5",
+        "type": "ui_spacer",
+        "z": "4e702d50e851e07d",
+        "name": "spacer",
+        "group": "c1fd1f778554d218",
+        "order": 11,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "77fdc29e.3c49ec",
+        "type": "OPCUA-IIoT-Connector",
+        "discoveryUrl": "",
+        "endpoint": "opc.tcp://127.0.0.1:55489",
+        "endpointMustExist": false,
+        "keepSessionAlive": true,
+        "loginEnabled": false,
+        "name": "Servidor abierto OPC UA",
+        "showErrors": true,
+        "securityPolicy": "None",
+        "securityMode": "None",
+        "individualCerts": false,
+        "publicCertificateFile": "",
+        "privateKeyFile": "",
+        "defaultSecureTokenLifetime": "",
+        "autoSelectRightEndpoint": false,
+        "strategyMaxRetry": "",
+        "strategyInitialDelay": "",
+        "strategyMaxDelay": "",
+        "strategyRandomisationFactor": "",
+        "requestedSessionTimeout": "",
+        "connectionStartDelay": "",
+        "reconnectDelay": "",
+        "maxBadSessionRequests": ""
+    },
+    {
+        "id": "512391c17844a41a",
+        "type": "OPCUA-IIoT-Connector",
+        "discoveryUrl": "",
+        "endpoint": "opc.tcp://127.0.0.1:55490",
+        "endpointMustExist": false,
+        "keepSessionAlive": true,
+        "loginEnabled": true,
+        "name": "Servidor con usuario OPC UA",
+        "showErrors": false,
+        "securityPolicy": "Basic256Sha256",
+        "securityMode": "Sign",
+        "individualCerts": false,
+        "publicCertificateFile": "",
+        "privateKeyFile": "",
+        "defaultSecureTokenLifetime": "",
+        "autoSelectRightEndpoint": false,
+        "strategyMaxRetry": "",
+        "strategyInitialDelay": "",
+        "strategyMaxDelay": "",
+        "strategyRandomisationFactor": "",
+        "requestedSessionTimeout": "",
+        "connectionStartDelay": "",
+        "reconnectDelay": "",
+        "maxBadSessionRequests": "10"
+    },
+    {
+        "id": "015d58c3fd0d56e0",
+        "type": "OPCUA-IIoT-Connector",
+        "discoveryUrl": "Pruebas",
+        "endpoint": "opc.tcp://localhost:55481",
+        "endpointMustExist": false,
+        "keepSessionAlive": true,
+        "loginEnabled": false,
+        "name": "LOCAL SERVER",
+        "showErrors": false,
+        "securityPolicy": "None",
+        "securityMode": "None",
+        "individualCerts": false,
+        "publicCertificateFile": "",
+        "privateKeyFile": "",
+        "defaultSecureTokenLifetime": "",
+        "autoSelectRightEndpoint": false,
+        "strategyMaxRetry": "",
+        "strategyInitialDelay": "",
+        "strategyMaxDelay": "",
+        "strategyRandomisationFactor": "",
+        "requestedSessionTimeout": "",
+        "connectionStartDelay": "",
+        "reconnectDelay": "",
+        "maxBadSessionRequests": "10"
+    },
+    {
+        "id": "e1451619.8c241",
+        "type": "OPCUA-IIoT-Connector",
+        "discoveryUrl": "",
+        "endpoint": "opc.tcp://localhost:55481/",
+        "endpointMustExist": false,
+        "keepSessionAlive": true,
+        "loginEnabled": false,
+        "name": "LOCAL READ WRITE SERVER",
+        "showErrors": false,
+        "securityPolicy": "None",
+        "securityMode": "None",
+        "individualCerts": false,
+        "publicCertificateFile": "",
+        "privateKeyFile": "",
+        "defaultSecureTokenLifetime": "60000",
+        "autoSelectRightEndpoint": false,
+        "strategyMaxRetry": "",
+        "strategyInitialDelay": "",
+        "strategyMaxDelay": "",
+        "strategyRandomisationFactor": "",
+        "requestedSessionTimeout": "",
+        "connectionStartDelay": "",
+        "reconnectDelay": "",
+        "maxBadSessionRequests": ""
+    },
+    {
+        "id": "8c13482e.2d67",
+        "type": "OPCUA-IIoT-Connector",
+        "discoveryUrl": "",
+        "endpoint": "opc.tcp://localhost:55388/",
+        "endpointMustExist": false,
+        "keepSessionAlive": true,
+        "loginEnabled": false,
+        "name": "LOCAL DEMO SERVER",
+        "showErrors": false,
+        "securityPolicy": "None",
+        "securityMode": "None",
+        "publicCertificateFile": "",
+        "privateKeyFile": "",
+        "defaultSecureTokenLifetime": "60000",
+        "autoSelectRightEndpoint": false
+    },
+    {
+        "id": "7b5234389b683c5b",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://127.0.0.1:55489",
+        "secpol": "None",
+        "secmode": "None",
+        "none": true,
+        "login": false,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
+    },
+    {
+        "id": "70f971981f82859f",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://localhost:4840",
+        "secpol": "None",
+        "secmode": "None",
+        "none": true,
+        "login": false,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
+    },
+    {
+        "id": "7290d8b0.f713d8",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://localhost:62544/Quickstarts/AlarmConditionServer",
+        "login": false
+    },
+    {
+        "id": "83439742.083188",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://0.0.0.0:4840/",
+        "secpol": "None",
+        "secmode": "None",
+        "login": false
+    },
+    {
+        "id": "b8f39990.157038",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://TREL16087112.vstage.co:53530/OPCUA/SimulationServer",
+        "secpol": "None",
+        "secmode": "None",
+        "login": false
+    },
+    {
+        "id": "5a1ac14b.4d0f38",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://TREL16087112.vstage.co:53530/OPCUA/SimulationServer",
+        "secpol": "None",
+        "secmode": "None",
+        "login": false
+    },
+    {
+        "id": "endpoint1",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://ARC-WIN11:55489",
+        "secpol": "None",
+        "secmode": "None",
+        "none": true,
+        "login": false,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
+    },
+    {
+        "id": "4e3de2824b7dafd1",
+        "type": "rbe",
+        "z": "72b0edfdd7ea636f",
+        "name": "Flanco",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 310,
+        "y": 200,
+        "wires": [
+            [
+                "9b0e069f6b901de5"
+            ]
+        ]
+    },
+    {
+        "id": "9b0e069f6b901de5",
+        "type": "switch",
+        "z": "72b0edfdd7ea636f",
+        "name": "FP (1) o FN (0)",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 520,
+        "y": 200,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "eabb9ee36b27428c",
+        "type": "change",
+        "z": "c3367d12564d11c6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\" : \"MQTT\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 60,
+        "wires": [
+            [
+                "2532cddade43907e"
+            ]
+        ]
+    },
+    {
+        "id": "3204f68851411eef",
+        "type": "change",
+        "z": "c3367d12564d11c6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\" : \"OPC UA Selector\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 100,
+        "wires": [
+            [
+                "2532cddade43907e"
+            ]
+        ]
+    },
+    {
+        "id": "9ac19da2b727f702",
+        "type": "change",
+        "z": "c3367d12564d11c6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\" : \"MODBUS\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 140,
+        "wires": [
+            [
+                "2532cddade43907e"
+            ]
+        ]
+    },
+    {
+        "id": "b5630eefdd32bf55",
+        "type": "ui_button",
+        "z": "c3367d12564d11c6",
+        "name": "",
+        "group": "77fcbd12336f9e8f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "MQTT",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 250,
+        "y": 60,
+        "wires": [
+            [
+                "eabb9ee36b27428c"
+            ]
+        ]
+    },
+    {
+        "id": "54eeee06ed9f4e72",
+        "type": "ui_button",
+        "z": "c3367d12564d11c6",
+        "name": "",
+        "group": "77fcbd12336f9e8f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "OPC UA",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 260,
+        "y": 100,
+        "wires": [
+            [
+                "3204f68851411eef"
+            ]
+        ]
+    },
+    {
+        "id": "b87474862a9e6524",
+        "type": "ui_button",
+        "z": "c3367d12564d11c6",
+        "name": "",
+        "group": "77fcbd12336f9e8f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Modbus",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 260,
+        "y": 140,
+        "wires": [
+            [
+                "9ac19da2b727f702"
+            ]
+        ]
+    },
+    {
+        "id": "2532cddade43907e",
+        "type": "ui_ui_control",
+        "z": "c3367d12564d11c6",
+        "name": "",
+        "events": "all",
+        "x": 680,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "593469ed174b2846",
+        "type": "change",
+        "z": "a4a07f451bd4dad9",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\" : \"Inicio\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 80,
+        "wires": [
+            [
+                "dd6227ce370e0d7c"
+            ]
+        ]
+    },
+    {
+        "id": "8cf8039fb4ece043",
+        "type": "mqtt out",
+        "z": "a4a07f451bd4dad9",
+        "name": "Enviar señal fija - Seguro",
+        "topic": "E_Signal_Fixed",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "389b7dfe828d514b",
+        "x": 810,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "1cf324b9ec9765d7",
+        "type": "mqtt out",
+        "z": "a4a07f451bd4dad9",
+        "name": "Enviar señal valor previsible - Abierto",
+        "topic": "E_Señal_Previsible",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12fc471dcc5f019d",
+        "x": 890,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "04ceb6db9725dc53",
+        "type": "debug",
+        "z": "a4a07f451bd4dad9",
+        "name": "Broker Status Events",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "7968aef41b60a2c0",
+        "type": "debug",
+        "z": "a4a07f451bd4dad9",
+        "name": "Broker Publish Events",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "f1fe0b6a6377fcc3",
+        "type": "mqtt out",
+        "z": "a4a07f451bd4dad9",
+        "name": "Enviar señal fija - Abierto",
+        "topic": "E_Signal_Fixed",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12fc471dcc5f019d",
+        "x": 810,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "e5523117c54a9cf2",
+        "type": "debug",
+        "z": "a4a07f451bd4dad9",
+        "name": "Broker Status Events",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "af5c9da9dba36717",
+        "type": "debug",
+        "z": "a4a07f451bd4dad9",
+        "name": "Broker Publish Events",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "042f3947673eb6cc",
+        "type": "mqtt out",
+        "z": "a4a07f451bd4dad9",
+        "name": "Enviar valor/texto - Seguro",
+        "topic": "E_Signal_Value",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "389b7dfe828d514b",
+        "x": 820,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "5c8fc7e9bd921210",
+        "type": "mqtt out",
+        "z": "a4a07f451bd4dad9",
+        "name": "Enviar valor/texto - Abierto",
+        "topic": "E_Signal_Value",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12fc471dcc5f019d",
+        "x": 820,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "4563d73e7abae5e0",
+        "type": "mqtt out",
+        "z": "a4a07f451bd4dad9",
+        "name": "Enviar señal valor previsible - Seguro",
+        "topic": "E_Señal_Previsible",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12fc471dcc5f019d",
+        "x": 890,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "ebfa8ec020cb1ae2",
+        "type": "inject",
+        "z": "a4a07f451bd4dad9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 140,
+        "wires": [
+            [
+                "51fb8a6747933113"
+            ]
+        ]
+    },
+    {
+        "id": "d4e803eea84281e3",
+        "type": "function",
+        "z": "a4a07f451bd4dad9",
+        "name": "Obtener IPV4",
+        "func": "msg.Ipv4 = msg.payload[3].address; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 140,
+        "wires": [
+            [
+                "ca26a58e12289d34"
+            ]
+        ]
+    },
+    {
+        "id": "350de05a9f50c05e",
+        "type": "debug",
+        "z": "a4a07f451bd4dad9",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "8383e3905d99b819",
+        "type": "function",
+        "z": "a4a07f451bd4dad9",
+        "name": "Obtener IPV4",
+        "func": "msg.Ipv4 = msg.payload[4].address; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 180,
+        "wires": [
+            [
+                "3eb80b65bf9ea3ce"
+            ]
+        ]
+    },
+    {
+        "id": "5ee1556f46ef87b5",
+        "type": "comment",
+        "z": "a4a07f451bd4dad9",
+        "name": "",
+        "info": "",
+        "x": 260,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "09f7f25efe42a9ad",
+        "type": "inject",
+        "z": "a4a07f451bd4dad9",
+        "name": "Interval Trigger",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.2",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 1340,
+        "wires": [
+            [
+                "8ef919da2f76992b"
+            ]
+        ]
+    },
+    {
+        "id": "8ef919da2f76992b",
+        "type": "function",
+        "z": "a4a07f451bd4dad9",
+        "name": "Generador de Señal Senoidal Configurable",
+        "func": "// En el nodo de función\nconst max = msg.topic === \"maxValue\" ? parseFloat(msg.payload) : flow.get('max') || 5;\nconst min = msg.topic === \"minValue\" ? parseFloat(msg.payload) : flow.get('min') || -5;\nconst enable = flow.get('enable') || false;\n\n// Guardar los valores en el contexto de flujo para uso futuro\nif (msg.topic === \"maxValue\") {\n    flow.set('max', max);\n} else if (msg.topic === \"minValue\") {\n    flow.set('min', min);\n}\n\nconst amplitude = (max - min) / 2;\nconst offset = (max + min) / 2;\nconst frequency = 0.7; // Frecuencia en Hz\nconst currentTime = Date.now();\n\n// Cálculo de la señal senoidal\nconst period = 1000 / frequency;\nconst angle = 2 * Math.PI * (currentTime % period) / period;\n    msg.payload = amplitude * Math.sin(angle) + offset;\n    \nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1340,
+        "wires": [
+            [
+                "7dfa2c8ae51ca9ce",
+                "1cf324b9ec9765d7",
+                "4563d73e7abae5e0"
+            ]
+        ]
+    },
+    {
+        "id": "storeValueNode",
+        "type": "change",
+        "z": "a4a07f451bd4dad9",
+        "name": "Guarda número",
+        "rules": [
+            {
+                "t": "set",
+                "p": "latestValue",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "x": 520,
+        "y": 860,
+        "wires": [
+            [
+                "5c8fc7e9bd921210",
+                "042f3947673eb6cc"
+            ]
+        ]
+    },
+    {
+        "id": "injectNode",
+        "type": "inject",
+        "z": "a4a07f451bd4dad9",
+        "name": "Periodic Trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "latestValue",
+        "payloadType": "flow",
+        "x": 270,
+        "y": 800,
+        "wires": [
+            [
+                "storeValueNode"
+            ]
+        ]
+    },
+    {
+        "id": "d9d6bfd4f8141582",
+        "type": "mqtt out",
+        "z": "a4a07f451bd4dad9",
+        "name": "Enviar texto - Seguro",
+        "topic": "E_Signal_Texto",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "389b7dfe828d514b",
+        "x": 800,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "2183cc828e7e4e98",
+        "type": "mqtt out",
+        "z": "a4a07f451bd4dad9",
+        "name": "Enviar texto - Abierto",
+        "topic": "E_Signal_Texto",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12fc471dcc5f019d",
+        "x": 800,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "5267a91aae5c3380",
+        "type": "function",
+        "z": "a4a07f451bd4dad9",
+        "name": "Obtener IPV4",
+        "func": "msg.Ipv4 = msg.payload[6].address; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 220,
+        "wires": [
+            [
+                "a9068fced0351804"
+            ]
+        ]
+    },
+    {
+        "id": "9d0a64c872507d87",
+        "type": "aedes broker",
+        "z": "a4a07f451bd4dad9",
+        "name": "Broker abierto - 1883",
+        "mqtt_port": "1883",
+        "mqtt_ws_bind": "port",
+        "mqtt_ws_port": "",
+        "mqtt_ws_path": "",
+        "cert": "",
+        "key": "",
+        "certname": "",
+        "keyname": "",
+        "persistence_bind": "memory",
+        "dburl": "",
+        "usetls": false,
+        "x": 260,
+        "y": 320,
+        "wires": [
+            [
+                "04ceb6db9725dc53"
+            ],
+            [
+                "7968aef41b60a2c0"
+            ]
+        ]
+    },
+    {
+        "id": "e0282c79aa5155f2",
+        "type": "aedes broker",
+        "z": "a4a07f451bd4dad9",
+        "name": "Broker seguro - 1884",
+        "mqtt_port": "1884",
+        "mqtt_ws_bind": "port",
+        "mqtt_ws_port": "",
+        "mqtt_ws_path": "",
+        "cert": "",
+        "key": "",
+        "certname": "",
+        "keyname": "",
+        "persistence_bind": "memory",
+        "dburl": "",
+        "usetls": false,
+        "x": 260,
+        "y": 420,
+        "wires": [
+            [
+                "e5523117c54a9cf2"
+            ],
+            [
+                "af5c9da9dba36717"
+            ]
+        ]
+    },
+    {
+        "id": "51fb8a6747933113",
+        "type": "hostip",
+        "z": "a4a07f451bd4dad9",
+        "name": "Host IP",
+        "x": 500,
+        "y": 140,
+        "wires": [
+            [
+                "d4e803eea84281e3",
+                "350de05a9f50c05e",
+                "8383e3905d99b819",
+                "5267a91aae5c3380"
+            ]
+        ]
+    },
+    {
+        "id": "581fe909da042586",
+        "type": "ui_button",
+        "z": "a4a07f451bd4dad9",
+        "name": "",
+        "group": "7b8a04e92de7a63b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "INICIO",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 310,
+        "y": 80,
+        "wires": [
+            [
+                "593469ed174b2846"
+            ]
+        ]
+    },
+    {
+        "id": "dbcfce3f083ca910",
+        "type": "ui_button",
+        "z": "a4a07f451bd4dad9",
+        "name": "",
+        "group": "8ad9d437f110e9ee",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "TRUE",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 290,
+        "y": 600,
+        "wires": [
+            [
+                "f1fe0b6a6377fcc3",
+                "8cf8039fb4ece043"
+            ]
+        ]
+    },
+    {
+        "id": "ec26d9b7c7dd433c",
+        "type": "ui_button",
+        "z": "a4a07f451bd4dad9",
+        "name": "",
+        "group": "8ad9d437f110e9ee",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "FALSE",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 300,
+        "y": 680,
+        "wires": [
+            [
+                "8cf8039fb4ece043",
+                "f1fe0b6a6377fcc3"
+            ]
+        ]
+    },
+    {
+        "id": "minValueInput",
+        "type": "ui_slider",
+        "z": "a4a07f451bd4dad9",
+        "name": "Valor Mínimo",
+        "label": "Min Value",
+        "tooltip": "Ajusta el valor mínimo de la señal",
+        "group": "e67c7bc1b7f7b417",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "minValue",
+        "topicType": "str",
+        "min": "-0.01",
+        "max": "-10",
+        "step": "0.5",
+        "className": "",
+        "x": 230,
+        "y": 1400,
+        "wires": [
+            [
+                "8ef919da2f76992b"
+            ]
+        ]
+    },
+    {
+        "id": "maxValueInput",
+        "type": "ui_slider",
+        "z": "a4a07f451bd4dad9",
+        "name": "Valor Máximo",
+        "label": "Max Value",
+        "tooltip": "Ajusta el valor máximo de la señal",
+        "group": "e67c7bc1b7f7b417",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "maxValue",
+        "topicType": "str",
+        "min": "0.01",
+        "max": 10,
+        "step": "0.5",
+        "className": "",
+        "x": 220,
+        "y": 1280,
+        "wires": [
+            [
+                "8ef919da2f76992b"
+            ]
+        ]
+    },
+    {
+        "id": "c43ec5c5e485c5a3",
+        "type": "ui_text_input",
+        "z": "a4a07f451bd4dad9",
+        "name": "",
+        "label": "Number to sent",
+        "tooltip": "",
+        "group": "fd47dcad5a2ee79a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": "0",
+        "topic": "",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 280,
+        "y": 860,
+        "wires": [
+            [
+                "storeValueNode"
+            ]
+        ]
+    },
+    {
+        "id": "3c72ee26ba255ae4",
+        "type": "ui_text_input",
+        "z": "a4a07f451bd4dad9",
+        "name": "",
+        "label": "Text to sent",
+        "tooltip": "",
+        "group": "9a95326a83745020",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 290,
+        "y": 980,
+        "wires": [
+            [
+                "2183cc828e7e4e98",
+                "d9d6bfd4f8141582"
+            ]
+        ]
+    },
+    {
+        "id": "e3f5d9e62707f556",
+        "type": "ui_text",
+        "z": "a4a07f451bd4dad9",
+        "d": true,
+        "group": "8ad9d437f110e9ee",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Señal fija",
+        "format": "",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 280,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "49de3f16438957cf",
+        "type": "ui_text",
+        "z": "a4a07f451bd4dad9",
+        "d": true,
+        "group": "fd47dcad5a2ee79a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Señal continua de valor elegible",
+        "format": "",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 290,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "0511dff8aaaf44e5",
+        "type": "ui_text",
+        "z": "a4a07f451bd4dad9",
+        "d": true,
+        "group": "e67c7bc1b7f7b417",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Señal periódica enviada",
+        "format": "",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 230,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "ca26a58e12289d34",
+        "type": "ui_text",
+        "z": "a4a07f451bd4dad9",
+        "group": "7b8a04e92de7a63b",
+        "order": 3,
+        "width": 10,
+        "height": 1,
+        "name": "",
+        "label": "IP Maestro (Adaptador 1)",
+        "format": "{{msg.Ipv4}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1010,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "3eb80b65bf9ea3ce",
+        "type": "ui_text",
+        "z": "a4a07f451bd4dad9",
+        "group": "7b8a04e92de7a63b",
+        "order": 4,
+        "width": 10,
+        "height": 1,
+        "name": "",
+        "label": "IP Maestro (Adaptador 2)",
+        "format": "{{msg.Ipv4}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1010,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "6066278368a197bb",
+        "type": "ui_text",
+        "z": "a4a07f451bd4dad9",
+        "d": true,
+        "group": "9a95326a83745020",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Señal de texto",
+        "format": "",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 280,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "a9068fced0351804",
+        "type": "ui_text",
+        "z": "a4a07f451bd4dad9",
+        "group": "7b8a04e92de7a63b",
+        "order": 5,
+        "width": 10,
+        "height": 1,
+        "name": "",
+        "label": "IP Maestro (Adaptador 3)",
+        "format": "{{msg.Ipv4}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1010,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "7dfa2c8ae51ca9ce",
+        "type": "ui_chart",
+        "z": "a4a07f451bd4dad9",
+        "name": "Gráfico de Señal periódica",
+        "group": "e67c7bc1b7f7b417",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "xformat": "HH:mm:ss",
+        "nodata": "",
+        "dot": true,
+        "ymin": "-10.5",
+        "ymax": "10.5",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": "",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 860,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dd6227ce370e0d7c",
+        "type": "ui_ui_control",
+        "z": "a4a07f451bd4dad9",
+        "name": "",
+        "events": "all",
+        "x": 740,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7e0b92f48157c750",
+        "type": "ui_template",
+        "z": "a4a07f451bd4dad9",
+        "group": "7b8a04e92de7a63b",
+        "name": "Virtual Keyboard",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "format": "<div id=\"empty\"></div>\n<button class=\"VK\">V-KeyBoard On</button>\n\n<!-- The Modal -->\n<div id=\"myModal\" class=\"modal\">\n\n  <!-- Modal content -->\n  <div class=\"modal-content\">\n      <div class=\"modal-header\">\n      <span class=\"close\" onclick=\"closeModal()\">&times;</span>\n      <h2 id=\"vkeyname\" style=\"background-color: aliceblue !important; color: black !important; text-align: center; min-height: 30px;\">V-Keyboard</h2>\n    </div>\n    <div class=\"modal-body\">\n        <div id=\"keyboard\"></div>\n        <div>\n        </div>\n    </div>\n  </div>\n</div>\n\n<style>\n.VK{\n    position: fixed;\n    top: 60px;\n    right: 20px;\n    height: 30px;\n}\n</style>\n\n<script>\n\nvar clickState = 1;\nvar btn = document.querySelector('.VK');\n\nbtn.addEventListener('click', function(){\n\n  if (clickState == 0) {\n    this.textContent = 'V-KeyBoard On';\n    modal = document.getElementById('myModal');\n    clickState = 1;\n  } else {\n    this.textContent = 'V-KeyBoard Off';\n    modal = document.getElementById('empty');\n    clickState = 0;\n  }\n\n});\n</script>\n\n<script>\n    // Get the modal\nvar modal = document.getElementById('myModal');\nvar inputTags;\nvar inputType;\nvar inputTarget;\n\nvar getinputs = function() {\n    inputTags = document.getElementsByTagName(\"input\");\n    console.log(inputTags)\n    for (var i = 0; i < inputTags.length; i++) {\n        inputTags[i].addEventListener('click', openModal, false)\n    }\n}\n\nsetTimeout(function(){ getinputs(); }, 1000);\n\nvar openModal = function() {\n    inputType = event.target.type\n    inputTarget = event.target\n    var layoutName;\n    if (inputType == \"number\"){\n        //inputTarget.type = \"number\" //hack because chrome doesn't allow setselection in number inputs\n        //inputTarget.value = \"\"\n        layoutName = \"numbers_only\"\n    }else{\n        layoutName = \"english\"\n    }\n    $('#vkeyname').text(event.target.value)\n    $('#keyboard').unbind().removeData();\n    modal.style.display = \"block\";\n    $('#keyboard').jkeyboard({\n        layout: layoutName,\n        input: $('#'+$(this).attr('id'))\n    });\n}\n\n\n// Get the <span> element that closes the modal\nvar span = document.getElementsByClassName(\"close\")[0];\n\n// When the user clicks anywhere outside of the modal, close it\nwindow.onclick = function(event) {\n    var source = event.target;\n    if (source == modal || source == span) {\n        closeModal(source)\n    }\n};\n\nvar closeModal = function(source){\n    //console.log(\"closing\")\n    modal.style.display = \"none\";\n   \n    if (inputType == \"number\"){\n        inputTarget.type = \"number\" //hack because chrome doesn't allow selectionstart on number inputs\n    }\n}\n\n    \n// the semi-colon before function invocation is a safety net against concatenated\n// scripts and/or other plugins which may not be closed properly.\n; (function ($, window, document, undefined) {\n\n    // undefined is used here as the undefined global variable in ECMAScript 3 is\n    // mutable (ie. it can be changed by someone else). undefined isn't really being\n    // passed in so we can ensure the value of it is truly undefined. In ES5, undefined\n    // can no longer be modified.\n\n    // window and document are passed through as local variable rather than global\n    // as this (slightly) quickens the resolution process and can be more efficiently\n    // minified (especially when both are regularly referenced in your plugin).\n\n    // Create the defaults once\n    var pluginName = \"jkeyboard\",\n        defaults = {\n            layout: \"english\",\n            input: $('#input'),\n            customLayouts: {\n                selectable: []\n            },\n        };\n\n\n    var function_keys = {\n        backspace: {\n            text: 'DEL',\n        },\n        return: {\n            text: 'Enter'\n        },\n        shift: {\n            text: 'Shift'\n        },\n        space: {\n            text: 'Space'\n        },\n        numeric_switch: {\n            text: '123',\n            command: function () {\n                this.createKeyboard('numeric');\n                this.events();\n            }\n        },\n        layout_switch: {\n            text: '<i class=\"fa fa-keyboard-o\" aria-hidden=\"true\"></i>',\n            command: function () {\n                var l = this.toggleLayout();\n                this.createKeyboard(l);\n                this.events();\n            }\n        },\n        character_switch: {\n            text: 'ABC',\n            command: function () {\n                this.createKeyboard(layout);\n                this.events();\n            }\n        },\n        symbol_switch: {\n            text: '#+=',\n            command: function () {\n                this.createKeyboard('symbolic');\n                this.events();\n            }\n        }\n    };\n\n\n    var layouts = {\n        selectable: ['english', 'russian','french', 'emoji'],\n        english: [\n            ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',],\n            ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l',],\n            ['shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', 'backspace'],\n            ['numeric_switch', 'layout_switch', 'space', 'return']\n        ],\n        russian: [\n            ['й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х'],\n            ['ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э'],\n            ['shift', 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', 'backspace'],\n            ['numeric_switch', 'layout_switch', 'space', 'return']\n        ],\n        french: [\n            ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',],\n            ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l','à','ç'],\n            ['shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm','é','è', 'backspace'],\n            ['numeric_switch', 'layout_switch', 'space', 'return']\n        ],\n        emoji: [\n            ['😀', '😁', '😂', '🤣', '😃', '😄', '😅', '😆', '😉', '😊',],\n            ['😋', '😎', '😍', '😘', '❤️', '🙏', '🔥', '✨', '👍','👌','💯'],\n            ['🤷', '🎉', '👏', '🤦', '🙌', '🎶', '💥', '🌈','✅','⭐', '👀'],\n            ['numeric_switch', 'layout_switch', 'space', 'return']\n        ],            \n        numeric: [\n            ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],\n            ['-', '/', ':', ';', '(', ')', '$', '&', '@', '\"'],\n            ['symbol_switch', '.', ',', '?', '!', \"'\", 'backspace'],\n            ['character_switch', 'layout_switch', 'space', 'return'],\n        ],\n        numbers_only: [\n            ['1', '2', '3',],\n            ['4', '5', '6',],\n            ['7', '8', '9',],\n            ['0', 'backspace', 'return'],\n        ],\n        symbolic: [\n            ['[', ']', '{', '}', '#', '%', '^', '*', '+', '='],\n            ['_', '\\\\', '|', '~', '<', '>'],\n            ['numeric_switch', '.', ',', '?', '!', \"'\", 'backspace'],\n            ['character_switch', 'layout_switch', 'space', 'return'],\n\n        ]\n    }\n\n    var shift = false, capslock = false, layout = 'english', layout_id = 0;\n\n    // The actual plugin constructor\n    function Plugin(element, options) {\n        this.element = element;\n        // jQuery has an extend method which merges the contents of two or\n        // more objects, storing the result in the first object. The first object\n        // is generally empty as we don't want to alter the default options for\n        // future instances of the plugin\n        this.settings = $.extend({}, defaults, options);\n        // Extend & Merge the cusom layouts\n        layouts = $.extend(true, {}, this.settings.customLayouts, layouts);\n        if (Array.isArray(this.settings.customLayouts.selectable)) {\n            $.merge(layouts.selectable, this.settings.customLayouts.selectable);\n        }\n        this._defaults = defaults;\n        this._name = pluginName;\n        this.init();\n    }\n\n    Plugin.prototype = {\n        init: function () {\n            layout = this.settings.layout;\n            this.createKeyboard(layout);\n            this.events();\n        },\n\n        setInput: function (newInputField) {\n            this.settings.input = newInputField;\n        },\n\n        createKeyboard: function (layout) {\n            shift = false;\n            capslock = false;\n\n            var keyboard_container = $('<ul/>').addClass('jkeyboard'),\n                me = this;\n\n            layouts[layout].forEach(function (line, index) {\n                var line_container = $('<li/>').addClass('jline');\n                line_container.append(me.createLine(line));\n                keyboard_container.append(line_container);\n            });\n\n            $(this.element).html('').append(keyboard_container);\n        },\n\n        createLine: function (line) {\n            var line_container = $('<ul/>');\n\n            line.forEach(function (key, index) {\n                var key_container = $('<li/>').addClass('jkey').data('command', key);\n\n                if (function_keys[key]) {\n                    key_container.addClass(key).html(function_keys[key].text);\n                }\n                else {\n                    key_container.addClass('letter').html(key);\n                }\n\n                line_container.append(key_container);\n            })\n\n            return line_container;\n        },\n\n        events: function () {\n            var letters = $(this.element).find('.letter'),\n                shift_key = $(this.element).find('.shift'),\n                space_key = $(this.element).find('.space'),\n                backspace_key = $(this.element).find('.backspace'),\n                return_key = $(this.element).find('.return'),\n\n                me = this,\n                fkeys = Object.keys(function_keys).map(function (k) {\n                    return '.' + k;\n                }).join(',');\n\n            letters.on('click', function () {\n                me.type((shift || capslock) ? $(this).text().toUpperCase() : $(this).text());\n            });\n\n            space_key.on('click', function () {\n                me.type(' ');\n            });\n\n            return_key.on('click', function () {\n                me.enter();\n            });\n\n            backspace_key.on('click', function () {\n                me.backspace();\n            });\n\n            shift_key.on('click', function () {\n                if (capslock) {\n                    me.toggleShiftOff();\n                    capslock = false;\n                } else {\n                    me.toggleShiftOn();\n                }\n            }).on('dblclick', function () {\n                capslock = true;\n            });\n\n\n            $(fkeys).on('click', function () {\n                var command = function_keys[$(this).data('command')].command;\n                if (!command) return;\n\n                command.call(me);\n            });\n        },\n\n        type: function (key) {\n            var input = this.settings.input,\n                val = input.val(),\n                input_node = input.get(0),\n                start = input_node.selectionStart,\n                end = input_node.selectionEnd;\n\n            var max_length = $(input).attr(\"maxlength\");\n            if (start == end && end == val.length) {\n                if (!max_length || val.length < max_length) {\n                    input.val(val + key);\n                    input.change()\n                    $('#vkeyname').text(val + key)\n                }\n            } else {\n                if (input_node.type == \"text\"){\n                    var new_string = this.insertToString(start, end, val, key);\n                    input.val(new_string);\n                    start++;\n                    end = start;\n                    input_node.setSelectionRange(start, end);\n                    input.change()\n                }else if (input_node.type == \"number\"){\n                    input.val(val + key);\n                }else{\n                    input.val(val + key);\n                    input.change()\n                }\n                $('#vkeyname').text(val + key)\n                \n            }\n            input.trigger('focus');\n\n            if (shift && !capslock) {\n                this.toggleShiftOff();\n            }\n        },\n        \n        enter: function () {\n            var input = this.settings.input,\n                val = input.val();\n                input_node = input.get(0),\n                start = input_node.selectionStart,\n                end = input_node.selectionEnd;\n            if (input_node.type == \"text\"){\n                val = val + \"\\n\";\n                $('#vkeyname').text(val)\n            }\n            input.change()\n            input.focus()\n            if (input_node.type == \"number\"){\n                modal.style.display = \"none\";\n            }\n        },\n\n        backspace: function () {\n            var input = this.settings.input,\n                val = input.val();\n                input_node = input.get(0),\n                start = input_node.selectionStart,\n                end = input_node.selectionEnd;\n            if (input.type == \"text\"){\n                input.val(val.slice(0, start-1) + val.slice(start))\n                input_node.setSelectionRange(start-1, start-1);\n                //console.log(val)\n                $('#vkeyname').text(val)\n            }else{\n                input.val(val.slice(0,-1))\n                $('#vkeyname').text(val.slice(0,-1))\n            }\n            //input.change()\n            //input.focus()\n        },\n\n        toggleShiftOn: function () {\n            var letters = $(this.element).find('.letter'),\n                shift_key = $(this.element).find('.shift');\n\n            letters.addClass('uppercase');\n            shift_key.addClass('active')\n            shift = true;\n        },\n\n        toggleShiftOff: function () {\n            var letters = $(this.element).find('.letter'),\n                shift_key = $(this.element).find('.shift');\n\n            letters.removeClass('uppercase');\n            shift_key.removeClass('active');\n            shift = false;\n        },\n\n        toggleLayout: function () {\n            layout_id = layout_id || 0;\n            var plain_layouts = layouts.selectable;\n            layout_id++;\n\n            var current_id = layout_id % plain_layouts.length;\n            var SelectedLayoutName = plain_layouts[current_id];\n            $('#vkeyname').text('V-Keyboard ' + SelectedLayoutName )\n            return plain_layouts[current_id];\n        },\n\n        insertToString: function (start, end, string, insert_string) {\n            return string.substring(0, start) + insert_string + string.substring(end, string.length);\n        }\n    };\n\n        /*\n\t\t// A really lightweight plugin wrapper around the constructor,\n\t\t// preventing against multiple instantiations\n\t\t$.fn[ pluginName ] = function ( options ) {\n\t\t\t\treturn this.each(function() {\n\t\t\t\t\t\tif ( !$.data( this, \"plugin_\" + pluginName ) ) {\n\t\t\t\t\t\t\t\t$.data( this, \"plugin_\" + pluginName, new Plugin( this, options ) );\n\t\t\t\t\t\t}\n\t\t\t\t});\n\t\t};\n        */\n        var methods = {\n            init: function(options) {\n                if (!this.data(\"plugin_\" + pluginName)) {\n                    this.data(\"plugin_\" + pluginName, new Plugin(this, options));\n                }\n            },\n\t\t\tsetInput: function(content) {\n\t\t\t\tthis.data(\"plugin_\" + pluginName).setInput($(content));\n            },\n            setLayout: function(layoutname) {\n                // change layout if it is not match current\n                object = this.data(\"plugin_\" + pluginName);\n                if (typeof(layouts[layoutname]) !== 'undefined' && object.settings.layout != layoutname) {\n                    object.settings.layout = layoutname;\n                    object.createKeyboard(layoutname);\n                    object.events();\n                };\n            },\n        };\n\n\t\t$.fn[pluginName] = function (methodOrOptions) {\n            if (methods[methodOrOptions]) {\n                return methods[methodOrOptions].apply(this.first(), Array.prototype.slice.call( arguments, 1));\n            } else if (typeof methodOrOptions === 'object' || ! methodOrOptions) {\n                // Default to \"init\"\n                return methods.init.apply(this.first(), arguments);\n            } else {\n                $.error('Method ' +  methodOrOptions + ' does not exist on jQuery.tooltip');\n            }\n        };\n\n})(jQuery, window, document);\n</script>\n\n<style>\nbody {font-family: Arial, Helvetica, sans-serif;}\n\n.nr-dashboard-theme .nr-dashboard-template .md-button:not(:first-of-type) {\n    margin-top: 0px;\n}\n\n/* The Modal (background) */\n.modal {\n    display: none; /* Hidden by default */\n    position: fixed; /* Stay in place */\n    opacity:0.99;\n    z-index: 100; /* Sit on top */\n    left: 0;\n    top: 0;\n    width: 100%; /* Full width */\n    height: 100%; /* Full height */\n    overflow: auto; /* Enable scroll if needed */\n    background-color: rgb(0,0,0); /* Fallback color */\n    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */\n}\n\n/* Modal Content */\n.modal-content {\n    position: fixed;\n    background-color: #fefefe;\n    margin: auto;\n    padding: 0;\n    bottom: 0%;\n    left: 50%;\n    transform: translate(-50%, 0%);\n    border: 1px solid #888;\n    width: fit-content;\n    max-width: 100%;\n    max-height: 100%;\n    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);\n    -webkit-animation-name: animate;\n    -webkit-animation-duration: 0.4s;\n    animation-name: animate;\n    animation-duration: 0.4s\n}\n\n/* Add Animation */\n@-webkit-keyframes animate {\n    from {bottom:100%; opacity:0} \n    to {bottom:0%; opacity:1}\n}\n\n@keyframes animate {\n    from {bottom:100%; opacity:0}\n    to {bottom:0%; opacity:1}\n}\n\n/* The Close Button */\n.close {\n    color: black;\n    float: right;\n    font-size: 28px;\n    font-weight: bold;\n}\n\n.close:hover,\n.close:focus {\n    color: #000;\n    text-decoration: none;\n    cursor: pointer;\n}\n\n.modal-header {\n    padding: 2px 16px;\n    background-color: aliceblue;\n    color: white;\n}\n\n.modal-body {padding: 2px 16px;}\n\n.modal-footer {\n    padding: 2px 16px;\n    background-color: #5cb85c;\n    color: white;\n}\n\n.jkeyboard {\n  display: inline-block;\n}\n.jkeyboard, .jkeyboard .jline, .jkeyboard .jline ul {\n  display: block;\n  margin: 0;\n  padding: 0;\n}\n.jkeyboard .jline {\n  text-align: center;\n  margin-left: -14px;\n}\n.jkeyboard .jline ul li {\n  font-family: arial, sans-serif;\n  font-size: 20px;\n  display: inline-block;\n  border: 1px solid #468db3;\n  -webkit-box-shadow: 0 0 3px #468db3;\n  -webkit-box-shadow: inset 0 0 3px #468db3;\n  margin: 5px 0 1px 6px;\n  color: #000000;\n  border-radius: 5px;\n  width: 52px;\n  height: 52px;\n  box-sizing: border-box;\n  text-align: center;\n  line-height: 52px;\n  overflow: hidden;\n  cursor: pointer;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: -moz-none;\n  -ms-user-select: none;\n  user-select: none;\n}\n.jkeyboard .jline ul li.uppercase {\n  text-transform: uppercase;\n}\n.jkeyboard .jline ul li:hover, .jkeyboard .jline ul li:active {\n  background-color: #185a82;\n}\n.jkeyboard .jline .return {\n  width: 80px;\n}\n.jkeyboard .jline .space {\n  width: 366px;\n}\n.jkeyboard .jline .numeric_switch {\n  width: 65px;\n}\n.jkeyboard .jline .layout_switch {\n}\n.jkeyboard .jline .shift {\n  width: 60px;\n}\n.jkeyboard .jline .backspace {\n  width: 69px;\n}\n</style>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 280,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "37a6222521259029",
+        "type": "change",
+        "z": "e340100c9b9fe682",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\" : \"OPC UA Selector\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 180,
+        "wires": [
+            [
+                "689117baa02312b2"
+            ]
+        ]
+    },
+    {
+        "id": "c5fa3a89667cf743",
+        "type": "inject",
+        "z": "e340100c9b9fe682",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 450,
+        "y": 240,
+        "wires": [
+            [
+                "d29fb0b3f1bc7226"
+            ]
+        ]
+    },
+    {
+        "id": "9637627df5d5be14",
+        "type": "debug",
+        "z": "e340100c9b9fe682",
+        "name": "Debug lectura",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "6818068350d21ee6",
+        "type": "debug",
+        "z": "e340100c9b9fe682",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "b5c67bdbc44d01ab",
+        "type": "debug",
+        "z": "e340100c9b9fe682",
+        "name": "Debug server abierto",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "2799f59311d52626",
+        "type": "change",
+        "z": "e340100c9b9fe682",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\" : \"OPC UA Público\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1220,
+        "y": 160,
+        "wires": [
+            [
+                "b3dda29d6c1a7e5f"
+            ]
+        ]
+    },
+    {
+        "id": "a46516797f94b473",
+        "type": "change",
+        "z": "e340100c9b9fe682",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\" : \"OPC UA Privado\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1220,
+        "y": 120,
+        "wires": [
+            [
+                "9b2794fe99960d9a"
+            ]
+        ]
+    },
+    {
+        "id": "658236328a43787f",
+        "type": "comment",
+        "z": "e340100c9b9fe682",
+        "name": "Información del servidor PTE",
+        "info": "Servidor OPC UA abierto en el puerto 55489\n\nVaribles disponibles en el espacio de direcciones:\n",
+        "x": 260,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "7720b664808c988a",
+        "type": "debug",
+        "z": "e340100c9b9fe682",
+        "name": "Debug server abierto",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "0b8489ec0a415f28",
+        "type": "comment",
+        "z": "e340100c9b9fe682",
+        "name": "Información del servidor PTE",
+        "info": "Servidor OPC UA con usuario en el puerto 55490\n\nUser: MI40\nPass: MI40\n\nVaribles disponibles en el espacio de direcciones:\n",
+        "x": 260,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "dee19a8c6af3fb62",
+        "type": "function",
+        "z": "e340100c9b9fe682",
+        "name": "Valor_1",
+        "func": "msg.valuesToWrite = [false];\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 820,
+        "wires": [
+            [
+                "b68301c89a686ca3"
+            ]
+        ]
+    },
+    {
+        "id": "f5e0311009728f97",
+        "type": "debug",
+        "z": "e340100c9b9fe682",
+        "name": "Debug lectura",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "65e0795b975e25bf",
+        "type": "change",
+        "z": "e340100c9b9fe682",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\" : \"Inicio\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 120,
+        "wires": [
+            [
+                "689117baa02312b2"
+            ]
+        ]
+    },
+    {
+        "id": "4040a0eeff8a654c",
+        "type": "function",
+        "z": "e340100c9b9fe682",
+        "name": "Obtener IPV4",
+        "func": "msg.Ipv4 = msg.payload[3].address; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 240,
+        "wires": [
+            [
+                "86daabd0610c1d34",
+                "bcf921f0f3175aca"
+            ]
+        ]
+    },
+    {
+        "id": "8863f9c75b535778",
+        "type": "function",
+        "z": "e340100c9b9fe682",
+        "name": "Obtener IPV4",
+        "func": "msg.Ipv4 = msg.payload[4].address; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 280,
+        "wires": [
+            [
+                "1bc1e96220750c1c",
+                "2a16d6523ba883b5"
+            ]
+        ]
+    },
+    {
+        "id": "4d833c57cd9ea0e4",
+        "type": "function",
+        "z": "e340100c9b9fe682",
+        "name": "Obtener IPV4",
+        "func": "msg.Ipv4 = msg.payload[6].address; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 320,
+        "wires": [
+            [
+                "5e9b92d03983a41e",
+                "abda1ddc8a6ead44"
+            ]
+        ]
+    },
+    {
+        "id": "d29fb0b3f1bc7226",
+        "type": "hostip",
+        "z": "e340100c9b9fe682",
+        "name": "Host IP",
+        "x": 620,
+        "y": 240,
+        "wires": [
+            [
+                "6818068350d21ee6",
+                "4040a0eeff8a654c",
+                "8863f9c75b535778",
+                "4d833c57cd9ea0e4"
+            ]
+        ]
+    },
+    {
+        "id": "30ddde700b963243",
+        "type": "ui_button",
+        "z": "e340100c9b9fe682",
+        "name": "",
+        "group": "2caf7620b7cbd0b2",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "ATRÁS",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 460,
+        "y": 200,
+        "wires": [
+            [
+                "37a6222521259029"
+            ]
+        ]
+    },
+    {
+        "id": "7564cde99bae07dd",
+        "type": "ui_button",
+        "z": "e340100c9b9fe682",
+        "name": "",
+        "group": "f52f7f9d7057398e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Público",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1020,
+        "y": 160,
+        "wires": [
+            [
+                "2799f59311d52626"
+            ]
+        ]
+    },
+    {
+        "id": "335129cff27a8c3e",
+        "type": "ui_button",
+        "z": "e340100c9b9fe682",
+        "name": "",
+        "group": "f52f7f9d7057398e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Privado",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1020,
+        "y": 120,
+        "wires": [
+            [
+                "a46516797f94b473"
+            ]
+        ]
+    },
+    {
+        "id": "9b3d964771c191c5",
+        "type": "ui_button",
+        "z": "e340100c9b9fe682",
+        "name": "",
+        "group": "9ba0ed5ba846c5e9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "ATRÁS",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 460,
+        "y": 160,
+        "wires": [
+            [
+                "37a6222521259029"
+            ]
+        ]
+    },
+    {
+        "id": "8771bafb3e98d459",
+        "type": "ui_button",
+        "z": "e340100c9b9fe682",
+        "name": "",
+        "group": "f52f7f9d7057398e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "INICIO",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 450,
+        "y": 120,
+        "wires": [
+            [
+                "65e0795b975e25bf"
+            ]
+        ]
+    },
+    {
+        "id": "59c8fbcd1861c8b7",
+        "type": "ui_text",
+        "z": "e340100c9b9fe682",
+        "group": "2caf7620b7cbd0b2",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Feedback texto",
+        "format": "{{payload.value[3].value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1020,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "8e2ea81da0f453bd",
+        "type": "ui_text",
+        "z": "e340100c9b9fe682",
+        "group": "2caf7620b7cbd0b2",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Feedback boolean",
+        "format": "{{payload.value[0].value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1030,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "41792a2d38623e31",
+        "type": "ui_text",
+        "z": "e340100c9b9fe682",
+        "group": "2caf7620b7cbd0b2",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Feedback double",
+        "format": "{{payload.value[1].value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1030,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "d108ba10f1ca43c3",
+        "type": "ui_text",
+        "z": "e340100c9b9fe682",
+        "group": "2caf7620b7cbd0b2",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Feedback Int",
+        "format": "{{payload.value[2].value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1010,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "941731631eaf2265",
+        "type": "ui_text",
+        "z": "e340100c9b9fe682",
+        "group": "9ba0ed5ba846c5e9",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Feedback texto",
+        "format": "{{payload.value[3].value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1020,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "879ee1b55564eb3c",
+        "type": "ui_text",
+        "z": "e340100c9b9fe682",
+        "group": "9ba0ed5ba846c5e9",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Feedback boolean",
+        "format": "{{payload.value[0].value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1030,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "304e43b0f1af034a",
+        "type": "ui_text",
+        "z": "e340100c9b9fe682",
+        "group": "9ba0ed5ba846c5e9",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Feedback double",
+        "format": "{{payload.value[1].value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1030,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "3b3119f4e2920307",
+        "type": "ui_text",
+        "z": "e340100c9b9fe682",
+        "group": "9ba0ed5ba846c5e9",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Feedback Int",
+        "format": "{{payload.value[2].value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1010,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "86daabd0610c1d34",
+        "type": "ui_text",
+        "z": "e340100c9b9fe682",
+        "group": "2caf7620b7cbd0b2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "IP Maestro (Adaptador 1) abierto",
+        "label": "IP Maestro (Adaptador 1)",
+        "format": "{{msg.Ipv4}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1200,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "1bc1e96220750c1c",
+        "type": "ui_text",
+        "z": "e340100c9b9fe682",
+        "group": "2caf7620b7cbd0b2",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "IP Maestro (Adaptador 2) abierto",
+        "label": "IP Maestro (Adaptador 2)",
+        "format": "{{msg.Ipv4}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1200,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "bcf921f0f3175aca",
+        "type": "ui_text",
+        "z": "e340100c9b9fe682",
+        "group": "9ba0ed5ba846c5e9",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "IP Maestro (Adaptador 1) con usuario",
+        "label": "IP Maestro (Adaptador 1)",
+        "format": "{{msg.Ipv4}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1210,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "2a16d6523ba883b5",
+        "type": "ui_text",
+        "z": "e340100c9b9fe682",
+        "group": "9ba0ed5ba846c5e9",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "IP Maestro (Adaptador 2) con usuario",
+        "label": "IP Maestro (Adaptador 2)",
+        "format": "{{msg.Ipv4}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1210,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "5e9b92d03983a41e",
+        "type": "ui_text",
+        "z": "e340100c9b9fe682",
+        "group": "2caf7620b7cbd0b2",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "IP Maestro (Adaptador 3) abierto",
+        "format": "{{msg.Ipv4}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1200,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "abda1ddc8a6ead44",
+        "type": "ui_text",
+        "z": "e340100c9b9fe682",
+        "group": "9ba0ed5ba846c5e9",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "IP Maestro (Adaptador 3) con usuario",
+        "label": "IP Maestro (Adaptador 3)",
+        "format": "{{msg.Ipv4}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1210,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "689117baa02312b2",
+        "type": "ui_ui_control",
+        "z": "e340100c9b9fe682",
+        "name": "",
+        "events": "all",
+        "x": 860,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b3dda29d6c1a7e5f",
+        "type": "ui_ui_control",
+        "z": "e340100c9b9fe682",
+        "name": "",
+        "events": "all",
+        "x": 1440,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9b2794fe99960d9a",
+        "type": "ui_ui_control",
+        "z": "e340100c9b9fe682",
+        "name": "",
+        "events": "all",
+        "x": 1440,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b4961e9a61a56314",
+        "type": "OPCUA-IIoT-Inject",
+        "z": "e340100c9b9fe682",
+        "injectType": "read",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "",
+        "repeat": "0.5",
+        "crontab": "",
+        "once": false,
+        "startDelay": "",
+        "name": "Nodos de lectura",
+        "addressSpaceItems": [
+            {
+                "name": "Boolean",
+                "nodeId": "ns=1;s=Var_BOOL",
+                "datatypeName": ""
+            },
+            {
+                "name": "Double",
+                "nodeId": "ns=1;s=Var_Double",
+                "datatypeName": ""
+            },
+            {
+                "name": "Int",
+                "nodeId": "ns=1;s=Var_INT",
+                "datatypeName": ""
+            },
+            {
+                "name": "Texto",
+                "nodeId": "ns=1;s=Var_STRING",
+                "datatypeName": ""
+            }
+        ],
+        "x": 510,
+        "y": 560,
+        "wires": [
+            [
+                "52f02ee11c64bbf5"
+            ]
+        ]
+    },
+    {
+        "id": "651ce7606492a541",
+        "type": "OPCUA-IIoT-Inject",
+        "z": "e340100c9b9fe682",
+        "injectType": "write",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "startDelay": "",
+        "name": "Write_1",
+        "addressSpaceItems": [
+            {
+                "name": "Var_Boulean",
+                "nodeId": "ns=1;s=Var_BOOL",
+                "datatypeName": "Boolean"
+            }
+        ],
+        "x": 550,
+        "y": 820,
+        "wires": [
+            [
+                "dee19a8c6af3fb62"
+            ]
+        ]
+    },
+    {
+        "id": "6b2ab1a26fb039c6",
+        "type": "OPCUA-IIoT-Inject",
+        "z": "e340100c9b9fe682",
+        "injectType": "read",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "",
+        "repeat": "0.5",
+        "crontab": "",
+        "once": false,
+        "startDelay": "",
+        "name": "Nodos de lectura",
+        "addressSpaceItems": [
+            {
+                "name": "Boolean",
+                "nodeId": "ns=1;s=Var_BOOL",
+                "datatypeName": ""
+            },
+            {
+                "name": "Double",
+                "nodeId": "ns=1;s=Var_Double",
+                "datatypeName": ""
+            },
+            {
+                "name": "Int",
+                "nodeId": "ns=1;s=Var_INT",
+                "datatypeName": ""
+            },
+            {
+                "name": "Texto",
+                "nodeId": "ns=1;s=Var_STRING",
+                "datatypeName": ""
+            }
+        ],
+        "x": 510,
+        "y": 1080,
+        "wires": [
+            [
+                "d809da8ee0803c90"
+            ]
+        ]
+    },
+    {
+        "id": "52f02ee11c64bbf5",
+        "type": "OPCUA-IIoT-Read",
+        "z": "e340100c9b9fe682",
+        "attributeId": 0,
+        "maxAge": 1,
+        "depth": 1,
+        "connector": "77fdc29e.3c49ec",
+        "name": "Lectura de variables",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "parseStrings": false,
+        "historyDays": 1,
+        "x": 780,
+        "y": 560,
+        "wires": [
+            [
+                "8e2ea81da0f453bd",
+                "d108ba10f1ca43c3",
+                "9637627df5d5be14",
+                "41792a2d38623e31",
+                "59c8fbcd1861c8b7"
+            ]
+        ]
+    },
+    {
+        "id": "d809da8ee0803c90",
+        "type": "OPCUA-IIoT-Read",
+        "z": "e340100c9b9fe682",
+        "attributeId": 0,
+        "maxAge": 1,
+        "depth": 1,
+        "connector": "512391c17844a41a",
+        "name": "Lectura de variables",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "parseStrings": false,
+        "historyDays": 1,
+        "x": 780,
+        "y": 1080,
+        "wires": [
+            [
+                "879ee1b55564eb3c",
+                "3b3119f4e2920307",
+                "f5e0311009728f97",
+                "304e43b0f1af034a",
+                "941731631eaf2265"
+            ]
+        ]
+    },
+    {
+        "id": "b68301c89a686ca3",
+        "type": "OPCUA-IIoT-Write",
+        "z": "e340100c9b9fe682",
+        "connector": "77fdc29e.3c49ec",
+        "name": "Escritura de variables ",
+        "justValue": false,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "x": 1020,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e4d81d84815907be",
+        "type": "OPCUA-IIoT-Flex-Server",
+        "z": "e340100c9b9fe682",
+        "port": "55489",
+        "endpoint": "",
+        "acceptExternalCommands": true,
+        "maxAllowedSessionNumber": "",
+        "maxConnectionsPerEndpoint": "",
+        "maxAllowedSubscriptionNumber": "",
+        "alternateHostname": "",
+        "name": "OPC UA Server abierto",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "allowAnonymous": true,
+        "individualCerts": false,
+        "isAuditing": false,
+        "serverDiscovery": true,
+        "users": [
+            {
+                "name": "MI40",
+                "password": "MI40"
+            }
+        ],
+        "xmlsets": [],
+        "publicCertificateFile": "",
+        "privateCertificateFile": "",
+        "registerServerMethod": "1",
+        "discoveryServerEndpointUrl": "",
+        "capabilitiesForMDNS": "",
+        "maxNodesPerRead": 1000,
+        "maxNodesPerBrowse": 2000,
+        "delayToClose": 1000,
+        "addressSpaceScript": "function constructAlarmAddressSpace(server, addressSpace, eventObjects, done) {\n    // server = the created node-opcua server\n    // addressSpace = script placeholder\n    // eventObjects = to hold event variables in memory from this script\n\n    // internal global sandbox objects are \n    // node = node of the flex server, \n    // coreServer = core iiot server object for debug and access to nodeOPCUA,\n    // and scriptObjects to hold variables and functions\n    const LocalizedText = opcua.LocalizedText;\n    const namespace = addressSpace.getOwnNamespace();\n\n    coreServer.internalDebugLog('Inicio dinámico de espacio de direcciones')\n    node.warn('Construyendo espacio de direcciones para servidor de OPC UA en 55489')\n\n    const Variant = opcua.Variant;\n    const DataType = opcua.DataType;\n    const DataValue = opcua.DataValue;\n\n    coreServer.internalDebugLog(\"init dynamic address space\");\n    const rootFolder = addressSpace.findNode(\"RootFolder\");\n\n    const myDevice = namespace.addFolder(rootFolder.objects, {\n        \"browseName\": \"Mis_Variables_libres\"\n    });\n    namespace.addVariable({\n        organizedBy: myDevice,\n        browseName: \"Var_BOOL\",\n        nodeId: \"ns=1;s=Var_BOOL\",\n        dataType: \"Boolean\",\n        value: {\n            get: function () {\n                return new opcua.Variant({ dataType: opcua.DataType.Boolean, value: true });\n            },\n            set: function (variant) {\n                return opcua.StatusCodes.Good;\n            }\n        }\n    });\n\n    namespace.addVariable({\n        organizedBy: myDevice,\n        browseName: \"Var_INT\",\n        nodeId: \"ns=1;s=Var_INT\",\n        dataType: \"Int16\",\n        value: {\n            get: function () {\n                return new opcua.Variant({ dataType: opcua.DataType.Int16, value: -3649 });\n            },\n            set: function (variant) {\n                return opcua.StatusCodes.Good;\n            }\n        }\n    });\n\n    namespace.addVariable({\n        organizedBy: myDevice,\n        browseName: \"Var_Double\",\n        nodeId: \"ns=1;s=Var_Double\",\n        dataType: \"Double\",\n        value: {\n            get: function () {\n                return new opcua.Variant({ dataType: opcua.DataType.Double, value: 10.3 });\n            },\n            set: function (variant) {\n                return opcua.StatusCodes.Good;\n            }\n        }\n    });\n\n    namespace.addVariable({\n        organizedBy: myDevice,\n        browseName: \"Var_STRING\",\n        nodeId: \"ns=1;s=Var_STRING\",\n        dataType: \"String\",\n        value: {\n            get: function () {\n                return new opcua.Variant({ dataType: opcua.DataType.String, value: \"Hola Mundo MI4.0\" });\n            },\n            set: function (variant) {\n                return opcua.StatusCodes.Good;\n            }\n        }\n    });\n    coreServer.internalDebugLog(\"Creación dinaámica de espacio de direcciones lista\");\n    node.warn(\"Contrucción de espacio de direcciones para servidor de OPC UA en 55489 listo\");\n\n    done();\n}",
+        "x": 510,
+        "y": 420,
+        "wires": [
+            [
+                "b5c67bdbc44d01ab"
+            ]
+        ]
+    },
+    {
+        "id": "869f691e3c6c2d75",
+        "type": "OPCUA-IIoT-Flex-Server",
+        "z": "e340100c9b9fe682",
+        "port": "55490",
+        "endpoint": "",
+        "acceptExternalCommands": true,
+        "maxAllowedSessionNumber": "",
+        "maxConnectionsPerEndpoint": "",
+        "maxAllowedSubscriptionNumber": "",
+        "alternateHostname": "",
+        "name": "OPC UA Server con usuario",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "allowAnonymous": false,
+        "individualCerts": false,
+        "isAuditing": false,
+        "serverDiscovery": false,
+        "users": [
+            {
+                "name": "MI40",
+                "password": "MI40"
+            }
+        ],
+        "xmlsets": [],
+        "publicCertificateFile": "",
+        "privateCertificateFile": "",
+        "registerServerMethod": "1",
+        "discoveryServerEndpointUrl": "",
+        "capabilitiesForMDNS": "",
+        "maxNodesPerRead": 1000,
+        "maxNodesPerBrowse": 2000,
+        "delayToClose": 1000,
+        "addressSpaceScript": "function constructAlarmAddressSpace(server, addressSpace, eventObjects, done) {\n    // server = the created node-opcua server\n    // addressSpace = script placeholder\n    // eventObjects = to hold event variables in memory from this script\n\n    // internal global sandbox objects are \n    // node = node of the flex server, \n    // coreServer = core iiot server object for debug and access to nodeOPCUA,\n    // and scriptObjects to hold variables and functions\n    const LocalizedText = opcua.LocalizedText;\n    const namespace = addressSpace.getOwnNamespace();\n\n    coreServer.internalDebugLog('init dynamic address space')\n    node.warn('construct new address space for OPC UA')\n\n    const Variant = opcua.Variant;\n    const DataType = opcua.DataType;\n    const DataValue = opcua.DataValue;\n\n    coreServer.internalDebugLog(\"init dynamic address space\");\n    const rootFolder = addressSpace.findNode(\"RootFolder\");\n\n    const myDevice = namespace.addFolder(rootFolder.objects, {\n        \"browseName\": \"Mis_Variables_protegidas\"\n    });\n    namespace.addVariable({\n        organizedBy: myDevice,\n        browseName: \"Var_BOOL\",\n        nodeId: \"ns=1;s=Var_BOOL\",\n        dataType: \"Boolean\",\n        value: {\n            get: function () {\n                return new opcua.Variant({ dataType: opcua.DataType.Boolean, value: true });\n            },\n            set: function (variant) {\n                return opcua.StatusCodes.Good;\n            }\n        }\n    });\n\n    namespace.addVariable({\n        organizedBy: myDevice,\n        browseName: \"Var_INT\",\n        nodeId: \"ns=1;s=Var_INT\",\n        dataType: \"Int32\",\n        value: {\n            get: function () {\n                return new opcua.Variant({ dataType: opcua.DataType.Int32, value: -1651 });\n            },\n            set: function (variant) {\n                return opcua.StatusCodes.Good;\n            }\n        }\n    });\n\n    namespace.addVariable({\n        organizedBy: myDevice,\n        browseName: \"Var_Double\",\n        nodeId: \"ns=1;s=Var_Double\",\n        dataType: \"Double\",\n        value: {\n            get: function () {\n                return new opcua.Variant({ dataType: opcua.DataType.Double, value: 10.3 });\n            },\n            set: function (variant) {\n                return opcua.StatusCodes.Good;\n            }\n        }\n    });\n\n    namespace.addVariable({\n        organizedBy: myDevice,\n        browseName: \"Var_STRING\",\n        nodeId: \"ns=1;s=Var_STRING\",\n        dataType: \"String\",\n        value: {\n            get: function () {\n                return new opcua.Variant({ dataType: opcua.DataType.String, value: \"Hola Mundo MI4.0\" });\n            },\n            set: function (variant) {\n                return opcua.StatusCodes.Good;\n            }\n        }\n    });\n    coreServer.internalDebugLog(\"create dynamic address space done\");\n    node.warn(\"construction of new address space for OPC UA done\");\n\n    done();\n}",
+        "x": 520,
+        "y": 940,
+        "wires": [
+            [
+                "7720b664808c988a"
+            ]
+        ]
+    },
+    {
+        "id": "0c6f07a60cbb40fa",
+        "type": "change",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\" : \"Inicio\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 100,
+        "wires": [
+            [
+                "0d1cbaf7adeaef4e"
+            ]
+        ]
+    },
+    {
+        "id": "b62de5d8effe8954",
+        "type": "inject",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 270,
+        "y": 160,
+        "wires": [
+            [
+                "30b8544c82e15861"
+            ]
+        ]
+    },
+    {
+        "id": "823e8b65e8698aa5",
+        "type": "function",
+        "z": "4e702d50e851e07d",
+        "name": "Obtener IPV4",
+        "func": "msg.Ipv4 = msg.payload[3].address; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 160,
+        "wires": [
+            [
+                "e0a37c872dc2464e"
+            ]
+        ]
+    },
+    {
+        "id": "cd0fbfd284939421",
+        "type": "debug",
+        "z": "4e702d50e851e07d",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "7d55ca4f9acb2845",
+        "type": "function",
+        "z": "4e702d50e851e07d",
+        "name": "Obtener IPV4",
+        "func": "msg.Ipv4 = msg.payload[4].address; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 200,
+        "wires": [
+            [
+                "951e16804deda846"
+            ]
+        ]
+    },
+    {
+        "id": "function-coil-control",
+        "type": "function",
+        "z": "4e702d50e851e07d",
+        "name": "Format Modbus Write",
+        "func": "var coilIndex = msg.payload.coil;\nvar state = msg.payload.state ? 1 : 0;\n\nmsg.payload = { \n    'value': state, \n    'fc': 5, \n    'unitid': 1, \n    'address': coilIndex, \n    'quantity': 1 \n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 780,
+        "wires": [
+            [
+                "modbus-write-coils"
+            ]
+        ]
+    },
+    {
+        "id": "function-input-control",
+        "type": "function",
+        "z": "4e702d50e851e07d",
+        "name": "Format Modbus Write for Inputs",
+        "func": "var inputIndex = msg.payload.input;\nvar value = msg.payload.value;\n\nmsg.payload = { \n    'value': value, \n    'fc': 6, \n    'unitid': 1, \n    'address': inputIndex + 10, // Ajusta la dirección base para los input registers\n    'quantity': 1 \n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 920,
+        "wires": [
+            [
+                "write-input"
+            ]
+        ]
+    },
+    {
+        "id": "function-holding-control",
+        "type": "function",
+        "z": "4e702d50e851e07d",
+        "name": "Format Modbus Write for Holdings",
+        "func": "var holdingIndex = msg.payload.holding;\nvar value = msg.payload.value;\n\nmsg.payload = { \n    'value': value, \n    'fc': 6, \n    'unitid': 1, \n    'address': holdingIndex + 20, // Ajusta la dirección base para los holding registers\n    'quantity': 1 \n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 1060,
+        "wires": [
+            [
+                "write-holding"
+            ]
+        ]
+    },
+    {
+        "id": "b546711919b276bf",
+        "type": "function",
+        "z": "4e702d50e851e07d",
+        "name": "Obtener IPV4",
+        "func": "msg.Ipv4 = msg.payload[6].address; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 240,
+        "wires": [
+            [
+                "60ba5b3dc17322d0"
+            ]
+        ]
+    },
+    {
+        "id": "30b8544c82e15861",
+        "type": "hostip",
+        "z": "4e702d50e851e07d",
+        "name": "Host IP",
+        "x": 480,
+        "y": 160,
+        "wires": [
+            [
+                "823e8b65e8698aa5",
+                "cd0fbfd284939421",
+                "7d55ca4f9acb2845",
+                "b546711919b276bf"
+            ]
+        ]
+    },
+    {
+        "id": "5af5cf5902692208",
+        "type": "modbus-read",
+        "z": "4e702d50e851e07d",
+        "name": "Read Input Registers",
+        "topic": "",
+        "showStatusActivities": true,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "InputRegister",
+        "adr": "10",
+        "quantity": "8",
+        "rate": "2",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "3b81367c79146636",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 380,
+        "y": 560,
+        "wires": [
+            [
+                "d97996f56cf2c3c1"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "93442a1cfe80b58b",
+        "type": "modbus-read",
+        "z": "4e702d50e851e07d",
+        "name": "Read Holding Registers",
+        "topic": "",
+        "showStatusActivities": true,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "20",
+        "quantity": "8",
+        "rate": "2",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "3b81367c79146636",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 380,
+        "y": 660,
+        "wires": [
+            [
+                "d318f280ec938980"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "9642714c46afabac",
+        "type": "modbus-read",
+        "z": "4e702d50e851e07d",
+        "name": "Read Coils",
+        "topic": "",
+        "showStatusActivities": true,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "0",
+        "quantity": "16",
+        "rate": "2",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "3b81367c79146636",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 420,
+        "y": 460,
+        "wires": [
+            [
+                "0bbf479c9c6410a2"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "write-holding",
+        "type": "modbus-write",
+        "z": "4e702d50e851e07d",
+        "name": "Write Holding Register",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "",
+        "quantity": "1",
+        "server": "3b81367c79146636",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 920,
+        "y": 1060,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "write-input",
+        "type": "modbus-write",
+        "z": "4e702d50e851e07d",
+        "name": "Write Input Register",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "InputRegister",
+        "adr": "",
+        "quantity": "1",
+        "server": "3b81367c79146636",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 910,
+        "y": 920,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "modbus-write-coils",
+        "type": "modbus-flex-write",
+        "z": "4e702d50e851e07d",
+        "name": "Write Coils",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "server": "3b81367c79146636",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 850,
+        "y": 780,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a0829dc1dfc04987",
+        "type": "modbus-server",
+        "z": "4e702d50e851e07d",
+        "name": "Server Modbus",
+        "logEnabled": false,
+        "hostname": "127.0.0.1",
+        "serverPort": "10502",
+        "responseDelay": 100,
+        "delayUnit": "ms",
+        "coilsBufferSize": 10000,
+        "holdingBufferSize": 10000,
+        "inputBufferSize": 10000,
+        "discreteBufferSize": 10000,
+        "showErrors": false,
+        "x": 380,
+        "y": 320,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2b391a2ec4fdf914",
+        "type": "ui_button",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "group": "c1fd1f778554d218",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "INICIO",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 290,
+        "y": 100,
+        "wires": [
+            [
+                "0c6f07a60cbb40fa"
+            ]
+        ]
+    },
+    {
+        "id": "e0a37c872dc2464e",
+        "type": "ui_text",
+        "z": "4e702d50e851e07d",
+        "group": "c1fd1f778554d218",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "IP Maestro (Adaptador 1)",
+        "format": "{{msg.Ipv4}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1030,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "951e16804deda846",
+        "type": "ui_text",
+        "z": "4e702d50e851e07d",
+        "group": "c1fd1f778554d218",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "IP Maestro (Adaptador 2)",
+        "format": "{{msg.Ipv4}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1030,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "0bbf479c9c6410a2",
+        "type": "ui_text",
+        "z": "4e702d50e851e07d",
+        "group": "c1fd1f778554d218",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "Display Coils",
+        "label": "Coils Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 630,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "d97996f56cf2c3c1",
+        "type": "ui_text",
+        "z": "4e702d50e851e07d",
+        "group": "c1fd1f778554d218",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "Display Inputs",
+        "label": "Input Registers",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 640,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "d318f280ec938980",
+        "type": "ui_text",
+        "z": "4e702d50e851e07d",
+        "group": "c1fd1f778554d218",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "name": "Display Holdings",
+        "label": "Holding Registers",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 650,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "60ba5b3dc17322d0",
+        "type": "ui_text",
+        "z": "4e702d50e851e07d",
+        "group": "c1fd1f778554d218",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "IP Maestro (Adaptador 3)",
+        "format": "{{msg.Ipv4}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1030,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "0d1cbaf7adeaef4e",
+        "type": "ui_ui_control",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "events": "all",
+        "x": 720,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "template-coil-control",
+        "type": "ui_template",
+        "z": "4e702d50e851e07d",
+        "group": "c1fd1f778554d218",
+        "name": "Coil Control Panel",
+        "order": 6,
+        "width": 6,
+        "height": 5,
+        "format": "<div class=\"coils-container\" ng-init=\"coils=[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]\">\n    <div class=\"coil-switch\" ng-repeat=\"coil in coils track by $index\">\n        <label>Coil {{$index}}:</label>\n        <md-switch ng-model=\"coils[$index]\" ng-change=\"send({payload: {coil: $index, state: coils[$index]}})\">\n            {{coils[$index] ? 'ON' : 'OFF'}}\n        </md-switch>\n    </div>\n</div>\n<style>\n    .coils-container {\n        display: flex;\n        flex-wrap: wrap;\n        justify-content: space-around;\n    }\n    .coil-switch {\n        width: 30%;\n        padding: 5px;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 390,
+        "y": 780,
+        "wires": [
+            [
+                "function-coil-control"
+            ]
+        ]
+    },
+    {
+        "id": "template-holding-control",
+        "type": "ui_template",
+        "z": "4e702d50e851e07d",
+        "group": "c1fd1f778554d218",
+        "name": "Holding Register Control Panel",
+        "order": 12,
+        "width": 6,
+        "height": 5,
+        "format": "<div class=\"holdings-container\" ng-init=\"holdings=[0,0,0,0,0,0,0,0]\">\n    <div class=\"holding-input\" ng-repeat=\"holding in holdings track by $index\">\n        <label>Holding {{$index}}:</label>\n        <input type=\"number\" ng-model=\"holdings[$index]\" ng-change=\"send({payload: {holding: $index, value: holdings[$index]}})\">\n    </div>\n</div>\n<style>\n    .holdings-container {\n        display: flex;\n        flex-wrap: wrap;\n        justify-content: space-around;\n    }\n    .holding-input {\n        width: 30%;\n        padding: 5px;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 230,
+        "y": 1060,
+        "wires": [
+            [
+                "function-holding-control"
+            ]
+        ]
+    },
+    {
+        "id": "template-input-control",
+        "type": "ui_template",
+        "z": "4e702d50e851e07d",
+        "group": "c1fd1f778554d218",
+        "name": "Input Register Control Panel",
+        "order": 9,
+        "width": 6,
+        "height": 5,
+        "format": "<div class=\"inputs-container\" ng-init=\"inputs=[0,0,0,0,0,0,0,0]\">\n    <div class=\"input-input\" ng-repeat=\"input in inputs track by $index\">\n        <label>Input {{$index}}:</label>\n        <input type=\"number\" ng-model=\"inputs[$index]\" ng-change=\"send({payload: {input: $index, value: inputs[$index]}})\">\n    </div>\n</div>\n<style>\n    .inputs-container {\n        display: flex;\n        flex-wrap: wrap;\n        justify-content: space-around;\n    }\n    .input-input {\n        width: 30%;\n        padding: 5px;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 240,
+        "y": 920,
+        "wires": [
+            [
+                "function-input-control"
+            ]
+        ]
+    }
+]
