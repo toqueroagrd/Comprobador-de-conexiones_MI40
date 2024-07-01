@@ -893,72 +893,6 @@
         "autoSelectRightEndpoint": false
     },
     {
-        "id": "7b5234389b683c5b",
-        "type": "OpcUa-Endpoint",
-        "endpoint": "opc.tcp://127.0.0.1:55489",
-        "secpol": "None",
-        "secmode": "None",
-        "none": true,
-        "login": false,
-        "usercert": false,
-        "usercertificate": "",
-        "userprivatekey": ""
-    },
-    {
-        "id": "70f971981f82859f",
-        "type": "OpcUa-Endpoint",
-        "endpoint": "opc.tcp://localhost:4840",
-        "secpol": "None",
-        "secmode": "None",
-        "none": true,
-        "login": false,
-        "usercert": false,
-        "usercertificate": "",
-        "userprivatekey": ""
-    },
-    {
-        "id": "7290d8b0.f713d8",
-        "type": "OpcUa-Endpoint",
-        "endpoint": "opc.tcp://localhost:62544/Quickstarts/AlarmConditionServer",
-        "login": false
-    },
-    {
-        "id": "83439742.083188",
-        "type": "OpcUa-Endpoint",
-        "endpoint": "opc.tcp://0.0.0.0:4840/",
-        "secpol": "None",
-        "secmode": "None",
-        "login": false
-    },
-    {
-        "id": "b8f39990.157038",
-        "type": "OpcUa-Endpoint",
-        "endpoint": "opc.tcp://TREL16087112.vstage.co:53530/OPCUA/SimulationServer",
-        "secpol": "None",
-        "secmode": "None",
-        "login": false
-    },
-    {
-        "id": "5a1ac14b.4d0f38",
-        "type": "OpcUa-Endpoint",
-        "endpoint": "opc.tcp://TREL16087112.vstage.co:53530/OPCUA/SimulationServer",
-        "secpol": "None",
-        "secmode": "None",
-        "login": false
-    },
-    {
-        "id": "endpoint1",
-        "type": "OpcUa-Endpoint",
-        "endpoint": "opc.tcp://ARC-WIN11:55489",
-        "secpol": "None",
-        "secmode": "None",
-        "none": true,
-        "login": false,
-        "usercert": false,
-        "usercertificate": "",
-        "userprivatekey": ""
-    },
-    {
         "id": "eeb32076a0ef250d",
         "type": "ui_spacer",
         "z": "a4a07f451bd4dad9",
@@ -989,14 +923,6 @@
         "height": 1
     },
     {
-        "id": "08630897d509378a",
-        "type": "OpcUa-Endpoint",
-        "endpoint": "opc.tcp://192.168.0.252:4840",
-        "secpol": "None",
-        "secmode": "NONE",
-        "login": false
-    },
-    {
         "id": "0debae5f533cb85b",
         "type": "modbus-client",
         "name": "ModbusServerSettings",
@@ -1020,14 +946,6 @@
         "reconnectOnTimeout": false,
         "reconnectTimeout": 1000,
         "parallelUnitIdsAllowed": false
-    },
-    {
-        "id": "a1f0d7db0323ab7e",
-        "type": "OpcUa-Endpoint",
-        "endpoint": "opc.tcp://localhost:4840",
-        "secpol": "None",
-        "secmode": "None",
-        "login": false
     },
     {
         "id": "6f4c5d9bcfd9c087",
@@ -1061,6 +979,18 @@
                 "name": "IOT_BOOL"
             }
         ]
+    },
+    {
+        "id": "1b48238c21b13cef",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp:/localhost:55489",
+        "secpol": "None",
+        "secmode": "None",
+        "none": true,
+        "login": false,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
     },
     {
         "id": "4ec01e92.bb7e1",
@@ -4098,7 +4028,7 @@
         "id": "ed7a9506ab190907",
         "type": "OpcUa-Server",
         "z": "e340100c9b9fe682",
-        "port": "4840",
+        "port": "55489",
         "name": "Servidor abierto",
         "endpoint": "",
         "users": "",
@@ -4168,7 +4098,7 @@
         "id": "22e39a9b7932abc2",
         "type": "OpcUa-Client",
         "z": "e340100c9b9fe682",
-        "endpoint": "a1f0d7db0323ab7e",
+        "endpoint": "1b48238c21b13cef",
         "action": "read",
         "deadbandtype": "a",
         "deadbandvalue": 1,
@@ -4179,8 +4109,13 @@
         "localkeyfile": "",
         "securitymode": "None",
         "securitypolicy": "None",
+        "useTransport": false,
+        "maxChunkCount": "",
+        "maxMessageSize": "",
+        "receiveBufferSize": "",
+        "sendBufferSize": "",
         "name": "",
-        "x": 720,
+        "x": 680,
         "y": 1280,
         "wires": [
             [],
@@ -4191,7 +4126,7 @@
         "id": "70edb966c9f946dc",
         "type": "OpcUa-Item",
         "z": "e340100c9b9fe682",
-        "item": "ns=5;s=OPCUA.Bool",
+        "item": "ns=5;s=Var_BOOL",
         "datatype": "Boolean",
         "value": "",
         "name": "Feedback boolean",
@@ -4239,7 +4174,7 @@
         "id": "b63a95473deff178",
         "type": "OpcUa-Item",
         "z": "e340100c9b9fe682",
-        "item": "ns=5;s=OPCUA.Int",
+        "item": "ns=5;s=Var_INT",
         "datatype": "Int32",
         "value": "",
         "name": "Feedback Int",
@@ -4255,7 +4190,7 @@
         "id": "591b75992c58599c",
         "type": "OpcUa-Item",
         "z": "e340100c9b9fe682",
-        "item": "ns=5;s=OPCUA.Real",
+        "item": "ns=5;s=Var_DOUBLE",
         "datatype": "Double",
         "value": "",
         "name": "Feedback double",
@@ -4271,7 +4206,7 @@
         "id": "148d8fbdc2c8d5a0",
         "type": "OpcUa-Item",
         "z": "e340100c9b9fe682",
-        "item": "ns=5;s=OPCUA.Time",
+        "item": "ns=5;s=Var_STRING",
         "datatype": "String",
         "value": "",
         "name": "Feedback texto",
@@ -4935,43 +4870,21 @@
         "wires": []
     },
     {
-        "id": "37ac700b82d5c260",
-        "type": "s7 in",
-        "z": "fd4b5ffea49ae0ba",
-        "endpoint": "6f4c5d9bcfd9c087",
-        "mode": "single",
-        "variable": "IOT_BOOL",
-        "diff": true,
-        "name": "S7Com S7-1500 BOOL",
-        "x": 180,
-        "y": 1020,
-        "wires": [
-            [
-                "08dbe4f133daafb9"
-            ]
-        ]
-    },
-    {
-        "id": "ea4b58d675f8b6dd",
-        "type": "comment",
-        "z": "fd4b5ffea49ae0ba",
-        "name": "Write Values from S7Communication",
-        "info": "",
-        "x": 200,
-        "y": 980,
-        "wires": []
-    },
-    {
         "id": "42884436d25df976",
         "type": "OpcUa-Client",
         "z": "fd4b5ffea49ae0ba",
-        "endpoint": "08630897d509378a",
+        "endpoint": "1b48238c21b13cef",
         "action": "read",
         "deadbandvalue": "",
         "time": 10,
         "timeUnit": "s",
         "localfile": "",
         "localkeyfile": "",
+        "useTransport": false,
+        "maxChunkCount": "",
+        "maxMessageSize": "",
+        "receiveBufferSize": "",
+        "sendBufferSize": "",
         "name": "",
         "x": 580,
         "y": 540,
@@ -5127,13 +5040,18 @@
         "id": "856b10956b20a5ce",
         "type": "OpcUa-Client",
         "z": "fd4b5ffea49ae0ba",
-        "endpoint": "08630897d509378a",
+        "endpoint": "1b48238c21b13cef",
         "action": "read",
         "deadbandvalue": "",
         "time": 10,
         "timeUnit": "s",
         "localfile": "",
         "localkeyfile": "",
+        "useTransport": false,
+        "maxChunkCount": "",
+        "maxMessageSize": "",
+        "receiveBufferSize": "",
+        "sendBufferSize": "",
         "name": "",
         "x": 580,
         "y": 620,
@@ -5164,13 +5082,18 @@
         "id": "deb63c143525fe37",
         "type": "OpcUa-Client",
         "z": "fd4b5ffea49ae0ba",
-        "endpoint": "08630897d509378a",
+        "endpoint": "1b48238c21b13cef",
         "action": "read",
         "deadbandvalue": "",
         "time": 10,
         "timeUnit": "s",
         "localfile": "",
         "localkeyfile": "",
+        "useTransport": false,
+        "maxChunkCount": "",
+        "maxMessageSize": "",
+        "receiveBufferSize": "",
+        "sendBufferSize": "",
         "name": "",
         "x": 580,
         "y": 580,
@@ -5487,29 +5410,6 @@
         ]
     },
     {
-        "id": "3ad4d78685501b30",
-        "type": "OpcUa-Client",
-        "z": "fd4b5ffea49ae0ba",
-        "endpoint": "a1f0d7db0323ab7e",
-        "action": "write",
-        "deadbandtype": "a",
-        "deadbandvalue": 1,
-        "time": 10,
-        "timeUnit": "s",
-        "certificate": "n",
-        "localfile": "",
-        "localkeyfile": "",
-        "securitymode": "None",
-        "securitypolicy": "None",
-        "name": "",
-        "x": 980,
-        "y": 1060,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
         "id": "0ab1e62ed8c75ad5",
         "type": "OpcUa-Item",
         "z": "fd4b5ffea49ae0ba",
@@ -5542,31 +5442,6 @@
         ]
     },
     {
-        "id": "1c4215f0b56b224d",
-        "type": "OpcUa-Client",
-        "z": "fd4b5ffea49ae0ba",
-        "endpoint": "a1f0d7db0323ab7e",
-        "action": "read",
-        "deadbandtype": "a",
-        "deadbandvalue": 1,
-        "time": 10,
-        "timeUnit": "s",
-        "certificate": "n",
-        "localfile": "",
-        "localkeyfile": "",
-        "securitymode": "None",
-        "securitypolicy": "None",
-        "name": "",
-        "x": 640,
-        "y": 840,
-        "wires": [
-            [
-                "9df9d84204dbfdae"
-            ],
-            []
-        ]
-    },
-    {
         "id": "a140b8117f6eeeac",
         "type": "OpcUa-Item",
         "z": "fd4b5ffea49ae0ba",
@@ -5577,9 +5452,7 @@
         "x": 430,
         "y": 780,
         "wires": [
-            [
-                "1c4215f0b56b224d"
-            ]
+            []
         ]
     },
     {
@@ -5625,9 +5498,7 @@
         "x": 430,
         "y": 820,
         "wires": [
-            [
-                "1c4215f0b56b224d"
-            ]
+            []
         ]
     },
     {
@@ -5641,9 +5512,7 @@
         "x": 430,
         "y": 860,
         "wires": [
-            [
-                "1c4215f0b56b224d"
-            ]
+            []
         ]
     },
     {
@@ -5657,55 +5526,8 @@
         "x": 430,
         "y": 900,
         "wires": [
-            [
-                "1c4215f0b56b224d"
-            ]
+            []
         ]
-    },
-    {
-        "id": "9df9d84204dbfdae",
-        "type": "join",
-        "z": "fd4b5ffea49ae0ba",
-        "name": "",
-        "mode": "custom",
-        "build": "array",
-        "property": "payload",
-        "propertyType": "msg",
-        "key": "topic",
-        "joiner": "\\n",
-        "joinerType": "str",
-        "accumulate": false,
-        "timeout": "",
-        "count": "4",
-        "reduceRight": false,
-        "reduceExp": "",
-        "reduceInit": "",
-        "reduceInitType": "",
-        "reduceFixup": "",
-        "x": 830,
-        "y": 840,
-        "wires": [
-            [
-                "081d63d8603360f3"
-            ]
-        ]
-    },
-    {
-        "id": "ae6ffd5357fdf670",
-        "type": "debug",
-        "z": "fd4b5ffea49ae0ba",
-        "name": "Read Output OPC UA",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1300,
-        "y": 840,
-        "wires": []
     },
     {
         "id": "730aab3b2edcfe01",
@@ -5716,335 +5538,6 @@
         "x": 230,
         "y": 740,
         "wires": []
-    },
-    {
-        "id": "081d63d8603360f3",
-        "type": "change",
-        "z": "fd4b5ffea49ae0ba",
-        "name": "name msg: OPC UA",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "OPC UA",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1040,
-        "y": 840,
-        "wires": [
-            [
-                "ae6ffd5357fdf670"
-            ]
-        ]
-    },
-    {
-        "id": "66f95b2d6dfa7548",
-        "type": "s7 in",
-        "z": "fd4b5ffea49ae0ba",
-        "endpoint": "6f4c5d9bcfd9c087",
-        "mode": "single",
-        "variable": "IOT_REAL",
-        "diff": true,
-        "name": "S7Com S7-1500 REAL",
-        "x": 180,
-        "y": 1060,
-        "wires": [
-            [
-                "bf163c9187a19624"
-            ]
-        ]
-    },
-    {
-        "id": "4d053a67910571b8",
-        "type": "s7 in",
-        "z": "fd4b5ffea49ae0ba",
-        "endpoint": "6f4c5d9bcfd9c087",
-        "mode": "single",
-        "variable": "IOT_INT",
-        "diff": true,
-        "name": "S7Com S7-1500 INT",
-        "x": 170,
-        "y": 1100,
-        "wires": [
-            [
-                "c7e1fb9c232f789a",
-                "1f790c6286d1cfa2"
-            ]
-        ]
-    },
-    {
-        "id": "08dbe4f133daafb9",
-        "type": "OpcUa-Item",
-        "z": "fd4b5ffea49ae0ba",
-        "item": "ns=5;s=S7.Bool",
-        "datatype": "Boolean",
-        "value": "",
-        "name": "WRITE-ITEM",
-        "x": 590,
-        "y": 1020,
-        "wires": [
-            [
-                "3ad4d78685501b30"
-            ]
-        ]
-    },
-    {
-        "id": "c7e1fb9c232f789a",
-        "type": "OpcUa-Item",
-        "z": "fd4b5ffea49ae0ba",
-        "item": "ns=5;s=S7.Int",
-        "datatype": "Int32",
-        "value": "",
-        "name": "WRITE-ITEM",
-        "x": 590,
-        "y": 1100,
-        "wires": [
-            [
-                "3ad4d78685501b30"
-            ]
-        ]
-    },
-    {
-        "id": "bf163c9187a19624",
-        "type": "OpcUa-Item",
-        "z": "fd4b5ffea49ae0ba",
-        "item": "ns=5;s=S7.Real",
-        "datatype": "Float",
-        "value": "",
-        "name": "WRITE-ITEM",
-        "x": 590,
-        "y": 1060,
-        "wires": [
-            [
-                "3ad4d78685501b30"
-            ]
-        ]
-    },
-    {
-        "id": "bc698b9b958f1c15",
-        "type": "OpcUa-Item",
-        "z": "fd4b5ffea49ae0ba",
-        "item": "ns=5;s=S7.Time",
-        "datatype": "DateTime",
-        "value": "",
-        "name": "WRITE-ITEM",
-        "x": 590,
-        "y": 1140,
-        "wires": [
-            [
-                "3ad4d78685501b30"
-            ]
-        ]
-    },
-    {
-        "id": "fde1c99fc4de162d",
-        "type": "OpcUa-Client",
-        "z": "fd4b5ffea49ae0ba",
-        "endpoint": "a1f0d7db0323ab7e",
-        "action": "read",
-        "deadbandtype": "a",
-        "deadbandvalue": 1,
-        "time": 10,
-        "timeUnit": "s",
-        "certificate": "n",
-        "localfile": "",
-        "localkeyfile": "",
-        "securitymode": "None",
-        "securitypolicy": "None",
-        "name": "",
-        "x": 640,
-        "y": 1320,
-        "wires": [
-            [
-                "d25aaae0c1ee6b13"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "2cb89c068306fc0b",
-        "type": "OpcUa-Item",
-        "z": "fd4b5ffea49ae0ba",
-        "item": "ns=5;s=S7.Bool",
-        "datatype": "Boolean",
-        "value": "",
-        "name": "READ-ITEM",
-        "x": 430,
-        "y": 1260,
-        "wires": [
-            [
-                "fde1c99fc4de162d"
-            ]
-        ]
-    },
-    {
-        "id": "b964be8214534dbb",
-        "type": "inject",
-        "z": "fd4b5ffea49ae0ba",
-        "name": "Read Values ever 5s",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "5",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 200,
-        "y": 1260,
-        "wires": [
-            [
-                "2cb89c068306fc0b",
-                "cbe1c761ef3c1aba",
-                "bcab1353cfc8d845",
-                "a24436d0bdc80f60"
-            ]
-        ]
-    },
-    {
-        "id": "cbe1c761ef3c1aba",
-        "type": "OpcUa-Item",
-        "z": "fd4b5ffea49ae0ba",
-        "item": "ns=5;s=S7.Int",
-        "datatype": "Int32",
-        "value": "",
-        "name": "READ-ITEM",
-        "x": 430,
-        "y": 1300,
-        "wires": [
-            [
-                "fde1c99fc4de162d"
-            ]
-        ]
-    },
-    {
-        "id": "bcab1353cfc8d845",
-        "type": "OpcUa-Item",
-        "z": "fd4b5ffea49ae0ba",
-        "item": "ns=5;s=S7.Real",
-        "datatype": "Float",
-        "value": "",
-        "name": "READ-ITEM",
-        "x": 430,
-        "y": 1340,
-        "wires": [
-            [
-                "fde1c99fc4de162d"
-            ]
-        ]
-    },
-    {
-        "id": "a24436d0bdc80f60",
-        "type": "OpcUa-Item",
-        "z": "fd4b5ffea49ae0ba",
-        "item": "ns=5;s=S7.Time",
-        "datatype": "DateTime",
-        "value": "",
-        "name": "READ-ITEM",
-        "x": 430,
-        "y": 1380,
-        "wires": [
-            [
-                "fde1c99fc4de162d"
-            ]
-        ]
-    },
-    {
-        "id": "d25aaae0c1ee6b13",
-        "type": "join",
-        "z": "fd4b5ffea49ae0ba",
-        "name": "",
-        "mode": "custom",
-        "build": "array",
-        "property": "payload",
-        "propertyType": "msg",
-        "key": "topic",
-        "joiner": "\\n",
-        "joinerType": "str",
-        "accumulate": false,
-        "timeout": "",
-        "count": "4",
-        "reduceRight": false,
-        "reduceExp": "",
-        "reduceInit": "",
-        "reduceInitType": "",
-        "reduceFixup": "",
-        "x": 830,
-        "y": 1320,
-        "wires": [
-            [
-                "eadafca6740a6b85"
-            ]
-        ]
-    },
-    {
-        "id": "164c11f4143955fb",
-        "type": "debug",
-        "z": "fd4b5ffea49ae0ba",
-        "name": "Read Output S7Communication",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1330,
-        "y": 1320,
-        "wires": []
-    },
-    {
-        "id": "a2548427d8893be0",
-        "type": "comment",
-        "z": "fd4b5ffea49ae0ba",
-        "name": "Read S7Communication Values from IOT2050 OPC UA",
-        "info": "",
-        "x": 260,
-        "y": 1220,
-        "wires": []
-    },
-    {
-        "id": "eadafca6740a6b85",
-        "type": "change",
-        "z": "fd4b5ffea49ae0ba",
-        "name": "name msg: S7",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "S7",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1020,
-        "y": 1320,
-        "wires": [
-            [
-                "164c11f4143955fb"
-            ]
-        ]
     },
     {
         "id": "4cb0db1170fee52f",
@@ -6060,7 +5553,7 @@
         "id": "adc980a57987a319",
         "type": "OpcUa-Client",
         "z": "fd4b5ffea49ae0ba",
-        "endpoint": "a1f0d7db0323ab7e",
+        "endpoint": "",
         "action": "read",
         "deadbandtype": "a",
         "deadbandvalue": 1,
@@ -6432,33 +5925,6 @@
         ]
     },
     {
-        "id": "1f790c6286d1cfa2",
-        "type": "change",
-        "z": "fd4b5ffea49ae0ba",
-        "name": "TIME",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "date"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 390,
-        "y": 1140,
-        "wires": [
-            [
-                "bc698b9b958f1c15"
-            ]
-        ]
-    },
-    {
         "id": "8c47f4dc9dbd208a",
         "type": "change",
         "z": "fd4b5ffea49ae0ba",
@@ -6489,7 +5955,7 @@
         "id": "1cc309746187aaac",
         "type": "OpcUa-Client",
         "z": "fd4b5ffea49ae0ba",
-        "endpoint": "a1f0d7db0323ab7e",
+        "endpoint": "",
         "action": "write",
         "deadbandtype": "a",
         "deadbandvalue": 1,
