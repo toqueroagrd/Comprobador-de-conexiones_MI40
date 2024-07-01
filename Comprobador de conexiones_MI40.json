@@ -2945,7 +2945,7 @@
         "users": "",
         "nodesetDir": "",
         "autoAcceptUnknownCertificate": true,
-        "registerToDiscovery": false,
+        "registerToDiscovery": true,
         "constructDefaultAddressSpace": false,
         "allowAnonymous": true,
         "endpointNone": true,
