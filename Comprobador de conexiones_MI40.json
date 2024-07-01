@@ -2939,7 +2939,7 @@
         "nodesetDir": "",
         "autoAcceptUnknownCertificate": true,
         "registerToDiscovery": false,
-        "constructDefaultAddressSpace": true,
+        "constructDefaultAddressSpace": false,
         "allowAnonymous": true,
         "endpointNone": true,
         "endpointSign": true,
