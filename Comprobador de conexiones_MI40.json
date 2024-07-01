@@ -1911,23 +1911,6 @@
         "wires": []
     },
     {
-        "id": "7720b664808c988a",
-        "type": "debug",
-        "z": "e340100c9b9fe682",
-        "name": "Debug server abierto",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 780,
-        "y": 940,
-        "wires": []
-    },
-    {
         "id": "0b8489ec0a415f28",
         "type": "comment",
         "z": "e340100c9b9fe682",
@@ -1935,43 +1918,6 @@
         "info": "Servidor OPC UA con usuario en el puerto 55490\n\nUser: MI40\nPass: MI40\n\nVaribles disponibles en el espacio de direcciones:\n",
         "x": 260,
         "y": 940,
-        "wires": []
-    },
-    {
-        "id": "dee19a8c6af3fb62",
-        "type": "function",
-        "z": "e340100c9b9fe682",
-        "name": "Valor_1",
-        "func": "msg.valuesToWrite = [false];\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 780,
-        "y": 820,
-        "wires": [
-            [
-                "b68301c89a686ca3"
-            ]
-        ]
-    },
-    {
-        "id": "f5e0311009728f97",
-        "type": "debug",
-        "z": "e340100c9b9fe682",
-        "name": "Debug lectura",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1020,
-        "y": 1020,
         "wires": []
     },
     {
@@ -2240,90 +2186,6 @@
         "wires": []
     },
     {
-        "id": "941731631eaf2265",
-        "type": "ui_text",
-        "z": "e340100c9b9fe682",
-        "group": "9ba0ed5ba846c5e9",
-        "order": 9,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Feedback texto",
-        "format": "{{payload.value[3].value}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1020,
-        "y": 1260,
-        "wires": []
-    },
-    {
-        "id": "879ee1b55564eb3c",
-        "type": "ui_text",
-        "z": "e340100c9b9fe682",
-        "group": "9ba0ed5ba846c5e9",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Feedback boolean",
-        "format": "{{payload.value[0].value}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1030,
-        "y": 1080,
-        "wires": []
-    },
-    {
-        "id": "304e43b0f1af034a",
-        "type": "ui_text",
-        "z": "e340100c9b9fe682",
-        "group": "9ba0ed5ba846c5e9",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Feedback double",
-        "format": "{{payload.value[1].value}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1030,
-        "y": 1140,
-        "wires": []
-    },
-    {
-        "id": "3b3119f4e2920307",
-        "type": "ui_text",
-        "z": "e340100c9b9fe682",
-        "group": "9ba0ed5ba846c5e9",
-        "order": 8,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Feedback Int",
-        "format": "{{payload.value[2].value}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1010,
-        "y": 1200,
-        "wires": []
-    },
-    {
         "id": "689117baa02312b2",
         "type": "ui_ui_control",
         "z": "e340100c9b9fe682",
@@ -2403,77 +2265,6 @@
         ]
     },
     {
-        "id": "651ce7606492a541",
-        "type": "OPCUA-IIoT-Inject",
-        "z": "e340100c9b9fe682",
-        "injectType": "write",
-        "payload": "",
-        "payloadType": "date",
-        "topic": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "startDelay": "",
-        "name": "Write_1",
-        "addressSpaceItems": [
-            {
-                "name": "Var_Boulean",
-                "nodeId": "ns=1;s=Var_BOOL",
-                "datatypeName": "Boolean"
-            }
-        ],
-        "x": 550,
-        "y": 820,
-        "wires": [
-            [
-                "dee19a8c6af3fb62"
-            ]
-        ]
-    },
-    {
-        "id": "6b2ab1a26fb039c6",
-        "type": "OPCUA-IIoT-Inject",
-        "z": "e340100c9b9fe682",
-        "injectType": "read",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "",
-        "repeat": "0.5",
-        "crontab": "",
-        "once": false,
-        "startDelay": "",
-        "name": "Nodos de lectura",
-        "addressSpaceItems": [
-            {
-                "name": "Boolean",
-                "nodeId": "ns=1;s=Var_BOOL",
-                "datatypeName": ""
-            },
-            {
-                "name": "Double",
-                "nodeId": "ns=1;s=Var_Double",
-                "datatypeName": ""
-            },
-            {
-                "name": "Int",
-                "nodeId": "ns=1;s=Var_INT",
-                "datatypeName": ""
-            },
-            {
-                "name": "Texto",
-                "nodeId": "ns=1;s=Var_STRING",
-                "datatypeName": ""
-            }
-        ],
-        "x": 510,
-        "y": 1080,
-        "wires": [
-            [
-                "d809da8ee0803c90"
-            ]
-        ]
-    },
-    {
         "id": "52f02ee11c64bbf5",
         "type": "OPCUA-IIoT-Read",
         "z": "e340100c9b9fe682",
@@ -2497,47 +2288,6 @@
                 "41792a2d38623e31",
                 "59c8fbcd1861c8b7"
             ]
-        ]
-    },
-    {
-        "id": "d809da8ee0803c90",
-        "type": "OPCUA-IIoT-Read",
-        "z": "e340100c9b9fe682",
-        "attributeId": 0,
-        "maxAge": 1,
-        "depth": 1,
-        "connector": "512391c17844a41a",
-        "name": "Lectura de variables",
-        "justValue": true,
-        "showStatusActivities": false,
-        "showErrors": false,
-        "parseStrings": false,
-        "historyDays": 1,
-        "x": 780,
-        "y": 1080,
-        "wires": [
-            [
-                "879ee1b55564eb3c",
-                "3b3119f4e2920307",
-                "f5e0311009728f97",
-                "304e43b0f1af034a",
-                "941731631eaf2265"
-            ]
-        ]
-    },
-    {
-        "id": "b68301c89a686ca3",
-        "type": "OPCUA-IIoT-Write",
-        "z": "e340100c9b9fe682",
-        "connector": "77fdc29e.3c49ec",
-        "name": "Escritura de variables ",
-        "justValue": false,
-        "showStatusActivities": false,
-        "showErrors": false,
-        "x": 1020,
-        "y": 820,
-        "wires": [
-            []
         ]
     },
     {
@@ -2579,48 +2329,6 @@
         "wires": [
             [
                 "b5c67bdbc44d01ab"
-            ]
-        ]
-    },
-    {
-        "id": "869f691e3c6c2d75",
-        "type": "OPCUA-IIoT-Flex-Server",
-        "z": "e340100c9b9fe682",
-        "port": "55490",
-        "endpoint": "",
-        "acceptExternalCommands": true,
-        "maxAllowedSessionNumber": "",
-        "maxConnectionsPerEndpoint": "",
-        "maxAllowedSubscriptionNumber": "",
-        "alternateHostname": "",
-        "name": "OPC UA Server con usuario",
-        "showStatusActivities": false,
-        "showErrors": false,
-        "allowAnonymous": false,
-        "individualCerts": false,
-        "isAuditing": false,
-        "serverDiscovery": false,
-        "users": [
-            {
-                "name": "MI40",
-                "password": "MI40"
-            }
-        ],
-        "xmlsets": [],
-        "publicCertificateFile": "",
-        "privateCertificateFile": "",
-        "registerServerMethod": "1",
-        "discoveryServerEndpointUrl": "",
-        "capabilitiesForMDNS": "",
-        "maxNodesPerRead": 1000,
-        "maxNodesPerBrowse": 2000,
-        "delayToClose": 1000,
-        "addressSpaceScript": "function constructAlarmAddressSpace(server, addressSpace, eventObjects, done) {\n    // server = the created node-opcua server\n    // addressSpace = script placeholder\n    // eventObjects = to hold event variables in memory from this script\n\n    // internal global sandbox objects are \n    // node = node of the flex server, \n    // coreServer = core iiot server object for debug and access to nodeOPCUA,\n    // and scriptObjects to hold variables and functions\n    const LocalizedText = opcua.LocalizedText;\n    const namespace = addressSpace.getOwnNamespace();\n\n    coreServer.internalDebugLog('init dynamic address space')\n    node.warn('construct new address space for OPC UA')\n\n    const Variant = opcua.Variant;\n    const DataType = opcua.DataType;\n    const DataValue = opcua.DataValue;\n\n    coreServer.internalDebugLog(\"init dynamic address space\");\n    const rootFolder = addressSpace.findNode(\"RootFolder\");\n\n    const myDevice = namespace.addFolder(rootFolder.objects, {\n        \"browseName\": \"Mis_Variables_protegidas\"\n    });\n    namespace.addVariable({\n        organizedBy: myDevice,\n        browseName: \"Var_BOOL\",\n        nodeId: \"ns=1;s=Var_BOOL\",\n        dataType: \"Boolean\",\n        value: {\n            get: function () {\n                return new opcua.Variant({ dataType: opcua.DataType.Boolean, value: true });\n            },\n            set: function (variant) {\n                return opcua.StatusCodes.Good;\n            }\n        }\n    });\n\n    namespace.addVariable({\n        organizedBy: myDevice,\n        browseName: \"Var_INT\",\n        nodeId: \"ns=1;s=Var_INT\",\n        dataType: \"Int32\",\n        value: {\n            get: function () {\n                return new opcua.Variant({ dataType: opcua.DataType.Int32, value: -1651 });\n            },\n            set: function (variant) {\n                return opcua.StatusCodes.Good;\n            }\n        }\n    });\n\n    namespace.addVariable({\n        organizedBy: myDevice,\n        browseName: \"Var_Double\",\n        nodeId: \"ns=1;s=Var_Double\",\n        dataType: \"Double\",\n        value: {\n            get: function () {\n                return new opcua.Variant({ dataType: opcua.DataType.Double, value: 10.3 });\n            },\n            set: function (variant) {\n                return opcua.StatusCodes.Good;\n            }\n        }\n    });\n\n    namespace.addVariable({\n        organizedBy: myDevice,\n        browseName: \"Var_STRING\",\n        nodeId: \"ns=1;s=Var_STRING\",\n        dataType: \"String\",\n        value: {\n            get: function () {\n                return new opcua.Variant({ dataType: opcua.DataType.String, value: \"Hola Mundo MI4.0\" });\n            },\n            set: function (variant) {\n                return opcua.StatusCodes.Good;\n            }\n        }\n    });\n    coreServer.internalDebugLog(\"create dynamic address space done\");\n    node.warn(\"construction of new address space for OPC UA done\");\n\n    done();\n}",
-        "x": 520,
-        "y": 940,
-        "wires": [
-            [
-                "7720b664808c988a"
             ]
         ]
     },
