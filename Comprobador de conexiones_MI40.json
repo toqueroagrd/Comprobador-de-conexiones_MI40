@@ -757,6 +757,18 @@
         "parallelUnitIdsAllowed": false
     },
     {
+        "id": "1b48238c21b13cef",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://localhost:55489",
+        "secpol": "None",
+        "secmode": "None",
+        "none": true,
+        "login": false,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
+    },
+    {
         "id": "6f4c5d9bcfd9c087",
         "type": "s7 endpoint",
         "transport": "iso-on-tcp",
@@ -788,18 +800,6 @@
                 "name": "IOT_BOOL"
             }
         ]
-    },
-    {
-        "id": "1b48238c21b13cef",
-        "type": "OpcUa-Endpoint",
-        "endpoint": "opc.tcp:/localhost:55489",
-        "secpol": "None",
-        "secmode": "None",
-        "none": true,
-        "login": false,
-        "usercert": false,
-        "usercertificate": "",
-        "userprivatekey": ""
     },
     {
         "id": "4ec01e92.bb7e1",
