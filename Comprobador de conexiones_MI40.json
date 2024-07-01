@@ -2545,7 +2545,7 @@
         "type": "OPCUA-IIoT-Flex-Server",
         "z": "e340100c9b9fe682",
         "port": "55489",
-        "endpoint": "",
+        "endpoint": "opc.tcp://192.168.1.143:55489",
         "acceptExternalCommands": true,
         "maxAllowedSessionNumber": "",
         "maxConnectionsPerEndpoint": "",
