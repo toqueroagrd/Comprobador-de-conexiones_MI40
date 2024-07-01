@@ -2744,26 +2744,6 @@
         ]
     },
     {
-        "id": "823e8b65e8698aa5",
-        "type": "function",
-        "z": "4e702d50e851e07d",
-        "name": "Obtener IPV4",
-        "func": "msg.Ipv4 = msg.payload[3].address; \nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 740,
-        "y": 160,
-        "wires": [
-            [
-                "e0a37c872dc2464e"
-            ]
-        ]
-    },
-    {
         "id": "cd0fbfd284939421",
         "type": "debug",
         "z": "4e702d50e851e07d",
@@ -2776,28 +2756,8 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 720,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "7d55ca4f9acb2845",
-        "type": "function",
-        "z": "4e702d50e851e07d",
-        "name": "Obtener IPV4",
-        "func": "msg.Ipv4 = msg.payload[4].address; \nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 740,
         "y": 200,
-        "wires": [
-            [
-                "951e16804deda846"
-            ]
-        ]
+        "wires": []
     },
     {
         "id": "function-coil-control",
@@ -2857,26 +2817,6 @@
         ]
     },
     {
-        "id": "b546711919b276bf",
-        "type": "function",
-        "z": "4e702d50e851e07d",
-        "name": "Obtener IPV4",
-        "func": "msg.Ipv4 = msg.payload[6].address; \nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 740,
-        "y": 240,
-        "wires": [
-            [
-                "60ba5b3dc17322d0"
-            ]
-        ]
-    },
-    {
         "id": "30b8544c82e15861",
         "type": "hostip",
         "z": "4e702d50e851e07d",
@@ -2885,10 +2825,8 @@
         "y": 160,
         "wires": [
             [
-                "823e8b65e8698aa5",
                 "cd0fbfd284939421",
-                "7d55ca4f9acb2845",
-                "b546711919b276bf"
+                "609fdaaf3a23e5a7"
             ]
         ]
     },
@@ -3111,48 +3049,6 @@
         ]
     },
     {
-        "id": "e0a37c872dc2464e",
-        "type": "ui_text",
-        "z": "4e702d50e851e07d",
-        "group": "c1fd1f778554d218",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "IP Maestro (Adaptador 1)",
-        "format": "{{msg.Ipv4}}",
-        "layout": "col-center",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1030,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "951e16804deda846",
-        "type": "ui_text",
-        "z": "4e702d50e851e07d",
-        "group": "c1fd1f778554d218",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "IP Maestro (Adaptador 2)",
-        "format": "{{msg.Ipv4}}",
-        "layout": "col-center",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1030,
-        "y": 200,
-        "wires": []
-    },
-    {
         "id": "0bbf479c9c6410a2",
         "type": "ui_text",
         "z": "4e702d50e851e07d",
@@ -3213,26 +3109,6 @@
         "color": "#000000",
         "x": 650,
         "y": 660,
-        "wires": []
-    },
-    {
-        "id": "60ba5b3dc17322d0",
-        "type": "ui_text",
-        "z": "4e702d50e851e07d",
-        "group": "c1fd1f778554d218",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "IP Maestro (Adaptador 3)",
-        "format": "{{msg.Ipv4}}",
-        "layout": "col-center",
-        "className": "",
-        "style": false,
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1030,
-        "y": 240,
         "wires": []
     },
     {
@@ -3313,6 +3189,47 @@
         "wires": [
             [
                 "function-input-control"
+            ]
+        ]
+    },
+    {
+        "id": "18f7516113b6cdb8",
+        "type": "ui_text",
+        "z": "4e702d50e851e07d",
+        "group": "7b8a04e92de7a63b",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "IP Maestro",
+        "format": "{{msg.Ipv4}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 930,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "609fdaaf3a23e5a7",
+        "type": "function",
+        "z": "4e702d50e851e07d",
+        "name": "Obtener IPV4",
+        "func": "msg.Ipv4 = msg.payload[0].address; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 160,
+        "wires": [
+            [
+                "18f7516113b6cdb8"
             ]
         ]
     }
