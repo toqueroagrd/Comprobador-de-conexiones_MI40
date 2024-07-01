@@ -35,7 +35,7 @@
         "id": "fd4b5ffea49ae0ba",
         "type": "tab",
         "label": "IOT2050 Communication Example",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
@@ -3806,6 +3806,7 @@
         "id": "e4d81d84815907be",
         "type": "OPCUA-IIoT-Flex-Server",
         "z": "e340100c9b9fe682",
+        "d": true,
         "port": "55489",
         "endpoint": "opc.tcp://192.168.1.143:55489",
         "acceptExternalCommands": true,
@@ -3908,98 +3909,13 @@
         "wires": []
     },
     {
-        "id": "41c8e06c20aea51f",
-        "type": "inject",
-        "z": "e340100c9b9fe682",
-        "name": "buildStructure",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "www.testiot.com",
-        "payload": "{ \"opcuaCommand\": \"registerNamespace\" }",
-        "payloadType": "json",
-        "x": 510,
-        "y": 940,
-        "wires": [
-            [
-                "0906e2a97d67af6b"
-            ]
-        ]
-    },
-    {
-        "id": "fda032980e4b0985",
-        "type": "change",
-        "z": "e340100c9b9fe682",
-        "name": "Create Object",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{ \"opcuaCommand\": \"addFolder\" }",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "ns=5;s=IOTData",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 820,
-        "y": 940,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "0906e2a97d67af6b",
-        "type": "delay",
-        "z": "e340100c9b9fe682",
-        "name": "Delay 1s",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "outputs": 1,
-        "x": 660,
-        "y": 940,
-        "wires": [
-            [
-                "fda032980e4b0985"
-            ]
-        ]
-    },
-    {
         "id": "f3b75042adf5e6dd",
         "type": "subflow:93ffc0ab.75647",
         "z": "e340100c9b9fe682",
         "name": "OPC UA",
         "env": [],
-        "x": 740,
-        "y": 1100,
+        "x": 220,
+        "y": 1200,
         "wires": [
             [
                 "ed7a9506ab190907"
@@ -4059,8 +3975,8 @@
         "maxMessageSize": "",
         "maxBufferSize": "",
         "maxSessions": "",
-        "x": 980,
-        "y": 1100,
+        "x": 800,
+        "y": 1200,
         "wires": [
             [
                 "8d68029415083e9e"
@@ -4080,8 +3996,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1190,
-        "y": 1100,
+        "x": 1010,
+        "y": 1200,
         "wires": []
     },
     {
@@ -4116,7 +4032,7 @@
         "sendBufferSize": "",
         "name": "",
         "x": 760,
-        "y": 1280,
+        "y": 1420,
         "wires": [
             [],
             []
@@ -4131,7 +4047,7 @@
         "value": "",
         "name": "Feedback boolean",
         "x": 510,
-        "y": 1220,
+        "y": 1360,
         "wires": [
             [
                 "22e39a9b7932abc2"
@@ -4160,7 +4076,7 @@
         "payload": "",
         "payloadType": "str",
         "x": 260,
-        "y": 1220,
+        "y": 1360,
         "wires": [
             [
                 "70edb966c9f946dc",
@@ -4179,7 +4095,7 @@
         "value": "",
         "name": "Feedback Int",
         "x": 490,
-        "y": 1260,
+        "y": 1400,
         "wires": [
             [
                 "22e39a9b7932abc2"
@@ -4195,7 +4111,7 @@
         "value": "",
         "name": "Feedback double",
         "x": 510,
-        "y": 1300,
+        "y": 1440,
         "wires": [
             [
                 "22e39a9b7932abc2"
@@ -4211,7 +4127,7 @@
         "value": "",
         "name": "Feedback texto",
         "x": 500,
-        "y": 1340,
+        "y": 1480,
         "wires": [
             [
                 "22e39a9b7932abc2"
@@ -4277,7 +4193,7 @@
         "y": 1100,
         "wires": [
             [
-                "f3b75042adf5e6dd"
+                "ed7a9506ab190907"
             ]
         ]
     },
@@ -5145,7 +5061,7 @@
         "maxMonitoredItemsPerCall": 0,
         "maxNodesPerHistoryUpdateEvents": 0,
         "maxNodesPerTranslateBrowsePathsToNodeIds": 0,
-        "x": 1060,
+        "x": 820,
         "y": 200,
         "wires": [
             [
@@ -5166,7 +5082,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1250,
+        "x": 1010,
         "y": 200,
         "wires": []
     },
@@ -5216,7 +5132,7 @@
         "z": "fd4b5ffea49ae0ba",
         "name": "OPC UA Server on opc.tcp://localhost:4840/",
         "info": "",
-        "x": 1170,
+        "x": 930,
         "y": 160,
         "wires": []
     },
@@ -5250,8 +5166,7 @@
         "y": 80,
         "wires": [
             [
-                "93b20f39739f7ecf",
-                "f9477f6047704aff"
+                "93b20f39739f7ecf"
             ]
         ]
     },
@@ -5280,79 +5195,13 @@
         ]
     },
     {
-        "id": "f9477f6047704aff",
-        "type": "subflow:f149fb7e.880d38",
-        "z": "fd4b5ffea49ae0ba",
-        "name": "Modbus",
-        "env": [],
-        "x": 440,
-        "y": 200,
-        "wires": [
-            [
-                "93b20f39739f7ecf"
-            ],
-            [
-                "93b20f39739f7ecf"
-            ],
-            [
-                "93b20f39739f7ecf"
-            ],
-            [
-                "93b20f39739f7ecf"
-            ],
-            [
-                "93b20f39739f7ecf"
-            ],
-            [
-                "93b20f39739f7ecf",
-                "60bf3fe5dad00b7c"
-            ],
-            [
-                "93b20f39739f7ecf"
-            ]
-        ]
-    },
-    {
-        "id": "60bf3fe5dad00b7c",
-        "type": "subflow:22707877.303a28",
-        "z": "fd4b5ffea49ae0ba",
-        "name": "S7",
-        "env": [],
-        "x": 630,
-        "y": 320,
-        "wires": [
-            [
-                "93b20f39739f7ecf"
-            ],
-            [
-                "93b20f39739f7ecf"
-            ],
-            [
-                "93b20f39739f7ecf"
-            ],
-            [
-                "93b20f39739f7ecf"
-            ],
-            [
-                "93b20f39739f7ecf"
-            ],
-            [
-                "93b20f39739f7ecf",
-                "2bbee5a80d0749f4"
-            ],
-            [
-                "93b20f39739f7ecf"
-            ]
-        ]
-    },
-    {
         "id": "2bbee5a80d0749f4",
         "type": "subflow:93ffc0ab.75647",
         "z": "fd4b5ffea49ae0ba",
         "name": "OPC UA",
         "env": [],
-        "x": 860,
-        "y": 420,
+        "x": 180,
+        "y": 200,
         "wires": [
             [
                 "93b20f39739f7ecf"
