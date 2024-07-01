@@ -2902,7 +2902,7 @@
         "z": "e340100c9b9fe682",
         "name": "OPC UA",
         "env": [],
-        "x": 220,
+        "x": 380,
         "y": 1200,
         "wires": [
             [
@@ -3206,6 +3206,35 @@
         "wires": [
             [
                 "a9ee4948d4d13b80"
+            ]
+        ]
+    },
+    {
+        "id": "772bfc44482fd3c6",
+        "type": "inject",
+        "z": "e340100c9b9fe682",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 1200,
+        "wires": [
+            [
+                "f3b75042adf5e6dd"
             ]
         ]
     },
