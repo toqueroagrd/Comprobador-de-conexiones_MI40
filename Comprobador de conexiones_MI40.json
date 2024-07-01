@@ -3168,7 +3168,7 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "ns=5;s=MI40_Object",
+                "to": "ns=1;s=MI40_Object",
                 "tot": "str"
             }
         ],
