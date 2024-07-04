@@ -3175,7 +3175,7 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "ns=1;s=MI40_Variables",
+        "topic": "ns=0;s=MI40_Variables",
         "payload": "{ \"opcuaCommand\": \"addFolder\" }",
         "payloadType": "str",
         "x": 250,
