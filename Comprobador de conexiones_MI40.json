@@ -19,7 +19,7 @@
         "id": "e340100c9b9fe682",
         "type": "tab",
         "label": "OPCUA",
-        "disabled": true,
+        "disabled": false,
         "info": "",
         "env": []
     },
@@ -2971,6 +2971,7 @@
         "id": "f3b75042adf5e6dd",
         "type": "subflow:93ffc0ab.75647",
         "z": "e340100c9b9fe682",
+        "d": true,
         "name": "OPC UA",
         "env": [],
         "x": 240,
@@ -3197,6 +3198,7 @@
         "id": "aded64a1bbbb8082",
         "type": "inject",
         "z": "e340100c9b9fe682",
+        "d": true,
         "name": "buildStructure",
         "props": [
             {
@@ -3227,6 +3229,7 @@
         "id": "a9ee4948d4d13b80",
         "type": "change",
         "z": "e340100c9b9fe682",
+        "d": true,
         "name": "Create Object",
         "rules": [
             {
@@ -3261,6 +3264,7 @@
         "id": "57d3c1600cb98fd8",
         "type": "delay",
         "z": "e340100c9b9fe682",
+        "d": true,
         "name": "Delay 1s",
         "pauseType": "delay",
         "timeout": "1",
@@ -3278,6 +3282,64 @@
         "wires": [
             [
                 "a9ee4948d4d13b80"
+            ]
+        ]
+    },
+    {
+        "id": "f91adeca12381c1e",
+        "type": "inject",
+        "z": "e340100c9b9fe682",
+        "name": "AddFolder Test",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=TestAddFolderX;description=MyTestFolder",
+        "payload": "{\"opcuaCommand\":\"addFolder\"}",
+        "payloadType": "json",
+        "x": 510,
+        "y": 940,
+        "wires": [
+            [
+                "ed7a9506ab190907"
+            ]
+        ]
+    },
+    {
+        "id": "c0090fe784741093",
+        "type": "inject",
+        "z": "e340100c9b9fe682",
+        "name": "AddVariable",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=TestAddVariableX;datatype=Float;description=MyVariableX",
+        "payload": "{\"opcuaCommand\":\"addVariable\"}",
+        "payloadType": "json",
+        "x": 520,
+        "y": 1000,
+        "wires": [
+            [
+                "ed7a9506ab190907"
             ]
         ]
     },
@@ -7312,7 +7374,8 @@
         "z": "b4792f36.7b37e",
         "name": "ServerInput",
         "links": [
-            "1df7782bd6adf05a"
+            "1df7782bd6adf05a",
+            "dc2985072cfcf001"
         ],
         "x": 75,
         "y": 40,
