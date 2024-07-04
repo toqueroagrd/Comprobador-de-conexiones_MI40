@@ -2708,7 +2708,7 @@
         "type": "OPCUA-IIoT-Flex-Server",
         "z": "e340100c9b9fe682",
         "port": "55489",
-        "endpoint": "opc.tcp://127.0.0.1:55489",
+        "endpoint": "",
         "acceptExternalCommands": true,
         "maxAllowedSessionNumber": "",
         "maxConnectionsPerEndpoint": "",
@@ -2720,7 +2720,7 @@
         "allowAnonymous": true,
         "individualCerts": false,
         "isAuditing": false,
-        "serverDiscovery": true,
+        "serverDiscovery": false,
         "users": [
             {
                 "name": "MI40",
@@ -2730,7 +2730,7 @@
         "xmlsets": [],
         "publicCertificateFile": "",
         "privateCertificateFile": "",
-        "registerServerMethod": "3",
+        "registerServerMethod": "1",
         "discoveryServerEndpointUrl": "opc.tcp://127.0.0.1:55489",
         "capabilitiesForMDNS": "",
         "maxNodesPerRead": 1000,
