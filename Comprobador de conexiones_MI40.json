@@ -5270,7 +5270,7 @@
         "id": "46ba6b0a0309a386",
         "type": "OPCUA-IIoT-Flex-Server",
         "z": "9e98528a1a8ac073",
-        "port": "55491",
+        "port": "4840",
         "endpoint": "",
         "acceptExternalCommands": true,
         "maxAllowedSessionNumber": "",
