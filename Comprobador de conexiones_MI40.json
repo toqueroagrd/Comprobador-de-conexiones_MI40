@@ -5540,7 +5540,7 @@
         "maxConnectionsPerEndpoint": "",
         "maxMessageSize": "",
         "maxBufferSize": "",
-        "x": 870,
+        "x": 670,
         "y": 60,
         "wires": [
             [
