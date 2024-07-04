@@ -647,75 +647,6 @@
         "maxBadSessionRequests": "10"
     },
     {
-        "id": "015d58c3fd0d56e0",
-        "type": "OPCUA-IIoT-Connector",
-        "discoveryUrl": "Pruebas",
-        "endpoint": "opc.tcp://localhost:55481",
-        "endpointMustExist": false,
-        "keepSessionAlive": true,
-        "loginEnabled": false,
-        "name": "LOCAL SERVER",
-        "showErrors": false,
-        "securityPolicy": "None",
-        "securityMode": "None",
-        "individualCerts": false,
-        "publicCertificateFile": "",
-        "privateKeyFile": "",
-        "defaultSecureTokenLifetime": "",
-        "autoSelectRightEndpoint": false,
-        "strategyMaxRetry": "",
-        "strategyInitialDelay": "",
-        "strategyMaxDelay": "",
-        "strategyRandomisationFactor": "",
-        "requestedSessionTimeout": "",
-        "connectionStartDelay": "",
-        "reconnectDelay": "",
-        "maxBadSessionRequests": "10"
-    },
-    {
-        "id": "e1451619.8c241",
-        "type": "OPCUA-IIoT-Connector",
-        "discoveryUrl": "",
-        "endpoint": "opc.tcp://localhost:55481/",
-        "endpointMustExist": false,
-        "keepSessionAlive": true,
-        "loginEnabled": false,
-        "name": "LOCAL READ WRITE SERVER",
-        "showErrors": false,
-        "securityPolicy": "None",
-        "securityMode": "None",
-        "individualCerts": false,
-        "publicCertificateFile": "",
-        "privateKeyFile": "",
-        "defaultSecureTokenLifetime": "60000",
-        "autoSelectRightEndpoint": false,
-        "strategyMaxRetry": "",
-        "strategyInitialDelay": "",
-        "strategyMaxDelay": "",
-        "strategyRandomisationFactor": "",
-        "requestedSessionTimeout": "",
-        "connectionStartDelay": "",
-        "reconnectDelay": "",
-        "maxBadSessionRequests": ""
-    },
-    {
-        "id": "8c13482e.2d67",
-        "type": "OPCUA-IIoT-Connector",
-        "discoveryUrl": "",
-        "endpoint": "opc.tcp://localhost:55388/",
-        "endpointMustExist": false,
-        "keepSessionAlive": true,
-        "loginEnabled": false,
-        "name": "LOCAL DEMO SERVER",
-        "showErrors": false,
-        "securityPolicy": "None",
-        "securityMode": "None",
-        "publicCertificateFile": "",
-        "privateKeyFile": "",
-        "defaultSecureTokenLifetime": "60000",
-        "autoSelectRightEndpoint": false
-    },
-    {
         "id": "eeb32076a0ef250d",
         "type": "ui_spacer",
         "z": "a4a07f451bd4dad9",
@@ -5371,7 +5302,7 @@
         "id": "46ba6b0a0309a386",
         "type": "OPCUA-IIoT-Flex-Server",
         "z": "9e98528a1a8ac073",
-        "port": "55489",
+        "port": "55491",
         "endpoint": "",
         "acceptExternalCommands": true,
         "maxAllowedSessionNumber": "",
@@ -5468,23 +5399,6 @@
         "wires": []
     },
     {
-        "id": "93ba75eb6c9818bc",
-        "type": "OPCUA-IIoT-Write",
-        "z": "9e98528a1a8ac073",
-        "connector": "77fdc29e.3c49ec",
-        "name": "",
-        "justValue": false,
-        "showStatusActivities": false,
-        "showErrors": true,
-        "x": 450,
-        "y": 300,
-        "wires": [
-            [
-                "eacec11f14c4433f"
-            ]
-        ]
-    },
-    {
         "id": "524dd108ec40ea9f",
         "type": "OPCUA-IIoT-Inject",
         "z": "9e98528a1a8ac073",
@@ -5529,8 +5443,8 @@
         "y": 300,
         "wires": [
             [
-                "93ba75eb6c9818bc",
-                "d1773b9e76702806"
+                "d1773b9e76702806",
+                "93ba75eb6c9818bc"
             ]
         ]
     },
@@ -5632,6 +5546,23 @@
         "wires": [
             [
                 "4dc62287dda5244e"
+            ]
+        ]
+    },
+    {
+        "id": "93ba75eb6c9818bc",
+        "type": "OPCUA-IIoT-Write",
+        "z": "9e98528a1a8ac073",
+        "connector": "77fdc29e.3c49ec",
+        "name": "",
+        "justValue": false,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "x": 450,
+        "y": 300,
+        "wires": [
+            [
+                "eacec11f14c4433f"
             ]
         ]
     }
