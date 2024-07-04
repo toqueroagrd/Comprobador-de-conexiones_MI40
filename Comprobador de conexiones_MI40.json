@@ -3187,6 +3187,35 @@
         ]
     },
     {
+        "id": "f93202aab49dc37a",
+        "type": "inject",
+        "z": "e340100c9b9fe682",
+        "name": "Set carperta",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "\"ns=0;s=MI40_Variables\"",
+        "payload": "{ \"opcuaCommand\": \"setFolder\" }",
+        "payloadType": "str",
+        "x": 250,
+        "y": 1180,
+        "wires": [
+            [
+                "ed7a9506ab190907"
+            ]
+        ]
+    },
+    {
         "id": "0c6f07a60cbb40fa",
         "type": "change",
         "z": "4e702d50e851e07d",
