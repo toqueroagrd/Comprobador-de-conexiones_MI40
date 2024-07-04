@@ -19,7 +19,7 @@
         "id": "e340100c9b9fe682",
         "type": "tab",
         "label": "OPCUA",
-        "disabled": true,
+        "disabled": false,
         "info": "",
         "env": []
     },
@@ -42,7 +42,7 @@
         "id": "9e98528a1a8ac073",
         "type": "tab",
         "label": "IIoT OPC UA Flex Server",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
