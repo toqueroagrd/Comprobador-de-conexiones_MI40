@@ -45,7 +45,7 @@
         "id": "b4792f36.7b37e",
         "type": "tab",
         "label": "NodeRed UA-Server",
-        "disabled": false
+        "disabled": true
     },
     {
         "id": "93ffc0ab.75647",
@@ -3100,97 +3100,6 @@
         ]
     },
     {
-        "id": "aded64a1bbbb8082",
-        "type": "inject",
-        "z": "e340100c9b9fe682",
-        "d": true,
-        "name": "buildStructure",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "www.testiot.com",
-        "payload": "{ \"opcuaCommand\": \"registerNamespace\" }",
-        "payloadType": "json",
-        "x": 230,
-        "y": 1160,
-        "wires": [
-            [
-                "57d3c1600cb98fd8",
-                "ed7a9506ab190907"
-            ]
-        ]
-    },
-    {
-        "id": "a9ee4948d4d13b80",
-        "type": "change",
-        "z": "e340100c9b9fe682",
-        "d": true,
-        "name": "Create Object",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{ \"opcuaCommand\": \"addFolder\" }",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "ns=5;s=MI40_Object",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 580,
-        "y": 1100,
-        "wires": [
-            [
-                "ed7a9506ab190907"
-            ]
-        ]
-    },
-    {
-        "id": "57d3c1600cb98fd8",
-        "type": "delay",
-        "z": "e340100c9b9fe682",
-        "d": true,
-        "name": "Delay 1s",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "outputs": 1,
-        "x": 420,
-        "y": 1100,
-        "wires": [
-            [
-                "a9ee4948d4d13b80"
-            ]
-        ]
-    },
-    {
         "id": "f91adeca12381c1e",
         "type": "inject",
         "z": "e340100c9b9fe682",
@@ -3242,6 +3151,35 @@
         "payloadType": "json",
         "x": 520,
         "y": 1000,
+        "wires": [
+            [
+                "ed7a9506ab190907"
+            ]
+        ]
+    },
+    {
+        "id": "dc6ceb2ade684f2d",
+        "type": "inject",
+        "z": "e340100c9b9fe682",
+        "name": "Crear carperta",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=MI40_Variables",
+        "payload": "{ \"opcuaCommand\": \"addFolder\" }",
+        "payloadType": "str",
+        "x": 250,
+        "y": 1140,
         "wires": [
             [
                 "ed7a9506ab190907"
