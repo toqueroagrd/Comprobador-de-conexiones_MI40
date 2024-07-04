@@ -5510,7 +5510,7 @@
         "id": "ab08549b.86da7",
         "type": "OpcUa-Server",
         "z": "b4792f36.7b37e",
-        "port": "53881",
+        "port": "55489",
         "name": "LocalServer",
         "endpoint": "",
         "users": "wrongUserfile.json",
@@ -5540,6 +5540,7 @@
         "maxConnectionsPerEndpoint": "",
         "maxMessageSize": "",
         "maxBufferSize": "",
+        "maxSessions": "",
         "x": 670,
         "y": 60,
         "wires": [
