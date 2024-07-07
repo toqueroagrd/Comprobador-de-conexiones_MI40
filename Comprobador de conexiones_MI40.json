@@ -2708,7 +2708,7 @@
         "showErrors": false,
         "parseStrings": false,
         "historyDays": 1,
-        "x": 780,
+        "x": 760,
         "y": 560,
         "wires": [
             [
@@ -3015,7 +3015,7 @@
         "showErrors": false,
         "parseStrings": false,
         "historyDays": 1,
-        "x": 800,
+        "x": 780,
         "y": 980,
         "wires": [
             [
@@ -3053,7 +3053,7 @@
         ],
         "xmlsets": [],
         "publicCertificateFile": "/home/pi/.node-red/node_modules/node-red-contrib-iiot-opcua/certificates/server_selfsigned_cert_2048.pem",
-        "privateCertificateFile": "/home/pi/.node-red/node_modules/node-red-contrib-iiot-opcua/certificates/PKI/own/private/private_key.pem",
+        "privateCertificateFile": "/home/pi/.node-red/node_modules/node-red-contrib-iiot-opcua/certificates/server_key_2048.pem",
         "registerServerMethod": "1",
         "discoveryServerEndpointUrl": "",
         "capabilitiesForMDNS": "",
