@@ -1627,16 +1627,6 @@
         "wires": []
     },
     {
-        "id": "5ee1556f46ef87b5",
-        "type": "comment",
-        "z": "a4a07f451bd4dad9",
-        "name": "",
-        "info": "",
-        "x": 260,
-        "y": 260,
-        "wires": []
-    },
-    {
         "id": "09f7f25efe42a9ad",
         "type": "inject",
         "z": "a4a07f451bd4dad9",
@@ -2377,26 +2367,6 @@
         ]
     },
     {
-        "id": "658236328a43787f",
-        "type": "comment",
-        "z": "e340100c9b9fe682",
-        "name": "Información del servidor PTE",
-        "info": "Servidor OPC UA abierto en el puerto 55489\n\nVaribles disponibles en el espacio de direcciones:\n",
-        "x": 260,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "0b8489ec0a415f28",
-        "type": "comment",
-        "z": "e340100c9b9fe682",
-        "name": "Información del servidor PTE",
-        "info": "Servidor OPC UA con usuario en el puerto 55490\n\nUser: MI40\nPass: MI40\n\nVaribles disponibles en el espacio de direcciones:\n",
-        "x": 260,
-        "y": 940,
-        "wires": []
-    },
-    {
         "id": "65e0795b975e25bf",
         "type": "change",
         "z": "e340100c9b9fe682",
@@ -2770,8 +2740,7 @@
         "id": "e4d81d84815907be",
         "type": "OPCUA-IIoT-Flex-Server",
         "z": "e340100c9b9fe682",
-        "d": true,
-        "port": "55489",
+        "port": "55490",
         "endpoint": "",
         "acceptExternalCommands": true,
         "maxAllowedSessionNumber": "",
@@ -2963,16 +2932,6 @@
         "statusType": "auto",
         "x": 1010,
         "y": 1200,
-        "wires": []
-    },
-    {
-        "id": "0596727128b624b5",
-        "type": "comment",
-        "z": "e340100c9b9fe682",
-        "name": "OPC UA Server on opc.tcp://localhost:4840/",
-        "info": "",
-        "x": 310,
-        "y": 1040,
         "wires": []
     },
     {
