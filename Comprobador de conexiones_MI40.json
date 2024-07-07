@@ -2514,23 +2514,6 @@
         ]
     },
     {
-        "id": "db6ff2c8cf92383a",
-        "type": "OPCUA-IIoT-Write",
-        "z": "e340100c9b9fe682",
-        "connector": "77fdc29e.3c49ec",
-        "name": "",
-        "justValue": true,
-        "showStatusActivities": false,
-        "showErrors": false,
-        "x": 1790,
-        "y": 560,
-        "wires": [
-            [
-                "b423e6d59b62e68e"
-            ]
-        ]
-    },
-    {
         "id": "3070b8514aba88e2",
         "type": "OPCUA-IIoT-Inject",
         "z": "e340100c9b9fe682",
@@ -2554,34 +2537,6 @@
         "y": 560,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "85c03e13cae797a2",
-        "type": "OPCUA-IIoT-Inject",
-        "z": "e340100c9b9fe682",
-        "injectType": "write",
-        "payload": "latestValue",
-        "payloadType": "flow",
-        "topic": "",
-        "repeat": "1",
-        "crontab": "",
-        "once": false,
-        "startDelay": "",
-        "name": "Nodo Double",
-        "addressSpaceItems": [
-            {
-                "name": "Double",
-                "nodeId": "ns=1;s=Var_Double",
-                "datatypeName": ""
-            }
-        ],
-        "x": 1420,
-        "y": 620,
-        "wires": [
-            [
-                "2ca00cb6b528cb80"
-            ]
         ]
     },
     {
@@ -2652,54 +2607,6 @@
         "x": 2100,
         "y": 560,
         "wires": []
-    },
-    {
-        "id": "2ca00cb6b528cb80",
-        "type": "change",
-        "z": "e340100c9b9fe682",
-        "name": "Guarda número",
-        "rules": [
-            {
-                "t": "set",
-                "p": "latestValue",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "x": 1620,
-        "y": 560,
-        "wires": [
-            [
-                "db6ff2c8cf92383a"
-            ]
-        ]
-    },
-    {
-        "id": "f24d3dd670b7ec62",
-        "type": "ui_text_input",
-        "z": "e340100c9b9fe682",
-        "name": "",
-        "label": "Number to sent",
-        "tooltip": "",
-        "group": "2caf7620b7cbd0b2",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "mode": "number",
-        "delay": "0",
-        "topic": "",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "str",
-        "x": 1420,
-        "y": 520,
-        "wires": [
-            [
-                "2ca00cb6b528cb80"
-            ]
-        ]
     },
     {
         "id": "0c6f07a60cbb40fa",
