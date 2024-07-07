@@ -3120,7 +3120,7 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "",
-        "repeat": "",
+        "repeat": "5",
         "crontab": "",
         "once": false,
         "startDelay": "",
@@ -3132,7 +3132,7 @@
                 "datatypeName": ""
             }
         ],
-        "x": 1410,
+        "x": 1420,
         "y": 560,
         "wires": [
             [
