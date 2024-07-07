@@ -354,17 +354,6 @@
         "className": ""
     },
     {
-        "id": "fb4ca7c3.864058",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "64be35cd.7831bc",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "8ad9d437f110e9ee",
         "type": "ui_group",
         "name": "Señales fija",
@@ -619,16 +608,6 @@
         "name": "OPC UA Dashboard",
         "order": 1,
         "hidden": false
-    },
-    {
-        "id": "endpoint_config",
-        "type": "OPCUA-IIoT-Endpoint",
-        "endpoint": "opc.tcp://localhost:55489",
-        "endpointName": "",
-        "certificate": "client_cert",
-        "securityPolicy": "None",
-        "securityMode": "None",
-        "login": false
     },
     {
         "id": "eabb9ee36b27428c",
