@@ -2522,7 +2522,7 @@
         "justValue": true,
         "showStatusActivities": false,
         "showErrors": false,
-        "x": 1830,
+        "x": 1790,
         "y": 560,
         "wires": [
             [
@@ -2535,10 +2535,10 @@
         "type": "OPCUA-IIoT-Inject",
         "z": "e340100c9b9fe682",
         "injectType": "write",
-        "payload": "true",
-        "payloadType": "bool",
+        "payload": "",
+        "payloadType": "date",
         "topic": "",
-        "repeat": "5",
+        "repeat": "0.001",
         "crontab": "",
         "once": false,
         "startDelay": "",
@@ -2553,9 +2553,7 @@
         "x": 1420,
         "y": 560,
         "wires": [
-            [
-                "cd5a3f6c034fb138"
-            ]
+            []
         ]
     },
     {
@@ -2563,10 +2561,10 @@
         "type": "OPCUA-IIoT-Inject",
         "z": "e340100c9b9fe682",
         "injectType": "write",
-        "payload": "true",
-        "payloadType": "bool",
+        "payload": "latestValue",
+        "payloadType": "flow",
         "topic": "",
-        "repeat": "",
+        "repeat": "1",
         "crontab": "",
         "once": false,
         "startDelay": "",
@@ -2578,11 +2576,11 @@
                 "datatypeName": ""
             }
         ],
-        "x": 1410,
+        "x": 1420,
         "y": 620,
         "wires": [
             [
-                "cd5a3f6c034fb138"
+                "2ca00cb6b528cb80"
             ]
         ]
     },
@@ -2609,9 +2607,7 @@
         "x": 1400,
         "y": 680,
         "wires": [
-            [
-                "cd5a3f6c034fb138"
-            ]
+            []
         ]
     },
     {
@@ -2637,9 +2633,7 @@
         "x": 1410,
         "y": 740,
         "wires": [
-            [
-                "cd5a3f6c034fb138"
-            ]
+            []
         ]
     },
     {
@@ -2655,12 +2649,12 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2020,
+        "x": 2100,
         "y": 560,
         "wires": []
     },
     {
-        "id": "4c3b0e8d77fe4dae",
+        "id": "2ca00cb6b528cb80",
         "type": "change",
         "z": "e340100c9b9fe682",
         "name": "Guarda número",
@@ -2673,49 +2667,22 @@
                 "tot": "msg"
             }
         ],
-        "x": 1640,
-        "y": 500,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6dab5905dd971962",
-        "type": "inject",
-        "z": "e340100c9b9fe682",
-        "name": "Periodic Trigger",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "latestValue",
-        "payloadType": "flow",
-        "x": 1390,
-        "y": 440,
+        "x": 1620,
+        "y": 560,
         "wires": [
             [
-                "4c3b0e8d77fe4dae"
+                "db6ff2c8cf92383a"
             ]
         ]
     },
     {
-        "id": "e66efae03a797ebb",
+        "id": "f24d3dd670b7ec62",
         "type": "ui_text_input",
         "z": "e340100c9b9fe682",
         "name": "",
         "label": "Number to sent",
         "tooltip": "",
-        "group": "fd47dcad5a2ee79a",
+        "group": "2caf7620b7cbd0b2",
         "order": 2,
         "width": 0,
         "height": 0,
@@ -2726,30 +2693,13 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "str",
-        "x": 1400,
-        "y": 500,
+        "x": 1420,
+        "y": 520,
         "wires": [
             [
-                "4c3b0e8d77fe4dae"
+                "2ca00cb6b528cb80"
             ]
         ]
-    },
-    {
-        "id": "cd5a3f6c034fb138",
-        "type": "debug",
-        "z": "e340100c9b9fe682",
-        "name": "Debug escritura",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1640,
-        "y": 560,
-        "wires": []
     },
     {
         "id": "0c6f07a60cbb40fa",
