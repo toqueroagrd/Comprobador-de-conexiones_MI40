@@ -762,6 +762,32 @@
         "userprivatekey": "key.pem"
     },
     {
+        "id": "ui_group",
+        "type": "ui_group",
+        "name": "MyVariables",
+        "tab": "ui_tab",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "ui_tab",
+        "type": "ui_tab",
+        "name": "OPC UA Dashboard",
+        "order": 1,
+        "hidden": false
+    },
+    {
+        "id": "endpoint_config",
+        "type": "OPCUA-IIoT-Endpoint",
+        "endpoint": "opc.tcp://localhost:55489",
+        "endpointName": "",
+        "certificate": "client_cert",
+        "securityPolicy": "None",
+        "securityMode": "None",
+        "login": false
+    },
+    {
         "id": "4ec01e92.bb7e1",
         "type": "delay",
         "z": "93ffc0ab.75647",
@@ -2268,7 +2294,7 @@
         "type": "debug",
         "z": "e340100c9b9fe682",
         "name": "debug 9",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3078,8 +3104,8 @@
         "justValue": true,
         "showStatusActivities": false,
         "showErrors": false,
-        "x": 1630,
-        "y": 640,
+        "x": 1810,
+        "y": 560,
         "wires": [
             [
                 "b423e6d59b62e68e"
@@ -3110,7 +3136,7 @@
         "y": 560,
         "wires": [
             [
-                "db6ff2c8cf92383a"
+                "cd5a3f6c034fb138"
             ]
         ]
     },
@@ -3138,7 +3164,7 @@
         "y": 620,
         "wires": [
             [
-                "db6ff2c8cf92383a"
+                "cd5a3f6c034fb138"
             ]
         ]
     },
@@ -3166,7 +3192,7 @@
         "y": 680,
         "wires": [
             [
-                "db6ff2c8cf92383a"
+                "cd5a3f6c034fb138"
             ]
         ]
     },
@@ -3194,7 +3220,7 @@
         "y": 740,
         "wires": [
             [
-                "db6ff2c8cf92383a"
+                "cd5a3f6c034fb138"
             ]
         ]
     },
@@ -3211,8 +3237,100 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1840,
-        "y": 640,
+        "x": 2020,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "4c3b0e8d77fe4dae",
+        "type": "change",
+        "z": "e340100c9b9fe682",
+        "name": "Guarda número",
+        "rules": [
+            {
+                "t": "set",
+                "p": "latestValue",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "x": 1640,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6dab5905dd971962",
+        "type": "inject",
+        "z": "e340100c9b9fe682",
+        "name": "Periodic Trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "latestValue",
+        "payloadType": "flow",
+        "x": 1390,
+        "y": 440,
+        "wires": [
+            [
+                "4c3b0e8d77fe4dae"
+            ]
+        ]
+    },
+    {
+        "id": "e66efae03a797ebb",
+        "type": "ui_text_input",
+        "z": "e340100c9b9fe682",
+        "name": "",
+        "label": "Number to sent",
+        "tooltip": "",
+        "group": "fd47dcad5a2ee79a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": "0",
+        "topic": "",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 1400,
+        "y": 500,
+        "wires": [
+            [
+                "4c3b0e8d77fe4dae"
+            ]
+        ]
+    },
+    {
+        "id": "cd5a3f6c034fb138",
+        "type": "debug",
+        "z": "e340100c9b9fe682",
+        "name": "Debug escritura",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1640,
+        "y": 620,
         "wires": []
     },
     {
