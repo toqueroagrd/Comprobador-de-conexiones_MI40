@@ -3070,6 +3070,21 @@
         ]
     },
     {
+        "id": "db6ff2c8cf92383a",
+        "type": "OPCUA-IIoT-Write",
+        "z": "e340100c9b9fe682",
+        "connector": "77fdc29e.3c49ec",
+        "name": "",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "x": 1490,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "0c6f07a60cbb40fa",
         "type": "change",
         "z": "4e702d50e851e07d",
