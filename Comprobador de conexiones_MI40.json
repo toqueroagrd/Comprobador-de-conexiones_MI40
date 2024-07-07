@@ -2538,7 +2538,7 @@
         "payload": "",
         "payloadType": "date",
         "topic": "",
-        "repeat": "0.001",
+        "repeat": "1",
         "crontab": "",
         "once": false,
         "startDelay": "",
