@@ -601,7 +601,7 @@
         "id": "77fdc29e.3c49ec",
         "type": "OPCUA-IIoT-Connector",
         "discoveryUrl": "",
-        "endpoint": "opc.tcp://127.0.0.1:55489",
+        "endpoint": "opc.tcp://127.0.0.1:55490",
         "endpointMustExist": false,
         "keepSessionAlive": true,
         "loginEnabled": false,
