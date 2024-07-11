@@ -610,6 +610,16 @@
         "hidden": false
     },
     {
+        "id": "76817bb3d71e9ebd",
+        "type": "OPCUA-IIoT-Endpoint",
+        "endpoint": "opc.tcp://localhost:55489",
+        "endpointName": "",
+        "certificate": "client_cert",
+        "securityPolicy": "None",
+        "securityMode": "None",
+        "login": false
+    },
+    {
         "id": "eabb9ee36b27428c",
         "type": "change",
         "z": "c3367d12564d11c6",
@@ -2533,8 +2543,8 @@
                 "datatypeName": ""
             }
         ],
-        "x": 1420,
-        "y": 560,
+        "x": 1740,
+        "y": 140,
         "wires": [
             []
         ]
@@ -2559,8 +2569,8 @@
                 "datatypeName": ""
             }
         ],
-        "x": 1400,
-        "y": 680,
+        "x": 1720,
+        "y": 260,
         "wires": [
             []
         ]
@@ -2585,8 +2595,8 @@
                 "datatypeName": ""
             }
         ],
-        "x": 1410,
-        "y": 740,
+        "x": 1730,
+        "y": 320,
         "wires": [
             []
         ]
@@ -2607,6 +2617,223 @@
         "x": 2100,
         "y": 560,
         "wires": []
+    },
+    {
+        "id": "ui_switch_bool",
+        "type": "ui_switch",
+        "z": "e340100c9b9fe682",
+        "name": "",
+        "label": "Var_BOOL",
+        "tooltip": "",
+        "group": "2caf7620b7cbd0b2",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 1380,
+        "y": 550,
+        "wires": [
+            [
+                "change_bool"
+            ]
+        ]
+    },
+    {
+        "id": "change_bool",
+        "type": "change",
+        "z": "e340100c9b9fe682",
+        "name": "Set Var_BOOL",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"nodeId\":\"ns=1;s=Var_BOOL\",\"attributeId\":13,\"value\":{\"value\":{\"dataType\":\"Boolean\",\"value\":msg.payload}}}",
+                "tot": "jsonata"
+            }
+        ],
+        "x": 1580,
+        "y": 550,
+        "wires": [
+            [
+                "opc_write"
+            ]
+        ]
+    },
+    {
+        "id": "ui_slider_int",
+        "type": "ui_slider",
+        "z": "e340100c9b9fe682",
+        "name": "",
+        "label": "Var_INT",
+        "tooltip": "",
+        "group": "2caf7620b7cbd0b2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "",
+        "topicType": "str",
+        "min": -5000,
+        "max": 5000,
+        "step": 1,
+        "className": "",
+        "x": 1380,
+        "y": 610,
+        "wires": [
+            [
+                "change_int"
+            ]
+        ]
+    },
+    {
+        "id": "change_int",
+        "type": "change",
+        "z": "e340100c9b9fe682",
+        "name": "Set Var_INT",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"nodeId\":\"ns=1;s=Var_INT\",\"attributeId\":13,\"value\":{\"value\":{\"dataType\":\"Int16\",\"value\":msg.payload}}}",
+                "tot": "jsonata"
+            }
+        ],
+        "x": 1580,
+        "y": 610,
+        "wires": [
+            [
+                "opc_write"
+            ]
+        ]
+    },
+    {
+        "id": "ui_numeric_double",
+        "type": "ui_numeric",
+        "z": "e340100c9b9fe682",
+        "name": "",
+        "label": "Var_Double",
+        "tooltip": "",
+        "group": "2caf7620b7cbd0b2",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "topicType": "str",
+        "format": "",
+        "min": "-99",
+        "max": "99",
+        "step": "0.01",
+        "className": "",
+        "x": 1380,
+        "y": 670,
+        "wires": [
+            [
+                "change_double"
+            ]
+        ]
+    },
+    {
+        "id": "change_double",
+        "type": "change",
+        "z": "e340100c9b9fe682",
+        "name": "Set Var_Double",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"nodeId\":\"ns=1;s=Var_Double\",\"attributeId\":13,\"value\":{\"value\":{\"dataType\":\"Double\",\"value\":msg.payload}}}",
+                "tot": "jsonata"
+            }
+        ],
+        "x": 1580,
+        "y": 670,
+        "wires": [
+            [
+                "opc_write"
+            ]
+        ]
+    },
+    {
+        "id": "ui_text_input_string",
+        "type": "ui_text_input",
+        "z": "e340100c9b9fe682",
+        "name": "",
+        "label": "Var_STRING",
+        "tooltip": "",
+        "group": "2caf7620b7cbd0b2",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "delay": "",
+        "topic": "",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 1380,
+        "y": 730,
+        "wires": [
+            [
+                "change_string"
+            ]
+        ]
+    },
+    {
+        "id": "change_string",
+        "type": "change",
+        "z": "e340100c9b9fe682",
+        "name": "Set Var_STRING",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"nodeId\":\"ns=1;s=Var_STRING\",\"attributeId\":13,\"value\":{\"value\":{\"dataType\":\"String\",\"value\":msg.payload}}}",
+                "tot": "jsonata"
+            }
+        ],
+        "x": 1580,
+        "y": 730,
+        "wires": [
+            [
+                "opc_write"
+            ]
+        ]
+    },
+    {
+        "id": "opc_write",
+        "type": "OPCUA-IIoT-Write",
+        "z": "e340100c9b9fe682",
+        "connector": "77fdc29e.3c49ec",
+        "name": "Write Variable",
+        "justValue": false,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "x": 1780,
+        "y": 640,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "0c6f07a60cbb40fa",
