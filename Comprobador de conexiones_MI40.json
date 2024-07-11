@@ -431,8 +431,8 @@
         "tab": "e97cb207c443df1f",
         "order": 2,
         "disp": true,
-        "width": 7,
-        "collapse": false,
+        "width": "7",
+        "collapse": true,
         "className": ""
     },
     {
