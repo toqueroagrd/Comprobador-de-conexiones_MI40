@@ -452,7 +452,7 @@
         "name": "Repositorio Github / Guía",
         "link": "https://github.com/toqueroagrd/Comprobador-de-conexiones_MI40",
         "icon": "open_in_browser",
-        "target": "iframe",
+        "target": "newtab",
         "order": 1
     },
     {
