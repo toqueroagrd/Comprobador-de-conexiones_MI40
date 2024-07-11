@@ -481,8 +481,8 @@
         "name": "spacer",
         "group": "a1b2c8551fe935a7",
         "order": 2,
-        "width": 1,
-        "height": 1
+        "width": "0",
+        "height": "0"
     },
     {
         "id": "5a39358056fe498d",
@@ -491,8 +491,8 @@
         "name": "spacer",
         "group": "a1b2c8551fe935a7",
         "order": 7,
-        "width": 1,
-        "height": 1
+        "width": "0",
+        "height": "0"
     },
     {
         "id": "1aca339375443f4d",
