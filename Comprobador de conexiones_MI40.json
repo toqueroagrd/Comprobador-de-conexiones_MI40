@@ -600,7 +600,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"tab\" : \"Inicio\"}",
+                "to": "{\"tab\" : \"INICIO\"}",
                 "tot": "json"
             }
         ],
