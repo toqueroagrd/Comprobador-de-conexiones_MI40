@@ -1480,33 +1480,6 @@
         ]
     },
     {
-        "id": "37a6222521259029",
-        "type": "change",
-        "z": "e340100c9b9fe682",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"tab\" : \"OPC UA Selector\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 640,
-        "y": 180,
-        "wires": [
-            [
-                "689117baa02312b2"
-            ]
-        ]
-    },
-    {
         "id": "c5fa3a89667cf743",
         "type": "inject",
         "z": "e340100c9b9fe682",
@@ -1586,60 +1559,6 @@
         "wires": []
     },
     {
-        "id": "2799f59311d52626",
-        "type": "change",
-        "z": "e340100c9b9fe682",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"tab\" : \"OPCUA - Seguro\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1220,
-        "y": 160,
-        "wires": [
-            [
-                "b3dda29d6c1a7e5f"
-            ]
-        ]
-    },
-    {
-        "id": "a46516797f94b473",
-        "type": "change",
-        "z": "e340100c9b9fe682",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"tab\" : \"OPCUA - Libre\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1220,
-        "y": 120,
-        "wires": [
-            [
-                "9b2794fe99960d9a"
-            ]
-        ]
-    },
-    {
         "id": "65e0795b975e25bf",
         "type": "change",
         "z": "e340100c9b9fe682",
@@ -1649,7 +1568,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"tab\" : \"Inicio\"}",
+                "to": "{\"tab\" : \"INICIO\"}",
                 "tot": "json"
             }
         ],
@@ -1677,118 +1596,6 @@
             [
                 "6818068350d21ee6",
                 "c2bd012062bd0c77"
-            ]
-        ]
-    },
-    {
-        "id": "30ddde700b963243",
-        "type": "ui_button",
-        "z": "e340100c9b9fe682",
-        "name": "",
-        "group": "ce32b44e7e2cf22b",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "ATRÁS",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 460,
-        "y": 200,
-        "wires": [
-            [
-                "37a6222521259029"
-            ]
-        ]
-    },
-    {
-        "id": "7564cde99bae07dd",
-        "type": "ui_button",
-        "z": "e340100c9b9fe682",
-        "name": "",
-        "group": "5d5bf454532f4a45",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Público",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 1020,
-        "y": 160,
-        "wires": [
-            [
-                "2799f59311d52626"
-            ]
-        ]
-    },
-    {
-        "id": "335129cff27a8c3e",
-        "type": "ui_button",
-        "z": "e340100c9b9fe682",
-        "name": "",
-        "group": "5d5bf454532f4a45",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Privado",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 1020,
-        "y": 120,
-        "wires": [
-            [
-                "a46516797f94b473"
-            ]
-        ]
-    },
-    {
-        "id": "9b3d964771c191c5",
-        "type": "ui_button",
-        "z": "e340100c9b9fe682",
-        "name": "",
-        "group": "a1b2c8551fe935a7",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "ATRÁS",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 460,
-        "y": 160,
-        "wires": [
-            [
-                "37a6222521259029"
             ]
         ]
     },
@@ -1911,30 +1718,6 @@
         "name": "",
         "events": "all",
         "x": 860,
-        "y": 140,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b3dda29d6c1a7e5f",
-        "type": "ui_ui_control",
-        "z": "e340100c9b9fe682",
-        "name": "",
-        "events": "all",
-        "x": 1440,
-        "y": 160,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9b2794fe99960d9a",
-        "type": "ui_ui_control",
-        "z": "e340100c9b9fe682",
-        "name": "",
-        "events": "all",
-        "x": 1440,
         "y": 120,
         "wires": [
             []
