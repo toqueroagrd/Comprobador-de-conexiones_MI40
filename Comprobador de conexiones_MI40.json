@@ -2445,6 +2445,52 @@
         ]
     },
     {
+        "id": "d4b770e7f5548adb",
+        "type": "ui_text",
+        "z": "e340100c9b9fe682",
+        "group": "4361aa01fca1a200",
+        "order": 3,
+        "width": 7,
+        "height": 4,
+        "name": "",
+        "label": "Servidor seguro",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 620,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3e8bd1ad3e1692ea",
+        "type": "inject",
+        "z": "e340100c9b9fe682",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Conexión segura con usuario (MI40) y contraseña (MI40). Certificado necesario a localizar en el repositorio. Puerto 55489",
+        "payloadType": "str",
+        "x": 390,
+        "y": 260,
+        "wires": [
+            [
+                "d4b770e7f5548adb"
+            ]
+        ]
+    },
+    {
         "id": "b62de5d8effe8954",
         "type": "inject",
         "z": "4e702d50e851e07d",
