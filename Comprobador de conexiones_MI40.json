@@ -2409,7 +2409,7 @@
         "name": "",
         "label": "Servidor abierto",
         "format": "{{msg.payload}}",
-        "layout": "row-spread",
+        "layout": "col-center",
         "className": "",
         "style": false,
         "font": "",
@@ -2418,6 +2418,31 @@
         "x": 620,
         "y": 220,
         "wires": []
+    },
+    {
+        "id": "1d8b1b1fc6047406",
+        "type": "inject",
+        "z": "e340100c9b9fe682",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Conexión libre sin usuario ni certificado en el puerto 55490",
+        "payloadType": "str",
+        "x": 390,
+        "y": 220,
+        "wires": [
+            [
+                "4f1c7d37c7834721"
+            ]
+        ]
     },
     {
         "id": "b62de5d8effe8954",
