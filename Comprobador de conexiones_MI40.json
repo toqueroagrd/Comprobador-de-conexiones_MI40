@@ -507,7 +507,7 @@
     {
         "id": "4361aa01fca1a200",
         "type": "ui_group",
-        "name": "OPCUA - Conexión",
+        "name": "OPCUA - Info de conexión",
         "tab": "e97cb207c443df1f",
         "order": 1,
         "disp": true,
