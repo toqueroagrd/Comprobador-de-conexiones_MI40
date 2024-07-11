@@ -456,6 +456,25 @@
         "order": 1
     },
     {
+        "id": "e7174bcf0bf8f174",
+        "type": "ui_tab",
+        "name": "MODBUS",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "af9022af948df047",
+        "type": "ui_group",
+        "name": "MODBUS",
+        "tab": "e7174bcf0bf8f174",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "eabb9ee36b27428c",
         "type": "change",
         "z": "c3367d12564d11c6",
@@ -2321,33 +2340,6 @@
         ]
     },
     {
-        "id": "0c6f07a60cbb40fa",
-        "type": "change",
-        "z": "4e702d50e851e07d",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"tab\" : \"Inicio\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 500,
-        "y": 100,
-        "wires": [
-            [
-                "0d1cbaf7adeaef4e"
-            ]
-        ]
-    },
-    {
         "id": "b62de5d8effe8954",
         "type": "inject",
         "z": "4e702d50e851e07d",
@@ -2656,38 +2648,10 @@
         ]
     },
     {
-        "id": "2b391a2ec4fdf914",
-        "type": "ui_button",
-        "z": "4e702d50e851e07d",
-        "name": "",
-        "group": "",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "INICIO",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 250,
-        "y": 100,
-        "wires": [
-            [
-                "0c6f07a60cbb40fa"
-            ]
-        ]
-    },
-    {
         "id": "0bbf479c9c6410a2",
         "type": "ui_text",
         "z": "4e702d50e851e07d",
-        "group": "",
+        "group": "af9022af948df047",
         "order": 7,
         "width": 0,
         "height": 0,
@@ -2708,7 +2672,7 @@
         "id": "d97996f56cf2c3c1",
         "type": "ui_text",
         "z": "4e702d50e851e07d",
-        "group": "",
+        "group": "af9022af948df047",
         "order": 10,
         "width": 0,
         "height": 0,
@@ -2729,7 +2693,7 @@
         "id": "d318f280ec938980",
         "type": "ui_text",
         "z": "4e702d50e851e07d",
-        "group": "",
+        "group": "af9022af948df047",
         "order": 13,
         "width": 0,
         "height": 0,
@@ -2745,18 +2709,6 @@
         "x": 650,
         "y": 660,
         "wires": []
-    },
-    {
-        "id": "0d1cbaf7adeaef4e",
-        "type": "ui_ui_control",
-        "z": "4e702d50e851e07d",
-        "name": "",
-        "events": "all",
-        "x": 720,
-        "y": 100,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "template-coil-control",
@@ -2831,7 +2783,7 @@
         "id": "18f7516113b6cdb8",
         "type": "ui_text",
         "z": "4e702d50e851e07d",
-        "group": "",
+        "group": "af9022af948df047",
         "order": 3,
         "width": 6,
         "height": 1,
