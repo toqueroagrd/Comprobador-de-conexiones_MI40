@@ -486,46 +486,6 @@
         "className": ""
     },
     {
-        "id": "6b2a34933b646d3c",
-        "type": "ui_spacer",
-        "z": "e340100c9b9fe682",
-        "name": "spacer",
-        "group": "4361aa01fca1a200",
-        "order": 1,
-        "width": 7,
-        "height": 1
-    },
-    {
-        "id": "68d41828be172d45",
-        "type": "ui_spacer",
-        "z": "e340100c9b9fe682",
-        "name": "spacer",
-        "group": "a1b2c8551fe935a7",
-        "order": 1,
-        "width": 7,
-        "height": 1
-    },
-    {
-        "id": "1b1e27b290b569d3",
-        "type": "ui_spacer",
-        "z": "e340100c9b9fe682",
-        "name": "spacer",
-        "group": "a1b2c8551fe935a7",
-        "order": 6,
-        "width": 7,
-        "height": 1
-    },
-    {
-        "id": "38ef107f8c3d5e10",
-        "type": "ui_spacer",
-        "z": "e340100c9b9fe682",
-        "name": "spacer",
-        "group": "ce32b44e7e2cf22b",
-        "order": 1,
-        "width": 7,
-        "height": 1
-    },
-    {
         "id": "0f0a4a9f137f5a64",
         "type": "ui_spacer",
         "z": "a4a07f451bd4dad9",
@@ -563,6 +523,47 @@
         "group": "5c77a99695e85ecb",
         "order": 2,
         "width": 1,
+        "height": 1
+    },
+    {
+        "id": "5c192cfbaaea1c3c",
+        "type": "ui_spacer",
+        "z": "a4a07f451bd4dad9",
+        "name": "spacer",
+        "group": "4361aa01fca1a200",
+        "order": 1,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "18862a8865b78d65",
+        "type": "ui_spacer",
+        "z": "a4a07f451bd4dad9",
+        "name": "spacer",
+        "group": "a1b2c8551fe935a7",
+        "order": 1,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "6225a607ffd846a5",
+        "type": "ui_spacer",
+        "z": "a4a07f451bd4dad9",
+        "d": true,
+        "name": "spacer",
+        "group": "a1b2c8551fe935a7",
+        "order": 6,
+        "width": "7",
+        "height": "1"
+    },
+    {
+        "id": "1555184cc2bfe2d9",
+        "type": "ui_spacer",
+        "z": "a4a07f451bd4dad9",
+        "name": "spacer",
+        "group": "ce32b44e7e2cf22b",
+        "order": 1,
+        "width": 7,
         "height": 1
     },
     {
@@ -2459,7 +2460,7 @@
         "type": "ui_text",
         "z": "e340100c9b9fe682",
         "group": "4361aa01fca1a200",
-        "order": 3,
+        "order": 4,
         "width": 7,
         "height": 4,
         "name": "",
