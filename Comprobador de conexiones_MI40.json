@@ -432,7 +432,7 @@
         "order": 2,
         "disp": true,
         "width": "7",
-        "collapse": true,
+        "collapse": false,
         "className": ""
     },
     {
@@ -442,7 +442,7 @@
         "tab": "e97cb207c443df1f",
         "order": 3,
         "disp": true,
-        "width": 7,
+        "width": "7",
         "collapse": false,
         "className": ""
     },
@@ -512,7 +512,7 @@
         "order": 1,
         "disp": true,
         "width": "7",
-        "collapse": false,
+        "collapse": true,
         "className": ""
     },
     {
