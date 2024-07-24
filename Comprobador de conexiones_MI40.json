@@ -32,26 +32,6 @@
         "env": []
     },
     {
-        "id": "e3ce149a6a583c48",
-        "type": "junction",
-        "z": "a4a07f451bd4dad9",
-        "x": 1020,
-        "y": 840,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "89d8e7aa0691b761",
-        "type": "junction",
-        "z": "a4a07f451bd4dad9",
-        "x": 1020,
-        "y": 960,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "12fc471dcc5f019d",
         "type": "mqtt-broker",
         "name": "Open broker - 1883",
@@ -776,7 +756,7 @@
         "expiry": "",
         "broker": "12fc471dcc5f019d",
         "x": 930,
-        "y": 1200,
+        "y": 1240,
         "wires": []
     },
     {
@@ -880,7 +860,7 @@
         "expiry": "",
         "broker": "389b7dfe828d514b",
         "x": 820,
-        "y": 920,
+        "y": 860,
         "wires": []
     },
     {
@@ -898,7 +878,7 @@
         "expiry": "",
         "broker": "12fc471dcc5f019d",
         "x": 820,
-        "y": 860,
+        "y": 800,
         "wires": []
     },
     {
@@ -916,7 +896,7 @@
         "expiry": "",
         "broker": "12fc471dcc5f019d",
         "x": 930,
-        "y": 1260,
+        "y": 1300,
         "wires": []
     },
     {
@@ -1002,7 +982,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 260,
-        "y": 1200,
+        "y": 1240,
         "wires": [
             [
                 "8ef919da2f76992b"
@@ -1022,7 +1002,7 @@
         "finalize": "",
         "libs": [],
         "x": 550,
-        "y": 1200,
+        "y": 1240,
         "wires": [
             [
                 "7dfa2c8ae51ca9ce",
@@ -1253,7 +1233,7 @@
         "label": "Min Value",
         "tooltip": "Ajusta el valor mínimo de la señal",
         "group": "5c77a99695e85ecb",
-        "order": 14,
+        "order": 15,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -1265,7 +1245,7 @@
         "step": "0.5",
         "className": "",
         "x": 270,
-        "y": 1260,
+        "y": 1300,
         "wires": [
             [
                 "8ef919da2f76992b"
@@ -1280,7 +1260,7 @@
         "label": "Max Value",
         "tooltip": "Ajusta el valor máximo de la señal",
         "group": "5c77a99695e85ecb",
-        "order": 15,
+        "order": 14,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -1292,7 +1272,7 @@
         "step": "0.5",
         "className": "",
         "x": 260,
-        "y": 1140,
+        "y": 1180,
         "wires": [
             [
                 "8ef919da2f76992b"
@@ -1412,7 +1392,7 @@
         "fontSize": "",
         "color": "#000000",
         "x": 330,
-        "y": 1080,
+        "y": 1120,
         "wires": []
     },
     {
@@ -1494,7 +1474,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 900,
-        "y": 1140,
+        "y": 1180,
         "wires": [
             []
         ]
