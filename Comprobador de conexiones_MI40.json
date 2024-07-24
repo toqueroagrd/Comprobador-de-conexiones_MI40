@@ -2425,7 +2425,7 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "Conexión libre sin usuario ni certificado en el puerto 55490",
+        "payload": "Conexión libre sin usuario ni certificado. Puerto 55490",
         "payloadType": "str",
         "x": 390,
         "y": 220,
