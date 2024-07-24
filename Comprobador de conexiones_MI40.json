@@ -522,8 +522,8 @@
         "name": "spacer",
         "group": "5c77a99695e85ecb",
         "order": 2,
-        "width": 1,
-        "height": 1
+        "width": "0",
+        "height": "0"
     },
     {
         "id": "5c192cfbaaea1c3c",
