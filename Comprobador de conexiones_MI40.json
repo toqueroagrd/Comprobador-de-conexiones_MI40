@@ -1840,8 +1840,8 @@
         "z": "e340100c9b9fe682",
         "name": "Seguro - 55489",
         "info": "",
-        "x": 320,
-        "y": 840,
+        "x": 1300,
+        "y": 400,
         "wires": []
     },
     {
@@ -1857,8 +1857,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1060,
-        "y": 920,
+        "x": 2040,
+        "y": 480,
         "wires": []
     },
     {
@@ -1874,8 +1874,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 780,
-        "y": 840,
+        "x": 1760,
+        "y": 400,
         "wires": []
     },
     {
@@ -1895,8 +1895,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1040,
-        "y": 1160,
+        "x": 2020,
+        "y": 720,
         "wires": []
     },
     {
@@ -1916,8 +1916,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1050,
-        "y": 980,
+        "x": 2030,
+        "y": 540,
         "wires": []
     },
     {
@@ -1937,8 +1937,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1050,
-        "y": 1040,
+        "x": 2030,
+        "y": 600,
         "wires": []
     },
     {
@@ -1958,8 +1958,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1030,
-        "y": 1100,
+        "x": 2010,
+        "y": 660,
         "wires": []
     },
     {
@@ -1997,8 +1997,8 @@
                 "datatypeName": ""
             }
         ],
-        "x": 530,
-        "y": 980,
+        "x": 1510,
+        "y": 540,
         "wires": [
             [
                 "e94c4ecd76922591"
@@ -2019,8 +2019,8 @@
         "showErrors": false,
         "parseStrings": false,
         "historyDays": 1,
-        "x": 780,
-        "y": 980,
+        "x": 1760,
+        "y": 540,
         "wires": [
             [
                 "75f93661c1cdace7",
@@ -2065,8 +2065,8 @@
         "maxNodesPerBrowse": 2000,
         "delayToClose": 1000,
         "addressSpaceScript": "function constructAlarmAddressSpace(server, addressSpace, eventObjects, done) {\n    const LocalizedText = opcua.LocalizedText;\n    const namespace = addressSpace.getOwnNamespace();\n\n    coreServer.internalDebugLog('Inicio dinámico de espacio de direcciones')\n    node.warn('Construyendo espacio de direcciones para servidor de OPC UA en 55489')\n\n    const Variant = opcua.Variant;\n    const DataType = opcua.DataType;\n    const DataValue = opcua.DataValue;\n\n    coreServer.internalDebugLog(\"init dynamic address space\");\n    const rootFolder = addressSpace.findNode(\"RootFolder\");\n\n    const myDevice = namespace.addFolder(rootFolder.objects, {\n        \"browseName\": \"Mis_Variables_seguras\"\n    });\n\n    // Valor por defecto de las variables\n    let varBoolValue = false;\n    let varIntValue = -2369;\n    let varDoubleValue = 28.5;\n    let varStringValue = \"Hola Mundo MI4.0 - Seguro\";\n\n    namespace.addVariable({\n        organizedBy: myDevice,\n        browseName: \"Var_BOOL\",\n        nodeId: \"ns=1;s=Var_BOOL\",\n        dataType: \"Boolean\",\n        value: {\n            get: function () {\n                return new opcua.Variant({ dataType: opcua.DataType.Boolean, value: varBoolValue });\n            },\n            set: function (variant) {\n                varBoolValue = variant.value;\n                return opcua.StatusCodes.Good;\n            }\n        }\n    });\n\n    namespace.addVariable({\n        organizedBy: myDevice,\n        browseName: \"Var_INT\",\n        nodeId: \"ns=1;s=Var_INT\",\n        dataType: \"Int16\",\n        value: {\n            get: function () {\n                return new opcua.Variant({ dataType: opcua.DataType.Int16, value: varIntValue });\n            },\n            set: function (variant) {\n                varIntValue = variant.value;\n                return opcua.StatusCodes.Good;\n            }\n        }\n    });\n\n    namespace.addVariable({\n        organizedBy: myDevice,\n        browseName: \"Var_Double\",\n        nodeId: \"ns=1;s=Var_Double\",\n        dataType: \"Double\",\n        value: {\n            get: function () {\n                return new opcua.Variant({ dataType: opcua.DataType.Double, value: varDoubleValue });\n            },\n            set: function (variant) {\n                varDoubleValue = variant.value;\n                return opcua.StatusCodes.Good;\n            }\n        }\n    });\n\n    namespace.addVariable({\n        organizedBy: myDevice,\n        browseName: \"Var_STRING\",\n        nodeId: \"ns=1;s=Var_STRING\",\n        dataType: \"String\",\n        value: {\n            get: function () {\n                return new opcua.Variant({ dataType: opcua.DataType.String, value: varStringValue });\n            },\n            set: function (variant) {\n                varStringValue = variant.value;\n                return opcua.StatusCodes.Good;\n            }\n        }\n    });\n\n    coreServer.internalDebugLog(\"Creación dinámica de espacio de direcciones lista\");\n    node.warn(\"Construcción de espacio de direcciones para servidor de OPC UA en 55489 listo\");\n\n    done();\n}\n",
-        "x": 530,
-        "y": 840,
+        "x": 1510,
+        "y": 400,
         "wires": [
             [
                 "408dc6cbeff25d77"
@@ -2093,8 +2093,8 @@
                 "datatypeName": ""
             }
         ],
-        "x": 1740,
-        "y": 140,
+        "x": 440,
+        "y": 1160,
         "wires": [
             []
         ]
@@ -2119,8 +2119,8 @@
                 "datatypeName": ""
             }
         ],
-        "x": 1720,
-        "y": 260,
+        "x": 420,
+        "y": 1280,
         "wires": [
             []
         ]
@@ -2145,8 +2145,8 @@
                 "datatypeName": ""
             }
         ],
-        "x": 1730,
-        "y": 320,
+        "x": 430,
+        "y": 1340,
         "wires": [
             []
         ]
@@ -2164,8 +2164,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2100,
-        "y": 560,
+        "x": 1540,
+        "y": 1160,
         "wires": []
     },
     {
@@ -2195,8 +2195,8 @@
         "offcolor": "",
         "animate": true,
         "className": "",
-        "x": 1380,
-        "y": 550,
+        "x": 820,
+        "y": 1150,
         "wires": [
             [
                 "change_bool"
@@ -2217,8 +2217,8 @@
                 "tot": "jsonata"
             }
         ],
-        "x": 1580,
-        "y": 550,
+        "x": 1020,
+        "y": 1150,
         "wires": [
             [
                 "opc_write"
@@ -2245,8 +2245,8 @@
         "max": 5000,
         "step": 1,
         "className": "",
-        "x": 1380,
-        "y": 610,
+        "x": 820,
+        "y": 1210,
         "wires": [
             [
                 "change_int"
@@ -2267,8 +2267,8 @@
                 "tot": "jsonata"
             }
         ],
-        "x": 1580,
-        "y": 610,
+        "x": 1020,
+        "y": 1210,
         "wires": [
             [
                 "opc_write"
@@ -2296,8 +2296,8 @@
         "max": "99",
         "step": "0.01",
         "className": "",
-        "x": 1380,
-        "y": 670,
+        "x": 820,
+        "y": 1270,
         "wires": [
             [
                 "change_double"
@@ -2318,8 +2318,8 @@
                 "tot": "jsonata"
             }
         ],
-        "x": 1580,
-        "y": 670,
+        "x": 1020,
+        "y": 1270,
         "wires": [
             [
                 "opc_write"
@@ -2344,8 +2344,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "str",
-        "x": 1380,
-        "y": 730,
+        "x": 820,
+        "y": 1330,
         "wires": [
             [
                 "change_string"
@@ -2366,8 +2366,8 @@
                 "tot": "jsonata"
             }
         ],
-        "x": 1580,
-        "y": 730,
+        "x": 1020,
+        "y": 1330,
         "wires": [
             [
                 "opc_write"
@@ -2383,8 +2383,8 @@
         "justValue": false,
         "showStatusActivities": false,
         "showErrors": false,
-        "x": 1780,
-        "y": 640,
+        "x": 1220,
+        "y": 1240,
         "wires": [
             []
         ]
