@@ -2482,7 +2482,35 @@
         ]
     },
     {
-        "id": "b62de5d8effe8954",
+        "id": "9ebabc71460f257d",
+        "type": "modbus-server",
+        "z": "4e702d50e851e07d",
+        "name": "Server Modbus",
+        "logEnabled": false,
+        "hostname": "0.0.0.0",
+        "serverPort": "502",
+        "responseDelay": 100,
+        "delayUnit": "ms",
+        "coilsBufferSize": 10000,
+        "holdingBufferSize": 10000,
+        "inputBufferSize": 10000,
+        "discreteBufferSize": 10000,
+        "showErrors": false,
+        "showStatusActivities": false,
+        "x": 500,
+        "y": 180,
+        "wires": [
+            [
+                "b5de69b61aeed542"
+            ],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "718c2a1890c02989",
         "type": "inject",
         "z": "4e702d50e851e07d",
         "name": "",
@@ -2497,21 +2525,21 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 270,
-        "y": 160,
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 250,
+        "y": 180,
         "wires": [
             [
-                "30b8544c82e15861"
+                "9ebabc71460f257d"
             ]
         ]
     },
     {
-        "id": "cd0fbfd284939421",
+        "id": "b5de69b61aeed542",
         "type": "debug",
         "z": "4e702d50e851e07d",
         "name": "debug 11",
@@ -2522,460 +2550,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 720,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "function-coil-control",
-        "type": "function",
-        "z": "4e702d50e851e07d",
-        "name": "Format Modbus Write",
-        "func": "var coilIndex = msg.payload.coil;\nvar state = msg.payload.state ? 1 : 0;\n\nmsg.payload = { \n    'value': state, \n    'fc': 5, \n    'unitid': 1, \n    'address': coilIndex, \n    'quantity': 1 \n};\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 640,
-        "y": 780,
-        "wires": [
-            [
-                "modbus-write-coils"
-            ]
-        ]
-    },
-    {
-        "id": "function-input-control",
-        "type": "function",
-        "z": "4e702d50e851e07d",
-        "name": "Format Modbus Write for Inputs",
-        "func": "var inputIndex = msg.payload.input;\nvar value = msg.payload.value;\n\nmsg.payload = { \n    'value': value, \n    'fc': 6, \n    'unitid': 1, \n    'address': inputIndex + 10, // Ajusta la dirección base para los input registers\n    'quantity': 1 \n};\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 570,
-        "y": 920,
-        "wires": [
-            [
-                "write-input"
-            ]
-        ]
-    },
-    {
-        "id": "function-holding-control",
-        "type": "function",
-        "z": "4e702d50e851e07d",
-        "name": "Format Modbus Write for Holdings",
-        "func": "var holdingIndex = msg.payload.holding;\nvar value = msg.payload.value;\n\nmsg.payload = { \n    'value': value, \n    'fc': 6, \n    'unitid': 1, \n    'address': holdingIndex + 20, // Ajusta la dirección base para los holding registers\n    'quantity': 1 \n};\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 560,
-        "y": 1060,
-        "wires": [
-            [
-                "write-holding"
-            ]
-        ]
-    },
-    {
-        "id": "30b8544c82e15861",
-        "type": "hostip",
-        "z": "4e702d50e851e07d",
-        "name": "Host IP",
-        "x": 480,
+        "x": 780,
         "y": 160,
-        "wires": [
-            [
-                "cd0fbfd284939421",
-                "609fdaaf3a23e5a7"
-            ]
-        ]
-    },
-    {
-        "id": "5af5cf5902692208",
-        "type": "modbus-read",
-        "z": "4e702d50e851e07d",
-        "name": "Read Input Registers",
-        "topic": "",
-        "showStatusActivities": true,
-        "logIOActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "unitid": "1",
-        "dataType": "InputRegister",
-        "adr": "10",
-        "quantity": "8",
-        "rate": "2",
-        "rateUnit": "s",
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "server": "3b81367c79146636",
-        "useIOFile": false,
-        "ioFile": "",
-        "useIOForPayload": false,
-        "emptyMsgOnFail": false,
-        "x": 380,
-        "y": 560,
-        "wires": [
-            [
-                "d97996f56cf2c3c1"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "93442a1cfe80b58b",
-        "type": "modbus-read",
-        "z": "4e702d50e851e07d",
-        "name": "Read Holding Registers",
-        "topic": "",
-        "showStatusActivities": true,
-        "logIOActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "unitid": "1",
-        "dataType": "HoldingRegister",
-        "adr": "20",
-        "quantity": "8",
-        "rate": "2",
-        "rateUnit": "s",
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "server": "3b81367c79146636",
-        "useIOFile": false,
-        "ioFile": "",
-        "useIOForPayload": false,
-        "emptyMsgOnFail": false,
-        "x": 380,
-        "y": 660,
-        "wires": [
-            [
-                "d318f280ec938980"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "9642714c46afabac",
-        "type": "modbus-read",
-        "z": "4e702d50e851e07d",
-        "name": "Read Coils",
-        "topic": "",
-        "showStatusActivities": true,
-        "logIOActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "unitid": "1",
-        "dataType": "Coil",
-        "adr": "0",
-        "quantity": "16",
-        "rate": "2",
-        "rateUnit": "s",
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "server": "3b81367c79146636",
-        "useIOFile": false,
-        "ioFile": "",
-        "useIOForPayload": false,
-        "emptyMsgOnFail": false,
-        "x": 420,
-        "y": 460,
-        "wires": [
-            [
-                "0bbf479c9c6410a2"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "write-holding",
-        "type": "modbus-write",
-        "z": "4e702d50e851e07d",
-        "name": "Write Holding Register",
-        "showStatusActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "unitid": "1",
-        "dataType": "HoldingRegister",
-        "adr": "",
-        "quantity": "1",
-        "server": "3b81367c79146636",
-        "emptyMsgOnFail": false,
-        "keepMsgProperties": false,
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "x": 920,
-        "y": 1060,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
-        "id": "write-input",
-        "type": "modbus-write",
-        "z": "4e702d50e851e07d",
-        "name": "Write Input Register",
-        "showStatusActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "unitid": "1",
-        "dataType": "InputRegister",
-        "adr": "",
-        "quantity": "1",
-        "server": "3b81367c79146636",
-        "emptyMsgOnFail": false,
-        "keepMsgProperties": false,
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "x": 910,
-        "y": 920,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
-        "id": "modbus-write-coils",
-        "type": "modbus-flex-write",
-        "z": "4e702d50e851e07d",
-        "name": "Write Coils",
-        "showStatusActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "server": "3b81367c79146636",
-        "emptyMsgOnFail": false,
-        "keepMsgProperties": false,
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "x": 850,
-        "y": 780,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
-        "id": "a0829dc1dfc04987",
-        "type": "modbus-server",
-        "z": "4e702d50e851e07d",
-        "name": "Server Modbus",
-        "logEnabled": false,
-        "hostname": "127.0.0.1",
-        "serverPort": "502",
-        "responseDelay": 100,
-        "delayUnit": "ms",
-        "coilsBufferSize": 10000,
-        "holdingBufferSize": 10000,
-        "inputBufferSize": 10000,
-        "discreteBufferSize": 10000,
-        "showErrors": false,
-        "showStatusActivities": false,
-        "x": 380,
-        "y": 320,
-        "wires": [
-            [
-                "b1db5fac1b8738d2"
-            ],
-            [],
-            [],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "0bbf479c9c6410a2",
-        "type": "ui_text",
-        "z": "4e702d50e851e07d",
-        "group": "af9022af948df047",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "name": "Display Coils",
-        "label": "Coils Status",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
-        "x": 630,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "d97996f56cf2c3c1",
-        "type": "ui_text",
-        "z": "4e702d50e851e07d",
-        "group": "af9022af948df047",
-        "order": 10,
-        "width": 0,
-        "height": 0,
-        "name": "Display Inputs",
-        "label": "Input Registers",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
-        "x": 640,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "d318f280ec938980",
-        "type": "ui_text",
-        "z": "4e702d50e851e07d",
-        "group": "af9022af948df047",
-        "order": 13,
-        "width": 0,
-        "height": 0,
-        "name": "Display Holdings",
-        "label": "Holding Registers",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
-        "x": 650,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "template-coil-control",
-        "type": "ui_template",
-        "z": "4e702d50e851e07d",
-        "group": "",
-        "name": "Coil Control Panel",
-        "order": 6,
-        "width": 6,
-        "height": 5,
-        "format": "<div class=\"coils-container\" ng-init=\"coils=[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]\">\n    <div class=\"coil-switch\" ng-repeat=\"coil in coils track by $index\">\n        <label>Coil {{$index}}:</label>\n        <md-switch ng-model=\"coils[$index]\" ng-change=\"send({payload: {coil: $index, state: coils[$index]}})\">\n            {{coils[$index] ? 'ON' : 'OFF'}}\n        </md-switch>\n    </div>\n</div>\n<style>\n    .coils-container {\n        display: flex;\n        flex-wrap: wrap;\n        justify-content: space-around;\n    }\n    .coil-switch {\n        width: 30%;\n        padding: 5px;\n    }\n</style>",
-        "storeOutMessages": true,
-        "fwdInMessages": false,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "className": "",
-        "x": 390,
-        "y": 780,
-        "wires": [
-            [
-                "function-coil-control"
-            ]
-        ]
-    },
-    {
-        "id": "template-holding-control",
-        "type": "ui_template",
-        "z": "4e702d50e851e07d",
-        "group": "",
-        "name": "Holding Register Control Panel",
-        "order": 12,
-        "width": 6,
-        "height": 5,
-        "format": "<div class=\"holdings-container\" ng-init=\"holdings=[0,0,0,0,0,0,0,0]\">\n    <div class=\"holding-input\" ng-repeat=\"holding in holdings track by $index\">\n        <label>Holding {{$index}}:</label>\n        <input type=\"number\" ng-model=\"holdings[$index]\" ng-change=\"send({payload: {holding: $index, value: holdings[$index]}})\">\n    </div>\n</div>\n<style>\n    .holdings-container {\n        display: flex;\n        flex-wrap: wrap;\n        justify-content: space-around;\n    }\n    .holding-input {\n        width: 30%;\n        padding: 5px;\n    }\n</style>",
-        "storeOutMessages": true,
-        "fwdInMessages": false,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "className": "",
-        "x": 230,
-        "y": 1060,
-        "wires": [
-            [
-                "function-holding-control"
-            ]
-        ]
-    },
-    {
-        "id": "template-input-control",
-        "type": "ui_template",
-        "z": "4e702d50e851e07d",
-        "group": "",
-        "name": "Input Register Control Panel",
-        "order": 9,
-        "width": 6,
-        "height": 5,
-        "format": "<div class=\"inputs-container\" ng-init=\"inputs=[0,0,0,0,0,0,0,0]\">\n    <div class=\"input-input\" ng-repeat=\"input in inputs track by $index\">\n        <label>Input {{$index}}:</label>\n        <input type=\"number\" ng-model=\"inputs[$index]\" ng-change=\"send({payload: {input: $index, value: inputs[$index]}})\">\n    </div>\n</div>\n<style>\n    .inputs-container {\n        display: flex;\n        flex-wrap: wrap;\n        justify-content: space-around;\n    }\n    .input-input {\n        width: 30%;\n        padding: 5px;\n    }\n</style>",
-        "storeOutMessages": true,
-        "fwdInMessages": false,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "className": "",
-        "x": 240,
-        "y": 920,
-        "wires": [
-            [
-                "function-input-control"
-            ]
-        ]
-    },
-    {
-        "id": "18f7516113b6cdb8",
-        "type": "ui_text",
-        "z": "4e702d50e851e07d",
-        "group": "af9022af948df047",
-        "order": 3,
-        "width": 6,
-        "height": 1,
-        "name": "",
-        "label": "IP Maestro",
-        "format": "{{msg.Ipv4}}",
-        "layout": "col-center",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 930,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "609fdaaf3a23e5a7",
-        "type": "function",
-        "z": "4e702d50e851e07d",
-        "name": "Obtener IPV4",
-        "func": "msg.Ipv4 = msg.payload[0].address; \nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 740,
-        "y": 160,
-        "wires": [
-            [
-                "18f7516113b6cdb8"
-            ]
-        ]
-    },
-    {
-        "id": "b1db5fac1b8738d2",
-        "type": "debug",
-        "z": "4e702d50e851e07d",
-        "name": "debug 12",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 600,
-        "y": 280,
         "wires": []
     }
 ]
