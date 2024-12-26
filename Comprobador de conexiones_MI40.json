@@ -3050,7 +3050,7 @@
         "showErrors": false,
         "showWarnings": true,
         "unitid": "1",
-        "dataType": "Holding Register",
+        "dataType": "HoldingRegister",
         "adr": "0",
         "quantity": "10",
         "rate": "5",
