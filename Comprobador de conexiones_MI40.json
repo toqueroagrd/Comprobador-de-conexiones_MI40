@@ -2664,8 +2664,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
-        "y": 420,
+        "x": 350,
+        "y": 580,
         "wires": [
             [
                 "e1b0a71750230317"
@@ -2722,6 +2722,202 @@
         "topicType": "str",
         "x": 130,
         "y": 480,
+        "wires": [
+            [
+                "216a3822e523ae7a"
+            ]
+        ]
+    },
+    {
+        "id": "ef31022307174015",
+        "type": "ui_button",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "group": "af9022af948df047",
+        "order": 1,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "Coil 3",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "3",
+        "topicType": "str",
+        "x": 130,
+        "y": 520,
+        "wires": [
+            [
+                "216a3822e523ae7a"
+            ]
+        ]
+    },
+    {
+        "id": "71161e24df05fb2a",
+        "type": "ui_button",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "group": "af9022af948df047",
+        "order": 1,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "Coil 4",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "4",
+        "topicType": "str",
+        "x": 130,
+        "y": 560,
+        "wires": [
+            [
+                "216a3822e523ae7a"
+            ]
+        ]
+    },
+    {
+        "id": "e82766c55ba796ee",
+        "type": "ui_button",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "group": "af9022af948df047",
+        "order": 1,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "Coil 5",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "5",
+        "topicType": "str",
+        "x": 130,
+        "y": 600,
+        "wires": [
+            [
+                "216a3822e523ae7a"
+            ]
+        ]
+    },
+    {
+        "id": "9cb3a2210b6d9e54",
+        "type": "ui_button",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "group": "af9022af948df047",
+        "order": 1,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "Coil 6",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "6",
+        "topicType": "str",
+        "x": 130,
+        "y": 640,
+        "wires": [
+            [
+                "216a3822e523ae7a"
+            ]
+        ]
+    },
+    {
+        "id": "4e351b0933706152",
+        "type": "ui_button",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "group": "af9022af948df047",
+        "order": 1,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "Coil 7",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "7",
+        "topicType": "str",
+        "x": 130,
+        "y": 680,
+        "wires": [
+            [
+                "216a3822e523ae7a"
+            ]
+        ]
+    },
+    {
+        "id": "349c8be653fe52e7",
+        "type": "ui_button",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "group": "af9022af948df047",
+        "order": 1,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "Coil 8",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "8",
+        "topicType": "str",
+        "x": 130,
+        "y": 720,
+        "wires": [
+            [
+                "216a3822e523ae7a"
+            ]
+        ]
+    },
+    {
+        "id": "50eb80d9307fc579",
+        "type": "ui_button",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "group": "af9022af948df047",
+        "order": 1,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "Coil 9",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "9",
+        "topicType": "str",
+        "x": 130,
+        "y": 760,
         "wires": [
             [
                 "216a3822e523ae7a"
