@@ -2567,7 +2567,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "{\"value\":123,\"fc\":6,\"unitid\":1,\"address\":0,\"quantity\":2}",
+        "payload": "{\"value\":123,\"fc\":6,\"unitid\":1,\"address\":0,\"quantity\":1}",
         "payloadType": "json",
         "x": 260,
         "y": 320,
