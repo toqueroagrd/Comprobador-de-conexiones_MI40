@@ -32,6 +32,13 @@
         "env": []
     },
     {
+        "id": "48b4dc49fafe0f14",
+        "type": "tab",
+        "label": "Holding Registers",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "12fc471dcc5f019d",
         "type": "mqtt-broker",
         "name": "Open broker - 1883",
@@ -553,6 +560,28 @@
         "name": "Coils",
         "tab": "e7174bcf0bf8f174",
         "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8ca878b182ad523d",
+        "type": "ui_group",
+        "name": "Holding Registers",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a9d511a6d1931d73",
+        "type": "ui_group",
+        "name": "Holding registers",
+        "tab": "e7174bcf0bf8f174",
+        "order": 3,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -2552,7 +2581,7 @@
         "delayOnStart": false,
         "startDelayTime": "",
         "x": 660,
-        "y": 500,
+        "y": 300,
         "wires": [
             [
                 "553555eadb4f9f44"
@@ -2574,7 +2603,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 860,
-        "y": 480,
+        "y": 280,
         "wires": []
     },
     {
@@ -2590,7 +2619,7 @@
         "finalize": "",
         "libs": [],
         "x": 450,
-        "y": 500,
+        "y": 300,
         "wires": [
             [
                 "e1b0a71750230317"
@@ -2624,7 +2653,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 500,
+        "y": 300,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2655,7 +2684,7 @@
         "useIOForPayload": false,
         "emptyMsgOnFail": false,
         "x": 240,
-        "y": 420,
+        "y": 220,
         "wires": [
             [
                 "b9119c64a1539248"
@@ -2690,7 +2719,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 560,
+        "y": 360,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2724,7 +2753,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 620,
+        "y": 420,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2758,7 +2787,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 680,
+        "y": 480,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2792,7 +2821,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 740,
+        "y": 540,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2826,7 +2855,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 800,
+        "y": 600,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2860,7 +2889,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 860,
+        "y": 660,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2894,7 +2923,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 920,
+        "y": 720,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2928,7 +2957,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 980,
+        "y": 780,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2962,7 +2991,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 1040,
+        "y": 840,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2987,7 +3016,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 720,
-        "y": 400,
+        "y": 200,
         "wires": []
     },
     {
@@ -3003,11 +3032,292 @@
         "finalize": "",
         "libs": [],
         "x": 450,
-        "y": 400,
+        "y": 200,
         "wires": [
             [
                 "27e6548e6e66f448"
             ]
+        ]
+    },
+    {
+        "id": "f2257bf6eb02ad79",
+        "type": "modbus-read",
+        "z": "4e702d50e851e07d",
+        "name": "Leer Holding Registers",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Holding Register",
+        "adr": "0",
+        "quantity": "10",
+        "rate": "5",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "3b81367c79146636",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 240,
+        "y": 940,
+        "wires": [
+            [
+                "0f29104e26f61a98"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "0f29104e26f61a98",
+        "type": "function",
+        "z": "4e702d50e851e07d",
+        "name": "Formatear Holding Registers",
+        "func": "// Convierte los valores en una lista legible\nmsg.payload = msg.payload.map((value, index) => `Reg ${index}: ${value}`).join('\\n');\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 940,
+        "wires": [
+            [
+                "af11aa18fa5c50f2"
+            ]
+        ]
+    },
+    {
+        "id": "af11aa18fa5c50f2",
+        "type": "ui_text",
+        "z": "4e702d50e851e07d",
+        "group": "a9d511a6d1931d73",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Valores Holding Registers",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 830,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "ae9969aa052b3ff2",
+        "type": "ui_numeric",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "label": "Registro 0",
+        "tooltip": "",
+        "group": "a9d511a6d1931d73",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "0",
+        "topicType": "str",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 1000,
+        "step": 1,
+        "className": "",
+        "x": 270,
+        "y": 1000,
+        "wires": [
+            [
+                "04a29447d0c7d272"
+            ]
+        ]
+    },
+    {
+        "id": "04a29447d0c7d272",
+        "type": "function",
+        "z": "4e702d50e851e07d",
+        "name": "Escribir Holding Register",
+        "func": "msg.payload = {\n    value: [parseInt(msg.payload)],\n    fc: 6,                          // Código de función Modbus\n    unitid: 1,                      // Unit ID del servidor\n    address: parseInt(msg.topic),   // Dirección del registro\n    quantity: 1                     // Solo un registro\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 1000,
+        "wires": [
+            [
+                "3739d53e57eaf11c"
+            ]
+        ]
+    },
+    {
+        "id": "3739d53e57eaf11c",
+        "type": "modbus-flex-write",
+        "z": "4e702d50e851e07d",
+        "name": "Escribir Registro Modbus",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "server": "3b81367c79146636",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 760,
+        "y": 1000,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a94563fac236df23",
+        "type": "modbus-read",
+        "z": "48b4dc49fafe0f14",
+        "name": "Leer Holding Registers",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Holding Register",
+        "adr": "0",
+        "quantity": "10",
+        "rate": "5",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "3b81367c79146636",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 180,
+        "y": 100,
+        "wires": [
+            [
+                "0f0862ce9501eb3d"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "0f0862ce9501eb3d",
+        "type": "function",
+        "z": "48b4dc49fafe0f14",
+        "name": "Formatear Holding Registers",
+        "func": "// Convierte los valores en una lista legible\nmsg.payload = msg.payload.map((value, index) => `Reg ${index}: ${value}`).join('\\n');\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 100,
+        "wires": [
+            [
+                "a45d046f3f88d8b5"
+            ]
+        ]
+    },
+    {
+        "id": "a45d046f3f88d8b5",
+        "type": "ui_text",
+        "z": "48b4dc49fafe0f14",
+        "group": "8ca878b182ad523d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Valores Holding Registers",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 770,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "6684ddc96b125374",
+        "type": "ui_numeric",
+        "z": "48b4dc49fafe0f14",
+        "name": "",
+        "label": "Registro 0",
+        "tooltip": "",
+        "group": "8ca878b182ad523d",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "topic": "0",
+        "topicType": "str",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 1000,
+        "step": 1,
+        "className": "",
+        "x": 230,
+        "y": 220,
+        "wires": [
+            [
+                "1978ca95bcab60d8"
+            ]
+        ]
+    },
+    {
+        "id": "1978ca95bcab60d8",
+        "type": "function",
+        "z": "48b4dc49fafe0f14",
+        "name": "Escribir Holding Register",
+        "func": "msg.payload = {\n    value: [parseInt(msg.payload)],\n    fc: 6,                          // Código de función Modbus\n    unitid: 1,                      // Unit ID del servidor\n    address: parseInt(msg.topic),   // Dirección del registro\n    quantity: 1                     // Solo un registro\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 220,
+        "wires": [
+            [
+                "5232ca1675dd4a5b"
+            ]
+        ]
+    },
+    {
+        "id": "5232ca1675dd4a5b",
+        "type": "modbus-flex-write",
+        "z": "48b4dc49fafe0f14",
+        "name": "Escribir Registro Modbus",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "server": "3b81367c79146636",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 720,
+        "y": 220,
+        "wires": [
+            [],
+            []
         ]
     }
 ]
