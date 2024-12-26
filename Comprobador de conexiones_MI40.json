@@ -2960,14 +2960,14 @@
         "height": 1,
         "label": "Coil 0",
         "stateField": "payload",
-        "enableField": "enabled_show",
-        "passthroughField": "never",
-        "inputMsgField": "none",
-        "rounded": false,
+        "enableField": "user_input",
+        "passthroughField": "passthrough",
+        "inputMsgField": "input_msg",
+        "rounded": true,
         "useThemeColors": true,
         "hideSelectedLabel": false,
         "multilineLabel": false,
-        "passThrough": "never",
+        "passThrough": "change",
         "inputMsg": "all",
         "userInput": "enabled_show",
         "options": [
@@ -3024,97 +3024,6 @@
         "wires": [
             [],
             []
-        ]
-    },
-    {
-        "id": "multistate1",
-        "type": "ui_multistate_switch",
-        "z": "controlCoils",
-        "name": "Coil 1",
-        "group": "af9022af948df047",
-        "order": 1,
-        "width": 2,
-        "height": 1,
-        "label": "Coil 1",
-        "stateField": "",
-        "enableField": "",
-        "passthroughField": "",
-        "inputMsgField": "",
-        "rounded": false,
-        "useThemeColors": false,
-        "hideSelectedLabel": false,
-        "multilineLabel": false,
-        "passThrough": "never",
-        "inputMsg": "all",
-        "userInput": "enabled_show",
-        "options": [],
-        "topic": "1",
-        "x": 150,
-        "y": 120,
-        "wires": [
-            [
-                "functionCoils"
-            ]
-        ]
-    },
-    {
-        "id": "multistate2",
-        "type": "ui_multistate_switch",
-        "z": "controlCoils",
-        "name": "Coil 2",
-        "group": "coilGroup",
-        "order": 2,
-        "width": 2,
-        "height": 1,
-        "label": "Coil 2",
-        "options": "[{\"label\":\"Off\",\"value\":false},{\"label\":\"On\",\"value\":true}]",
-        "topic": "2",
-        "x": 150,
-        "y": 180,
-        "wires": [
-            [
-                "functionCoils"
-            ]
-        ]
-    },
-    {
-        "id": "multistate3",
-        "type": "ui_multistate_switch",
-        "z": "controlCoils",
-        "name": "Coil 3",
-        "group": "coilGroup",
-        "order": 3,
-        "width": 2,
-        "height": 1,
-        "label": "Coil 3",
-        "options": "[{\"label\":\"Off\",\"value\":false},{\"label\":\"On\",\"value\":true}]",
-        "topic": "3",
-        "x": 150,
-        "y": 240,
-        "wires": [
-            [
-                "functionCoils"
-            ]
-        ]
-    },
-    {
-        "id": "multistate4",
-        "type": "ui_multistate_switch",
-        "z": "controlCoils",
-        "name": "Coil 4",
-        "group": "coilGroup",
-        "order": 4,
-        "width": 2,
-        "height": 1,
-        "label": "Coil 4",
-        "options": "[{\"label\":\"Off\",\"value\":false},{\"label\":\"On\",\"value\":true}]",
-        "topic": "4",
-        "x": 150,
-        "y": 300,
-        "wires": [
-            [
-                "functionCoils"
-            ]
         ]
     }
 ]
