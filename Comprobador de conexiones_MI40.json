@@ -32,7 +32,7 @@
         "env": []
     },
     {
-        "id": "c870dd9b631c1264",
+        "id": "5b62a2503bddb771",
         "type": "tab",
         "label": "Control Coils",
         "disabled": false,
@@ -458,7 +458,7 @@
         "tab": "e7174bcf0bf8f174",
         "order": 1,
         "disp": true,
-        "width": "6",
+        "width": 10,
         "collapse": false,
         "className": ""
     },
@@ -2650,34 +2650,6 @@
         "wires": []
     },
     {
-        "id": "745b8f24a64e3e6a",
-        "type": "ui_button",
-        "z": "4e702d50e851e07d",
-        "name": "Coil 0",
-        "group": "af9022af948df047",
-        "order": 1,
-        "width": 1,
-        "height": 1,
-        "passthru": false,
-        "label": "Coil 0",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "0",
-        "topicType": "str",
-        "x": 130,
-        "y": 400,
-        "wires": [
-            [
-                "216a3822e523ae7a"
-            ]
-        ]
-    },
-    {
         "id": "216a3822e523ae7a",
         "type": "function",
         "z": "4e702d50e851e07d",
@@ -2689,263 +2661,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 350,
+        "x": 510,
         "y": 580,
         "wires": [
             [
                 "e1b0a71750230317"
-            ]
-        ]
-    },
-    {
-        "id": "c05653809510ef49",
-        "type": "ui_button",
-        "z": "4e702d50e851e07d",
-        "name": "",
-        "group": "af9022af948df047",
-        "order": 1,
-        "width": 1,
-        "height": 1,
-        "passthru": false,
-        "label": "Coil 1",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "1",
-        "topicType": "str",
-        "x": 130,
-        "y": 440,
-        "wires": [
-            [
-                "216a3822e523ae7a"
-            ]
-        ]
-    },
-    {
-        "id": "a5f5548751590569",
-        "type": "ui_button",
-        "z": "4e702d50e851e07d",
-        "name": "",
-        "group": "af9022af948df047",
-        "order": 1,
-        "width": 1,
-        "height": 1,
-        "passthru": false,
-        "label": "Coil 2",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "2",
-        "topicType": "str",
-        "x": 130,
-        "y": 480,
-        "wires": [
-            [
-                "216a3822e523ae7a"
-            ]
-        ]
-    },
-    {
-        "id": "ef31022307174015",
-        "type": "ui_button",
-        "z": "4e702d50e851e07d",
-        "name": "",
-        "group": "af9022af948df047",
-        "order": 1,
-        "width": 1,
-        "height": 1,
-        "passthru": false,
-        "label": "Coil 3",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "3",
-        "topicType": "str",
-        "x": 130,
-        "y": 520,
-        "wires": [
-            [
-                "216a3822e523ae7a"
-            ]
-        ]
-    },
-    {
-        "id": "71161e24df05fb2a",
-        "type": "ui_button",
-        "z": "4e702d50e851e07d",
-        "name": "",
-        "group": "af9022af948df047",
-        "order": 1,
-        "width": 1,
-        "height": 1,
-        "passthru": false,
-        "label": "Coil 4",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "4",
-        "topicType": "str",
-        "x": 130,
-        "y": 560,
-        "wires": [
-            [
-                "216a3822e523ae7a"
-            ]
-        ]
-    },
-    {
-        "id": "e82766c55ba796ee",
-        "type": "ui_button",
-        "z": "4e702d50e851e07d",
-        "name": "",
-        "group": "af9022af948df047",
-        "order": 1,
-        "width": 1,
-        "height": 1,
-        "passthru": false,
-        "label": "Coil 5",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "5",
-        "topicType": "str",
-        "x": 130,
-        "y": 600,
-        "wires": [
-            [
-                "216a3822e523ae7a"
-            ]
-        ]
-    },
-    {
-        "id": "9cb3a2210b6d9e54",
-        "type": "ui_button",
-        "z": "4e702d50e851e07d",
-        "name": "",
-        "group": "af9022af948df047",
-        "order": 1,
-        "width": 1,
-        "height": 1,
-        "passthru": false,
-        "label": "Coil 6",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "6",
-        "topicType": "str",
-        "x": 130,
-        "y": 640,
-        "wires": [
-            [
-                "216a3822e523ae7a"
-            ]
-        ]
-    },
-    {
-        "id": "4e351b0933706152",
-        "type": "ui_button",
-        "z": "4e702d50e851e07d",
-        "name": "",
-        "group": "af9022af948df047",
-        "order": 1,
-        "width": 1,
-        "height": 1,
-        "passthru": false,
-        "label": "Coil 7",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "7",
-        "topicType": "str",
-        "x": 130,
-        "y": 680,
-        "wires": [
-            [
-                "216a3822e523ae7a"
-            ]
-        ]
-    },
-    {
-        "id": "349c8be653fe52e7",
-        "type": "ui_button",
-        "z": "4e702d50e851e07d",
-        "name": "",
-        "group": "af9022af948df047",
-        "order": 1,
-        "width": 1,
-        "height": 1,
-        "passthru": false,
-        "label": "Coil 8",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "8",
-        "topicType": "str",
-        "x": 130,
-        "y": 720,
-        "wires": [
-            [
-                "216a3822e523ae7a"
-            ]
-        ]
-    },
-    {
-        "id": "50eb80d9307fc579",
-        "type": "ui_button",
-        "z": "4e702d50e851e07d",
-        "name": "",
-        "group": "af9022af948df047",
-        "order": 1,
-        "width": 1,
-        "height": 1,
-        "passthru": false,
-        "label": "Coil 9",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "9",
-        "topicType": "str",
-        "x": 130,
-        "y": 760,
-        "wires": [
-            [
-                "216a3822e523ae7a"
             ]
         ]
     },
@@ -2975,8 +2695,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 130,
-        "y": 820,
+        "x": 270,
+        "y": 540,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2984,14 +2704,14 @@
         ]
     },
     {
-        "id": "bfae03c86650a50a",
+        "id": "cce412905e6d92cc",
         "type": "ui_svg_graphics",
         "z": "4e702d50e851e07d",
         "group": "af9022af948df047",
         "order": 1,
-        "width": "0",
-        "height": "0",
-        "svgString": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 300' width='600' height='300'>\n  <!-- Fila 1 -->\n  <g>\n    <rect id='coil0' x='20' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='70' y='50' text-anchor='middle' fill='white'>Coil 0</text>\n  </g>\n  <g>\n    <rect id='coil1' x='140' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='190' y='50' text-anchor='middle' fill='white'>Coil 1</text>\n  </g>\n  <g>\n    <rect id='coil2' x='260' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='310' y='50' text-anchor='middle' fill='white'>Coil 2</text>\n  </g>\n  <g>\n    <rect id='coil3' x='380' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='430' y='50' text-anchor='middle' fill='white'>Coil 3</text>\n  </g>\n  <g>\n    <rect id='coil4' x='500' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='550' y='50' text-anchor='middle' fill='white'>Coil 4</text>\n  </g>\n\n  <!-- Fila 2 -->\n  <g>\n    <rect id='coil5' x='20' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='70' y='130' text-anchor='middle' fill='white'>Coil 5</text>\n  </g>\n  <g>\n    <rect id='coil6' x='140' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='190' y='130' text-anchor='middle' fill='white'>Coil 6</text>\n  </g>\n  <g>\n    <rect id='coil7' x='260' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='310' y='130' text-anchor='middle' fill='white'>Coil 7</text>\n  </g>\n  <g>\n    <rect id='coil8' x='380' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='430' y='130' text-anchor='middle' fill='white'>Coil 8</text>\n  </g>\n  <g>\n    <rect id='coil9' x='500' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='550' y='130' text-anchor='middle' fill='white'>Coil 9</text>\n  </g>\n</svg>",
+        "width": 10,
+        "height": 4,
+        "svgString": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 300' width='600' height='300'>\n  <!-- Fila 1 -->\n  <g id='coil0' class='coil'>\n    <rect x='20' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='70' y='50' text-anchor='middle' fill='white'>Coil 0</text>\n  </g>\n  <g id='coil1' class='coil'>\n    <rect x='140' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='190' y='50' text-anchor='middle' fill='white'>Coil 1</text>\n  </g>\n  <g id='coil2' class='coil'>\n    <rect x='260' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='310' y='50' text-anchor='middle' fill='white'>Coil 2</text>\n  </g>\n  <g id='coil3' class='coil'>\n    <rect x='380' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='430' y='50' text-anchor='middle' fill='white'>Coil 3</text>\n  </g>\n  <g id='coil4' class='coil'>\n    <rect x='500' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='550' y='50' text-anchor='middle' fill='white'>Coil 4</text>\n  </g>\n  <!-- Fila 2 -->\n  <g id='coil5' class='coil'>\n    <rect x='20' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='70' y='130' text-anchor='middle' fill='white'>Coil 5</text>\n  </g>\n  <g id='coil6' class='coil'>\n    <rect x='140' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='190' y='130' text-anchor='middle' fill='white'>Coil 6</text>\n  </g>\n  <g id='coil7' class='coil'>\n    <rect x='260' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='310' y='130' text-anchor='middle' fill='white'>Coil 7</text>\n  </g>\n  <g id='coil8' class='coil'>\n    <rect x='380' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='430' y='130' text-anchor='middle' fill='white'>Coil 8</text>\n  </g>\n  <g id='coil9' class='coil'>\n    <rect x='500' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='550' y='130' text-anchor='middle' fill='white'>Coil 9</text>\n  </g>\n</svg>",
         "clickableShapes": [],
         "javascriptHandlers": [],
         "smilAnimations": [],
@@ -3012,8 +2732,8 @@
         "dblClickZoomPercentage": "150",
         "cssString": "",
         "name": "",
-        "x": 380,
-        "y": 740,
+        "x": 260,
+        "y": 640,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -3021,14 +2741,62 @@
         ]
     },
     {
-        "id": "6ec9cfa834e2aeef",
+        "id": "942990f59a07b6e1",
+        "type": "modbus-read",
+        "z": "4e702d50e851e07d",
+        "name": "Leer Coils",
+        "topic": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "0",
+        "quantity": "10",
+        "rate": "5",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "modbusServer",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 260,
+        "y": 740,
+        "wires": [
+            [
+                "ffc2927acd39dfe2"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ffc2927acd39dfe2",
+        "type": "function",
+        "z": "4e702d50e851e07d",
+        "name": "Actualizar SVG",
+        "func": "let updates = [];\nmsg.payload.forEach((state, index) => {\n    updates.push({\n        id: `coil${index}`,\n        fill: state ? \"green\" : \"gray\"\n    });\n});\nmsg.payload = updates;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 510,
+        "y": 740,
+        "wires": [
+            [
+                "cce412905e6d92cc"
+            ]
+        ]
+    },
+    {
+        "id": "c66fc8c34285ef23",
         "type": "ui_svg_graphics",
-        "z": "c870dd9b631c1264",
+        "z": "5b62a2503bddb771",
         "group": "coilGroup",
         "order": 1,
         "width": 12,
         "height": 6,
-        "svgString": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 300' width='600' height='300'>\n  <!-- Fila 1 -->\n  <g>\n    <rect id='coil0' x='20' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='70' y='50' text-anchor='middle' fill='white'>Coil 0</text>\n  </g>\n  <g>\n    <rect id='coil1' x='140' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='190' y='50' text-anchor='middle' fill='white'>Coil 1</text>\n  </g>\n  <g>\n    <rect id='coil2' x='260' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='310' y='50' text-anchor='middle' fill='white'>Coil 2</text>\n  </g>\n  <g>\n    <rect id='coil3' x='380' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='430' y='50' text-anchor='middle' fill='white'>Coil 3</text>\n  </g>\n  <g>\n    <rect id='coil4' x='500' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='550' y='50' text-anchor='middle' fill='white'>Coil 4</text>\n  </g>\n\n  <!-- Fila 2 -->\n  <g>\n    <rect id='coil5' x='20' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='70' y='130' text-anchor='middle' fill='white'>Coil 5</text>\n  </g>\n  <g>\n    <rect id='coil6' x='140' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='190' y='130' text-anchor='middle' fill='white'>Coil 6</text>\n  </g>\n  <g>\n    <rect id='coil7' x='260' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='310' y='130' text-anchor='middle' fill='white'>Coil 7</text>\n  </g>\n  <g>\n    <rect id='coil8' x='380' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='430' y='130' text-anchor='middle' fill='white'>Coil 8</text>\n  </g>\n  <g>\n    <rect id='coil9' x='500' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='550' y='130' text-anchor='middle' fill='white'>Coil 9</text>\n  </g>\n</svg>",
+        "svgString": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 300' width='600' height='300'>\n  <!-- Fila 1 -->\n  <g id='coil0' class='coil'>\n    <rect x='20' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='70' y='50' text-anchor='middle' fill='white'>Coil 0</text>\n  </g>\n  <g id='coil1' class='coil'>\n    <rect x='140' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='190' y='50' text-anchor='middle' fill='white'>Coil 1</text>\n  </g>\n  <g id='coil2' class='coil'>\n    <rect x='260' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='310' y='50' text-anchor='middle' fill='white'>Coil 2</text>\n  </g>\n  <g id='coil3' class='coil'>\n    <rect x='380' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='430' y='50' text-anchor='middle' fill='white'>Coil 3</text>\n  </g>\n  <g id='coil4' class='coil'>\n    <rect x='500' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='550' y='50' text-anchor='middle' fill='white'>Coil 4</text>\n  </g>\n  <!-- Fila 2 -->\n  <g id='coil5' class='coil'>\n    <rect x='20' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='70' y='130' text-anchor='middle' fill='white'>Coil 5</text>\n  </g>\n  <g id='coil6' class='coil'>\n    <rect x='140' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='190' y='130' text-anchor='middle' fill='white'>Coil 6</text>\n  </g>\n  <g id='coil7' class='coil'>\n    <rect x='260' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='310' y='130' text-anchor='middle' fill='white'>Coil 7</text>\n  </g>\n  <g id='coil8' class='coil'>\n    <rect x='380' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='430' y='130' text-anchor='middle' fill='white'>Coil 8</text>\n  </g>\n  <g id='coil9' class='coil'>\n    <rect x='500' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='550' y='130' text-anchor='middle' fill='white'>Coil 9</text>\n  </g>\n</svg>",
         "clickableShapes": "[\"coil0\",\"coil1\",\"coil2\",\"coil3\",\"coil4\",\"coil5\",\"coil6\",\"coil7\",\"coil8\",\"coil9\"]",
         "smilAnimations": "",
         "bindings": "",
@@ -3037,7 +2805,88 @@
         "x": 200,
         "y": 200,
         "wires": [
+            [
+                "a1f5ce51068d1086"
+            ]
+        ]
+    },
+    {
+        "id": "a1f5ce51068d1086",
+        "type": "function",
+        "z": "5b62a2503bddb771",
+        "name": "Procesar Coil",
+        "func": "msg.payload = {\n    value: msg.payload === 'true',  // Alterna entre true y false\n    fc: 5,                         // Código de función Modbus para Coils\n    unitid: 1,                     // ID del dispositivo Modbus\n    address: parseInt(msg.shapeId.replace('coil', '')), // Dirección del Coil enviada como shapeId\n    quantity: 1                    // Solo 1 Coil\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 450,
+        "y": 200,
+        "wires": [
+            [
+                "937bda912dad914e"
+            ]
+        ]
+    },
+    {
+        "id": "937bda912dad914e",
+        "type": "modbus-flex-write",
+        "z": "5b62a2503bddb771",
+        "name": "Escribir Coils",
+        "server": "modbusServer",
+        "x": 700,
+        "y": 200,
+        "wires": [
+            [],
             []
+        ]
+    },
+    {
+        "id": "f21a4f67a103d240",
+        "type": "modbus-read",
+        "z": "5b62a2503bddb771",
+        "name": "Leer Coils",
+        "topic": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "0",
+        "quantity": "10",
+        "rate": "5",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "modbusServer",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 200,
+        "y": 300,
+        "wires": [
+            [
+                "71d1e0c6bc70c318"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "71d1e0c6bc70c318",
+        "type": "function",
+        "z": "5b62a2503bddb771",
+        "name": "Actualizar SVG",
+        "func": "let updates = [];\nmsg.payload.forEach((state, index) => {\n    updates.push({\n        id: `coil${index}`,\n        fill: state ? \"green\" : \"gray\"\n    });\n});\nmsg.payload = updates;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 450,
+        "y": 300,
+        "wires": [
+            [
+                "c66fc8c34285ef23"
+            ]
         ]
     }
 ]
