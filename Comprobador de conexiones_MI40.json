@@ -3222,6 +3222,32 @@
         ]
     },
     {
+        "id": "09db98f66fa81bcf",
+        "type": "ui_text_input",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "8ca878b182ad523d",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "0",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 270,
+        "y": 1120,
+        "wires": [
+            [
+                "04a29447d0c7d272"
+            ]
+        ]
+    },
+    {
         "id": "a94563fac236df23",
         "type": "modbus-read",
         "z": "48b4dc49fafe0f14",
