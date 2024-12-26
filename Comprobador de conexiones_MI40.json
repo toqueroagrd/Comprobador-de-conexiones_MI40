@@ -2570,7 +2570,7 @@
         "payload": "{\"value\":123,\"fc\":6,\"unitid\":1,\"address\":0,\"quantity\":1}",
         "payloadType": "json",
         "x": 260,
-        "y": 320,
+        "y": 300,
         "wires": [
             [
                 "e1b0a71750230317"
