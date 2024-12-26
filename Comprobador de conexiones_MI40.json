@@ -3276,6 +3276,79 @@
         ]
     },
     {
+        "id": "5de78b437c9d92ab",
+        "type": "modbus-read",
+        "z": "4e702d50e851e07d",
+        "name": "Leer Coils",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "1",
+        "quantity": "10",
+        "rate": "5",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "3b81367c79146636",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 500,
+        "y": 140,
+        "wires": [
+            [
+                "a55c0c8b3e82f5a8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "4bf8d1ead2588507",
+        "type": "ui_text",
+        "z": "4e702d50e851e07d",
+        "group": "a7ed64dd462a9d40",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Coils status (5 sec refresh)",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 980,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "a55c0c8b3e82f5a8",
+        "type": "function",
+        "z": "4e702d50e851e07d",
+        "name": "Mapeo coils",
+        "func": "// Toma los primeros 10 elementos del array\nlet coilStates = msg.payload.slice(0, 10);\n\n// Convierte true/false en 1/0\nlet formattedStates = coilStates.map(state => state ? 1 : 0);\n\n// Une los números en una sola línea\nmsg.payload = formattedStates.join(' ');\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 120,
+        "wires": [
+            [
+                "4bf8d1ead2588507"
+            ]
+        ]
+    },
+    {
         "id": "a94563fac236df23",
         "type": "modbus-read",
         "z": "48b4dc49fafe0f14",
