@@ -2956,7 +2956,7 @@
         "passthru": true,
         "decouple": "false",
         "topic": "0",
-        "topicType": "msg",
+        "topicType": "str",
         "style": "",
         "onvalue": "true",
         "onvalueType": "bool",
