@@ -96,7 +96,7 @@
         "stateLogEnabled": false,
         "queueLogEnabled": false,
         "failureLogEnabled": true,
-        "tcpHost": "127.0.0.1",
+        "tcpHost": "192.168.1.143",
         "tcpPort": "502",
         "tcpType": "DEFAULT",
         "serialPort": "/dev/ttyUSB",
@@ -2601,9 +2601,7 @@
         "x": 500,
         "y": 260,
         "wires": [
-            [
-                "9ebabc71460f257d"
-            ],
+            [],
             []
         ]
     }
