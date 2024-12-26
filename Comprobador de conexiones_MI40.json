@@ -32,13 +32,6 @@
         "env": []
     },
     {
-        "id": "controlCoils",
-        "type": "tab",
-        "label": "Control Coils",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "12fc471dcc5f019d",
         "type": "mqtt-broker",
         "name": "Open broker - 1883",
@@ -2950,80 +2943,37 @@
         ]
     },
     {
-        "id": "multistate0",
-        "type": "ui_multistate_switch",
-        "z": "controlCoils",
-        "name": "Coil 0",
-        "group": "af9022af948df047",
-        "order": 0,
-        "width": 2,
-        "height": 1,
+        "id": "8a7530f9b076b5b6",
+        "type": "ui_switch",
+        "z": "4e702d50e851e07d",
+        "name": "",
         "label": "Coil 0",
-        "stateField": "payload",
-        "enableField": "user_input",
-        "passthroughField": "passthrough",
-        "inputMsgField": "input_msg",
-        "rounded": true,
-        "useThemeColors": true,
-        "hideSelectedLabel": false,
-        "multilineLabel": false,
-        "passThrough": "change",
-        "inputMsg": "all",
-        "userInput": "enabled_show",
-        "options": [
-            {
-                "label": "TRUE",
-                "value": "true",
-                "valueType": "bool",
-                "color": "#009933"
-            },
-            {
-                "label": "FALSE",
-                "value": "true",
-                "valueType": "bool",
-                "color": "#999999"
-            }
-        ],
+        "tooltip": "",
+        "group": "df3931bb045e7b4f",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
         "topic": "0",
-        "x": 150,
-        "y": 60,
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 130,
+        "y": 820,
         "wires": [
             [
-                "functionCoils"
+                "216a3822e523ae7a"
             ]
-        ]
-    },
-    {
-        "id": "functionCoils",
-        "type": "function",
-        "z": "controlCoils",
-        "name": "Procesar Coil",
-        "func": "msg.payload = {\n    value: msg.payload,  // El valor enviado por el switch (true/false)\n    fc: 5,               // Código de función para Coils\n    unitid: 1,           // Unit ID del servidor Modbus\n    address: parseInt(msg.topic),  // Dirección del Coil\n    quantity: 1          // Escribir un solo Coil\n};\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 400,
-        "y": 200,
-        "wires": [
-            [
-                "modbusFlexWrite"
-            ]
-        ]
-    },
-    {
-        "id": "modbusFlexWrite",
-        "type": "modbus-flex-write",
-        "z": "controlCoils",
-        "name": "Escribir Coils",
-        "server": "modbusServer",
-        "x": 650,
-        "y": 200,
-        "wires": [
-            [],
-            []
         ]
     }
 ]
