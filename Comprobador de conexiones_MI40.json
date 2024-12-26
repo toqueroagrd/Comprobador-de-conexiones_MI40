@@ -2560,19 +2560,15 @@
         "props": [
             {
                 "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
             }
         ],
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "fc:6,address:1",
-        "payload": "123",
-        "payloadType": "num",
+        "topic": "",
+        "payload": "{\"value\":123,\"fc\":6,\"unitid\":1,\"address\":0,\"quantity\":1}",
+        "payloadType": "json",
         "x": 260,
         "y": 320,
         "wires": [
