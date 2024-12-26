@@ -451,7 +451,7 @@
         "tab": "e7174bcf0bf8f174",
         "order": 1,
         "disp": true,
-        "width": 2,
+        "width": 3,
         "collapse": false,
         "className": ""
     },
@@ -548,29 +548,13 @@
         "height": 1
     },
     {
-        "id": "tab1",
-        "type": "ui_tab",
-        "name": "Control Modbus",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "coilTab",
-        "type": "ui_tab",
-        "name": "Control Modbus",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "972e93e9566d92f2",
+        "id": "54a361a261d88722",
         "type": "ui_spacer",
         "z": "4e702d50e851e07d",
         "name": "spacer",
         "group": "af9022af948df047",
         "order": 1,
-        "width": 2,
+        "width": 3,
         "height": 1
     },
     {
@@ -2569,10 +2553,10 @@
         "x": 660,
         "y": 500,
         "wires": [
-            [],
             [
                 "553555eadb4f9f44"
-            ]
+            ],
+            []
         ]
     },
     {
@@ -2589,7 +2573,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 860,
-        "y": 500,
+        "y": 480,
         "wires": []
     },
     {
