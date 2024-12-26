@@ -2658,7 +2658,7 @@
         "y": 420,
         "wires": [
             [
-                "27e6548e6e66f448"
+                "b9119c64a1539248"
             ],
             []
         ]
@@ -2978,7 +2978,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Current status coils",
+        "label": "Coils status",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
@@ -2986,8 +2986,28 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 490,
-        "y": 420,
+        "x": 670,
+        "y": 400,
         "wires": []
+    },
+    {
+        "id": "b9119c64a1539248",
+        "type": "function",
+        "z": "4e702d50e851e07d",
+        "name": "Mapeo coils",
+        "func": "// Toma los primeros 10 elementos del array\nlet coilStates = msg.payload.slice(0, 10);\n\n// Convierte true/false en 1/0\nlet formattedStates = coilStates.map(state => state ? 1 : 0);\n\n// Une los números en una sola línea\nmsg.payload = formattedStates.join(' ');\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 400,
+        "wires": [
+            [
+                "27e6548e6e66f448"
+            ]
+        ]
     }
 ]
