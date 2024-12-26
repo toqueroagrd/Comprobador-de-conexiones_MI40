@@ -556,16 +556,6 @@
         "hidden": false
     },
     {
-        "id": "coilGroup",
-        "type": "ui_group",
-        "name": "Coils",
-        "tab": "coilTab",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
         "id": "coilTab",
         "type": "ui_tab",
         "name": "Control Modbus",
@@ -2664,8 +2654,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 510,
-        "y": 580,
+        "x": 910,
+        "y": 620,
         "wires": [
             [
                 "e1b0a71750230317"
@@ -2698,62 +2688,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 270,
-        "y": 540,
-        "wires": [
-            [
-                "216a3822e523ae7a"
-            ]
-        ]
-    },
-    {
-        "id": "cce412905e6d92cc",
-        "type": "ui_svg_graphics",
-        "z": "4e702d50e851e07d",
-        "group": "af9022af948df047",
-        "order": 1,
-        "width": 14,
-        "height": 3,
-        "svgString": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 300' width='600' height='300'>\n  <!-- Fila 1 -->\n  <g id='coil0' class='coil'>\n    <rect x='20' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='70' y='50' text-anchor='middle' fill='white'>Coil 0</text>\n  </g>\n  <g id='coil1' class='coil'>\n    <rect x='140' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='190' y='50' text-anchor='middle' fill='white'>Coil 1</text>\n  </g>\n  <g id='coil2' class='coil'>\n    <rect x='260' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='310' y='50' text-anchor='middle' fill='white'>Coil 2</text>\n  </g>\n  <g id='coil3' class='coil'>\n    <rect x='380' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='430' y='50' text-anchor='middle' fill='white'>Coil 3</text>\n  </g>\n  <g id='coil4' class='coil'>\n    <rect x='500' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='550' y='50' text-anchor='middle' fill='white'>Coil 4</text>\n  </g>\n  <!-- Fila 2 -->\n  <g id='coil5' class='coil'>\n    <rect x='20' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='70' y='130' text-anchor='middle' fill='white'>Coil 5</text>\n  </g>\n  <g id='coil6' class='coil'>\n    <rect x='140' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='190' y='130' text-anchor='middle' fill='white'>Coil 6</text>\n  </g>\n  <g id='coil7' class='coil'>\n    <rect x='260' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='310' y='130' text-anchor='middle' fill='white'>Coil 7</text>\n  </g>\n  <g id='coil8' class='coil'>\n    <rect x='380' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='430' y='130' text-anchor='middle' fill='white'>Coil 8</text>\n  </g>\n  <g id='coil9' class='coil'>\n    <rect x='500' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='550' y='130' text-anchor='middle' fill='white'>Coil 9</text>\n  </g>\n</svg>",
-        "clickableShapes": [
-            {
-                "targetId": "g[id^=\"coil\"]",
-                "action": "click",
-                "payload": "coil0",
-                "payloadType": "str",
-                "topic": "Coil clicked"
-            }
-        ],
-        "javascriptHandlers": [],
-        "smilAnimations": [],
-        "bindings": [
-            {
-                "selector": "rect",
-                "bindSource": "msg.payload",
-                "bindType": "attr",
-                "attribute": "fill"
-            }
-        ],
-        "showCoordinates": false,
-        "autoFormatAfterEdit": false,
-        "showBrowserErrors": false,
-        "showBrowserEvents": false,
-        "enableJsDebugging": false,
-        "sendMsgWhenLoaded": true,
-        "noClickWhenDblClick": false,
-        "outputField": "payload",
-        "editorUrl": "",
-        "directory": "",
-        "panning": "disabled",
-        "zooming": "disabled",
-        "panOnlyWhenZoomed": false,
-        "doubleClickZoomEnabled": false,
-        "mouseWheelZoomEnabled": false,
-        "dblClickZoomPercentage": "150",
-        "cssString": "div.ui-svg svg{\n    color: var(--nr-dashboard-widgetColor);\n    fill: currentColor !important;\n}\ndiv.ui-svg path {\n    fill: inherit;\n}",
-        "name": "",
-        "x": 260,
-        "y": 640,
+        "x": 770,
+        "y": 940,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2783,51 +2719,102 @@
         "ioFile": "",
         "useIOForPayload": false,
         "emptyMsgOnFail": false,
-        "x": 260,
-        "y": 740,
+        "x": 220,
+        "y": 900,
         "wires": [
             [
-                "ffc2927acd39dfe2"
+                "e782c823a3c724b6"
             ],
-            []
+            [
+                "9e356ad543e5c950"
+            ]
         ]
     },
     {
-        "id": "ffc2927acd39dfe2",
+        "id": "e782c823a3c724b6",
         "type": "function",
         "z": "4e702d50e851e07d",
-        "name": "Actualizar SVG",
-        "func": "let updates = [];\nmsg.payload.slice(0, 10).forEach((state, index) => {\n    updates.push({\n        id: `coil${index}`, // ID del botón en el SVG\n        fill: state ? \"green\" : \"gray\" // Cambia a verde si es true, gris si es false\n    });\n});\nmsg.payload = updates;\nreturn msg;\n",
-        "outputs": 1,
+        "name": "Actualizar LEDs",
+        "func": "let leds = [];\nmsg.payload.slice(0, 10).forEach((state, index) => {\n    leds.push({\n        topic: `led${index}`,\n        payload: state\n    });\n});\nreturn leds;",
+        "outputs": 10,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 510,
-        "y": 740,
+        "x": 520,
+        "y": 760,
         "wires": [
             [
-                "cce412905e6d92cc",
-                "59ce0f05524ff032"
-            ]
+                "2b9702ea3081d863"
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
         ]
     },
     {
-        "id": "59ce0f05524ff032",
-        "type": "debug",
+        "id": "9e356ad543e5c950",
+        "type": "function",
         "z": "4e702d50e851e07d",
-        "name": "debug 13",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 720,
-        "y": 740,
+        "name": "Actualizar Interruptores",
+        "func": "msg.payload.slice(0, 10).forEach((state, index) => {\n    node.send({\n        topic: `switch${index}`,\n        payload: state\n    });\n});",
+        "outputs": 10,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 1000,
+        "wires": [
+            [
+                "8a7530f9b076b5b6"
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2b9702ea3081d863",
+        "type": "ui_led",
+        "z": "4e702d50e851e07d",
+        "order": 2,
+        "group": "af9022af948df047",
+        "width": "",
+        "height": "",
+        "label": "Coil 0",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 730,
+        "y": 700,
         "wires": []
     }
 ]
