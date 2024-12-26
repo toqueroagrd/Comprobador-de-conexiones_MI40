@@ -3052,7 +3052,7 @@
         "unitid": "1",
         "dataType": "HoldingRegister",
         "adr": "0",
-        "quantity": "10",
+        "quantity": "1",
         "rate": "5",
         "rateUnit": "s",
         "delayOnStart": false,
