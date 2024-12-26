@@ -2524,8 +2524,8 @@
         "discreteBufferSize": "0",
         "showErrors": false,
         "showStatusActivities": false,
-        "x": 720,
-        "y": 260,
+        "x": 240,
+        "y": 120,
         "wires": [
             [
                 "b5de69b61aeed542"
@@ -2534,31 +2534,6 @@
             [],
             [],
             []
-        ]
-    },
-    {
-        "id": "718c2a1890c02989",
-        "type": "inject",
-        "z": "4e702d50e851e07d",
-        "name": "Escribir coil",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"value\":true,\"fc\":5,\"unitid\":1,\"address\":2,\"quantity\":1}",
-        "payloadType": "json",
-        "x": 270,
-        "y": 180,
-        "wires": [
-            [
-                "e1b0a71750230317"
-            ]
         ]
     },
     {
@@ -2574,34 +2549,9 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1000,
-        "y": 240,
+        "x": 480,
+        "y": 60,
         "wires": []
-    },
-    {
-        "id": "1c22c72ee67d9e75",
-        "type": "inject",
-        "z": "4e702d50e851e07d",
-        "name": "Escribir holding",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"value\":123,\"fc\":6,\"unitid\":1,\"address\":0,\"quantity\":1}",
-        "payloadType": "json",
-        "x": 260,
-        "y": 300,
-        "wires": [
-            [
-                "e1b0a71750230317"
-            ]
-        ]
     },
     {
         "id": "e1b0a71750230317",
@@ -2616,8 +2566,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 500,
-        "y": 260,
+        "x": 660,
+        "y": 500,
         "wires": [
             [],
             [
@@ -2638,8 +2588,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
-        "y": 360,
+        "x": 860,
+        "y": 500,
         "wires": []
     },
     {
@@ -2719,8 +2669,8 @@
         "ioFile": "",
         "useIOForPayload": false,
         "emptyMsgOnFail": false,
-        "x": 900,
-        "y": 400,
+        "x": 240,
+        "y": 420,
         "wires": [
             [],
             []
