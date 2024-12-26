@@ -3116,34 +3116,6 @@
         "wires": []
     },
     {
-        "id": "ae9969aa052b3ff2",
-        "type": "ui_numeric",
-        "z": "4e702d50e851e07d",
-        "name": "",
-        "label": "Registro 0",
-        "tooltip": "",
-        "group": "a9d511a6d1931d73",
-        "order": 2,
-        "width": 3,
-        "height": 1,
-        "wrap": false,
-        "passthru": true,
-        "topic": "0",
-        "topicType": "str",
-        "format": "{{value}}",
-        "min": 0,
-        "max": 1000,
-        "step": 1,
-        "className": "",
-        "x": 270,
-        "y": 1000,
-        "wires": [
-            [
-                "04a29447d0c7d272"
-            ]
-        ]
-    },
-    {
         "id": "04a29447d0c7d272",
         "type": "function",
         "z": "4e702d50e851e07d",
@@ -3194,6 +3166,60 @@
         "x": 480,
         "y": 880,
         "wires": []
+    },
+    {
+        "id": "0433fc2200b8af02",
+        "type": "ui_slider",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "label": "Holding 0",
+        "tooltip": "",
+        "group": "a9d511a6d1931d73",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "0",
+        "topicType": "msg",
+        "min": "-1024",
+        "max": "1024",
+        "step": 1,
+        "className": "",
+        "x": 260,
+        "y": 1000,
+        "wires": [
+            [
+                "04a29447d0c7d272"
+            ]
+        ]
+    },
+    {
+        "id": "594504fe6c2e763d",
+        "type": "ui_slider",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "label": "Holding 1",
+        "tooltip": "",
+        "group": "a9d511a6d1931d73",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "1",
+        "topicType": "msg",
+        "min": "-1024",
+        "max": "1024",
+        "step": 1,
+        "className": "",
+        "x": 260,
+        "y": 1060,
+        "wires": [
+            [
+                "04a29447d0c7d272"
+            ]
+        ]
     },
     {
         "id": "a94563fac236df23",
