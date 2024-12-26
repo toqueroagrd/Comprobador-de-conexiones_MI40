@@ -3156,28 +3156,8 @@
         "y": 1000,
         "wires": [
             [
-                "3739d53e57eaf11c"
+                "e1b0a71750230317"
             ]
-        ]
-    },
-    {
-        "id": "3739d53e57eaf11c",
-        "type": "modbus-flex-write",
-        "z": "4e702d50e851e07d",
-        "name": "Escribir Registro Modbus",
-        "showStatusActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "server": "3b81367c79146636",
-        "emptyMsgOnFail": false,
-        "keepMsgProperties": false,
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "x": 760,
-        "y": 1000,
-        "wires": [
-            [],
-            []
         ]
     },
     {
