@@ -2513,7 +2513,7 @@
         "id": "718c2a1890c02989",
         "type": "inject",
         "z": "4e702d50e851e07d",
-        "name": "",
+        "name": "Escribir coil",
         "props": [
             {
                 "p": "payload"
@@ -2530,7 +2530,7 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 250,
+        "x": 270,
         "y": 180,
         "wires": [
             [
@@ -2547,11 +2547,41 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
         "x": 780,
         "y": 160,
         "wires": []
+    },
+    {
+        "id": "1c22c72ee67d9e75",
+        "type": "inject",
+        "z": "4e702d50e851e07d",
+        "name": "Escribir holding",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "123",
+        "payloadType": "num",
+        "x": 280,
+        "y": 240,
+        "wires": [
+            [
+                "9ebabc71460f257d"
+            ]
+        ]
     }
 ]
