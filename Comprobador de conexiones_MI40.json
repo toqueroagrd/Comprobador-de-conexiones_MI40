@@ -2654,8 +2654,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
-        "y": 620,
+        "x": 450,
+        "y": 500,
         "wires": [
             [
                 "e1b0a71750230317"
@@ -2675,7 +2675,7 @@
         "height": 0,
         "passthru": true,
         "decouple": "false",
-        "topic": "6",
+        "topic": "0",
         "topicType": "str",
         "style": "",
         "onvalue": "true",
@@ -2688,8 +2688,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 770,
-        "y": 940,
+        "x": 230,
+        "y": 500,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2719,353 +2719,317 @@
         "ioFile": "",
         "useIOForPayload": false,
         "emptyMsgOnFail": false,
-        "x": 220,
-        "y": 900,
+        "x": 900,
+        "y": 400,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1d8eabaabb9e02aa",
+        "type": "ui_switch",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "label": "Coil 1",
+        "tooltip": "",
+        "group": "af9022af948df047",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "1",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 230,
+        "y": 560,
         "wires": [
             [
-                "e782c823a3c724b6",
-                "3527b7a57d16ab36"
-            ],
-            [
-                "9e356ad543e5c950"
+                "216a3822e523ae7a"
             ]
         ]
     },
     {
-        "id": "e782c823a3c724b6",
-        "type": "function",
+        "id": "c34c9b1e4b254a13",
+        "type": "ui_switch",
         "z": "4e702d50e851e07d",
-        "name": "Actualizar LEDs",
-        "func": "// Procesa cada estado en el array y envía un mensaje por LED\nmsg.payload.forEach((state, index) => {\n    node.send({\n        topic: `led${index}`, // Identificador del LED\n        payload: state        // Estado del Coil (true/false)\n    });\n});\n\n// No devolvemos un mensaje global, ya que enviamos individualmente\nreturn null;\n",
-        "outputs": 10,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 520,
-        "y": 760,
+        "name": "",
+        "label": "Coil 2",
+        "tooltip": "",
+        "group": "af9022af948df047",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "2",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 230,
+        "y": 620,
         "wires": [
             [
-                "2b9702ea3081d863",
-                "f1e63d8e9a70e698"
-            ],
-            [
-                "be88a5fecb0dc73a"
-            ],
-            [
-                "d61a264f7e7b56fb"
-            ],
-            [
-                "1488eef8532f7aa7"
-            ],
-            [
-                "12a97ec3a2dee922"
-            ],
-            [
-                "3976d343cf2f1fb8"
-            ],
-            [
-                "0b6b3a71b187e1be"
-            ],
-            [
-                "0cce7bbd19625dad"
-            ],
-            [],
-            []
+                "216a3822e523ae7a"
+            ]
         ]
     },
     {
-        "id": "9e356ad543e5c950",
-        "type": "function",
+        "id": "82a0144759ca7803",
+        "type": "ui_switch",
         "z": "4e702d50e851e07d",
-        "name": "Actualizar Interruptores",
-        "func": "msg.payload.slice(0, 10).forEach((state, index) => {\n    node.send({\n        topic: `switch${index}`,\n        payload: state\n    });\n});",
-        "outputs": 10,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 550,
-        "y": 1000,
+        "name": "",
+        "label": "Coil 3",
+        "tooltip": "",
+        "group": "af9022af948df047",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "3",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 230,
+        "y": 680,
         "wires": [
             [
-                "8a7530f9b076b5b6"
-            ],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            []
+                "216a3822e523ae7a"
+            ]
         ]
     },
     {
-        "id": "2b9702ea3081d863",
-        "type": "ui_led",
+        "id": "68390d80ce60e43a",
+        "type": "ui_switch",
         "z": "4e702d50e851e07d",
-        "order": 2,
-        "group": "af9022af948df047",
-        "width": "",
-        "height": "",
-        "label": "Coil 0",
-        "colorForValue": [
-            {
-                "color": "#008000",
-                "value": "true",
-                "valueType": "bool"
-            },
-            {
-                "color": "#ff0000",
-                "value": "false",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": true,
         "name": "",
-        "x": 730,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "3527b7a57d16ab36",
-        "type": "debug",
-        "z": "4e702d50e851e07d",
-        "name": "debug 13",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 420,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "f1e63d8e9a70e698",
-        "type": "debug",
-        "z": "4e702d50e851e07d",
-        "name": "debug 14",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "be88a5fecb0dc73a",
-        "type": "ui_led",
-        "z": "4e702d50e851e07d",
-        "order": 2,
+        "label": "Coil 4",
+        "tooltip": "",
         "group": "af9022af948df047",
-        "width": "",
-        "height": "",
-        "label": "Coil 0",
-        "colorForValue": [
-            {
-                "color": "#008000",
-                "value": "true",
-                "valueType": "bool"
-            },
-            {
-                "color": "#ff0000",
-                "value": "false",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": true,
-        "name": "",
-        "x": 730,
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "4",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 230,
         "y": 740,
-        "wires": []
+        "wires": [
+            [
+                "216a3822e523ae7a"
+            ]
+        ]
     },
     {
-        "id": "d61a264f7e7b56fb",
-        "type": "ui_led",
+        "id": "89c65d8cc3742414",
+        "type": "ui_switch",
         "z": "4e702d50e851e07d",
-        "order": 2,
-        "group": "af9022af948df047",
-        "width": "",
-        "height": "",
-        "label": "Coil 0",
-        "colorForValue": [
-            {
-                "color": "#008000",
-                "value": "true",
-                "valueType": "bool"
-            },
-            {
-                "color": "#ff0000",
-                "value": "false",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": true,
         "name": "",
-        "x": 730,
-        "y": 780,
-        "wires": []
+        "label": "Coil 5",
+        "tooltip": "",
+        "group": "af9022af948df047",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "5",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 230,
+        "y": 800,
+        "wires": [
+            [
+                "216a3822e523ae7a"
+            ]
+        ]
     },
     {
-        "id": "1488eef8532f7aa7",
-        "type": "ui_led",
+        "id": "246c77032e31a6a2",
+        "type": "ui_switch",
         "z": "4e702d50e851e07d",
-        "order": 2,
-        "group": "af9022af948df047",
-        "width": "",
-        "height": "",
-        "label": "Coil 0",
-        "colorForValue": [
-            {
-                "color": "#008000",
-                "value": "true",
-                "valueType": "bool"
-            },
-            {
-                "color": "#ff0000",
-                "value": "false",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": true,
         "name": "",
-        "x": 730,
-        "y": 820,
-        "wires": []
+        "label": "Coil 6",
+        "tooltip": "",
+        "group": "af9022af948df047",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "6",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 230,
+        "y": 860,
+        "wires": [
+            [
+                "216a3822e523ae7a"
+            ]
+        ]
     },
     {
-        "id": "12a97ec3a2dee922",
-        "type": "ui_led",
+        "id": "b8bd08521de65530",
+        "type": "ui_switch",
         "z": "4e702d50e851e07d",
-        "order": 2,
-        "group": "af9022af948df047",
-        "width": "",
-        "height": "",
-        "label": "Coil 0",
-        "colorForValue": [
-            {
-                "color": "#008000",
-                "value": "true",
-                "valueType": "bool"
-            },
-            {
-                "color": "#ff0000",
-                "value": "false",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": true,
         "name": "",
-        "x": 910,
-        "y": 700,
-        "wires": []
+        "label": "Coil 7",
+        "tooltip": "",
+        "group": "af9022af948df047",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "7",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 230,
+        "y": 920,
+        "wires": [
+            [
+                "216a3822e523ae7a"
+            ]
+        ]
     },
     {
-        "id": "3976d343cf2f1fb8",
-        "type": "ui_led",
+        "id": "40280c2d7be0b279",
+        "type": "ui_switch",
         "z": "4e702d50e851e07d",
-        "order": 2,
-        "group": "af9022af948df047",
-        "width": "",
-        "height": "",
-        "label": "Coil 0",
-        "colorForValue": [
-            {
-                "color": "#008000",
-                "value": "true",
-                "valueType": "bool"
-            },
-            {
-                "color": "#ff0000",
-                "value": "false",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": true,
         "name": "",
-        "x": 910,
-        "y": 740,
-        "wires": []
+        "label": "Coil 8",
+        "tooltip": "",
+        "group": "af9022af948df047",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "8",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 230,
+        "y": 980,
+        "wires": [
+            [
+                "216a3822e523ae7a"
+            ]
+        ]
     },
     {
-        "id": "0b6b3a71b187e1be",
-        "type": "ui_led",
+        "id": "2fa452cdef0e6c15",
+        "type": "ui_switch",
         "z": "4e702d50e851e07d",
-        "order": 2,
-        "group": "af9022af948df047",
-        "width": "",
-        "height": "",
-        "label": "Coil 0",
-        "colorForValue": [
-            {
-                "color": "#008000",
-                "value": "true",
-                "valueType": "bool"
-            },
-            {
-                "color": "#ff0000",
-                "value": "false",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": true,
         "name": "",
-        "x": 910,
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "0cce7bbd19625dad",
-        "type": "ui_led",
-        "z": "4e702d50e851e07d",
-        "order": 2,
+        "label": "Coil 9",
+        "tooltip": "",
         "group": "af9022af948df047",
-        "width": "",
-        "height": "",
-        "label": "Coil 0",
-        "colorForValue": [
-            {
-                "color": "#008000",
-                "value": "true",
-                "valueType": "bool"
-            },
-            {
-                "color": "#ff0000",
-                "value": "false",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": true,
-        "name": "",
-        "x": 910,
-        "y": 820,
-        "wires": []
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "9",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 230,
+        "y": 1040,
+        "wires": [
+            [
+                "216a3822e523ae7a"
+            ]
+        ]
     }
 ]
