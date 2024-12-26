@@ -2777,8 +2777,7 @@
         "y": 740,
         "wires": [
             [
-                "ffc2927acd39dfe2",
-                "59ce0f05524ff032"
+                "ffc2927acd39dfe2"
             ],
             []
         ]
@@ -2788,16 +2787,19 @@
         "type": "function",
         "z": "4e702d50e851e07d",
         "name": "Actualizar SVG",
-        "func": "let updates = [];\nmsg.payload.forEach((state, index) => {\n    updates.push({\n        id: `coil${index}`,\n        fill: state ? \"green\" : \"gray\"\n    });\n});\nmsg.payload = updates;\nreturn msg;",
+        "func": "let updates = [];\nmsg.payload.slice(0, 10).forEach((state, index) => {\n    updates.push({\n        id: `coil${index}`, // ID del botón en el SVG\n        fill: state ? \"green\" : \"gray\" // Cambia a verde si es true, gris si es false\n    });\n});\nmsg.payload = updates;\nreturn msg;\n",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 510,
         "y": 740,
         "wires": [
             [
-                "cce412905e6d92cc"
+                "cce412905e6d92cc",
+                "59ce0f05524ff032"
             ]
         ]
     },
@@ -2814,8 +2816,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
-        "y": 780,
+        "x": 720,
+        "y": 740,
         "wires": []
     },
     {
