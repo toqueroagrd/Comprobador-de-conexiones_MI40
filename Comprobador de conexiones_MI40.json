@@ -2488,7 +2488,7 @@
         "name": "Server Modbus",
         "logEnabled": false,
         "hostname": "127.0.0.1",
-        "serverPort": "10502",
+        "serverPort": "502",
         "responseDelay": 100,
         "delayUnit": "ms",
         "coilsBufferSize": "0",
