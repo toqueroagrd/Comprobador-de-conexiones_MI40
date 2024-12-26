@@ -32,6 +32,13 @@
         "env": []
     },
     {
+        "id": "controlCoils",
+        "type": "tab",
+        "label": "Control Coils",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "12fc471dcc5f019d",
         "type": "mqtt-broker",
         "name": "Open broker - 1883",
@@ -549,6 +556,24 @@
     },
     {
         "id": "tab1",
+        "type": "ui_tab",
+        "name": "Control Modbus",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "coilGroup",
+        "type": "ui_group",
+        "name": "Coils",
+        "tab": "coilTab",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "coilTab",
         "type": "ui_tab",
         "name": "Control Modbus",
         "icon": "dashboard",
@@ -2921,6 +2946,174 @@
         "wires": [
             [
                 "216a3822e523ae7a"
+            ]
+        ]
+    },
+    {
+        "id": "multistate0",
+        "type": "ui_multistate_switch",
+        "z": "controlCoils",
+        "name": "Coil 0",
+        "group": "af9022af948df047",
+        "order": 0,
+        "width": 2,
+        "height": 1,
+        "label": "Coil 0",
+        "stateField": "payload",
+        "enableField": "enabled_show",
+        "passthroughField": "never",
+        "inputMsgField": "none",
+        "rounded": false,
+        "useThemeColors": true,
+        "hideSelectedLabel": false,
+        "multilineLabel": false,
+        "passThrough": "never",
+        "inputMsg": "all",
+        "userInput": "enabled_show",
+        "options": [
+            {
+                "label": "TRUE",
+                "value": "true",
+                "valueType": "bool",
+                "color": "#009933"
+            },
+            {
+                "label": "FALSE",
+                "value": "true",
+                "valueType": "bool",
+                "color": "#999999"
+            }
+        ],
+        "topic": "0",
+        "x": 150,
+        "y": 60,
+        "wires": [
+            [
+                "functionCoils"
+            ]
+        ]
+    },
+    {
+        "id": "functionCoils",
+        "type": "function",
+        "z": "controlCoils",
+        "name": "Procesar Coil",
+        "func": "msg.payload = {\n    value: msg.payload,  // El valor enviado por el switch (true/false)\n    fc: 5,               // Código de función para Coils\n    unitid: 1,           // Unit ID del servidor Modbus\n    address: parseInt(msg.topic),  // Dirección del Coil\n    quantity: 1          // Escribir un solo Coil\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 200,
+        "wires": [
+            [
+                "modbusFlexWrite"
+            ]
+        ]
+    },
+    {
+        "id": "modbusFlexWrite",
+        "type": "modbus-flex-write",
+        "z": "controlCoils",
+        "name": "Escribir Coils",
+        "server": "modbusServer",
+        "x": 650,
+        "y": 200,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "multistate1",
+        "type": "ui_multistate_switch",
+        "z": "controlCoils",
+        "name": "Coil 1",
+        "group": "af9022af948df047",
+        "order": 1,
+        "width": 2,
+        "height": 1,
+        "label": "Coil 1",
+        "stateField": "",
+        "enableField": "",
+        "passthroughField": "",
+        "inputMsgField": "",
+        "rounded": false,
+        "useThemeColors": false,
+        "hideSelectedLabel": false,
+        "multilineLabel": false,
+        "passThrough": "never",
+        "inputMsg": "all",
+        "userInput": "enabled_show",
+        "options": [],
+        "topic": "1",
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "functionCoils"
+            ]
+        ]
+    },
+    {
+        "id": "multistate2",
+        "type": "ui_multistate_switch",
+        "z": "controlCoils",
+        "name": "Coil 2",
+        "group": "coilGroup",
+        "order": 2,
+        "width": 2,
+        "height": 1,
+        "label": "Coil 2",
+        "options": "[{\"label\":\"Off\",\"value\":false},{\"label\":\"On\",\"value\":true}]",
+        "topic": "2",
+        "x": 150,
+        "y": 180,
+        "wires": [
+            [
+                "functionCoils"
+            ]
+        ]
+    },
+    {
+        "id": "multistate3",
+        "type": "ui_multistate_switch",
+        "z": "controlCoils",
+        "name": "Coil 3",
+        "group": "coilGroup",
+        "order": 3,
+        "width": 2,
+        "height": 1,
+        "label": "Coil 3",
+        "options": "[{\"label\":\"Off\",\"value\":false},{\"label\":\"On\",\"value\":true}]",
+        "topic": "3",
+        "x": 150,
+        "y": 240,
+        "wires": [
+            [
+                "functionCoils"
+            ]
+        ]
+    },
+    {
+        "id": "multistate4",
+        "type": "ui_multistate_switch",
+        "z": "controlCoils",
+        "name": "Coil 4",
+        "group": "coilGroup",
+        "order": 4,
+        "width": 2,
+        "height": 1,
+        "label": "Coil 4",
+        "options": "[{\"label\":\"Off\",\"value\":false},{\"label\":\"On\",\"value\":true}]",
+        "topic": "4",
+        "x": 150,
+        "y": 300,
+        "wires": [
+            [
+                "functionCoils"
             ]
         ]
     }
