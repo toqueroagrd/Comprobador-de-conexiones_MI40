@@ -97,7 +97,7 @@
         "queueLogEnabled": false,
         "failureLogEnabled": true,
         "tcpHost": "127.0.0.1",
-        "tcpPort": "10502",
+        "tcpPort": "502",
         "tcpType": "DEFAULT",
         "serialPort": "/dev/ttyUSB",
         "serialType": "RTU-BUFFERD",
@@ -113,6 +113,7 @@
         "reconnectOnTimeout": true,
         "reconnectTimeout": "2000",
         "parallelUnitIdsAllowed": true,
+        "showErrors": false,
         "showWarnings": true,
         "showLogs": true
     },
@@ -2497,8 +2498,8 @@
         "discreteBufferSize": "0",
         "showErrors": false,
         "showStatusActivities": false,
-        "x": 500,
-        "y": 180,
+        "x": 720,
+        "y": 260,
         "wires": [
             [
                 "b5de69b61aeed542"
@@ -2527,14 +2528,14 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "",
+        "topic": "fc:5,address:1",
         "payload": "true",
         "payloadType": "bool",
         "x": 270,
         "y": 180,
         "wires": [
             [
-                "9ebabc71460f257d"
+                "e1b0a71750230317"
             ]
         ]
     },
@@ -2551,8 +2552,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 780,
-        "y": 160,
+        "x": 1000,
+        "y": 240,
         "wires": []
     },
     {
@@ -2573,15 +2574,37 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "",
+        "topic": "fc:6,address:1",
         "payload": "123",
         "payloadType": "num",
-        "x": 280,
-        "y": 240,
+        "x": 260,
+        "y": 320,
+        "wires": [
+            [
+                "e1b0a71750230317"
+            ]
+        ]
+    },
+    {
+        "id": "e1b0a71750230317",
+        "type": "modbus-flex-write",
+        "z": "4e702d50e851e07d",
+        "name": "Escribir modbus",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "server": "3b81367c79146636",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 500,
+        "y": 260,
         "wires": [
             [
                 "9ebabc71460f257d"
-            ]
+            ],
+            []
         ]
     }
 ]
