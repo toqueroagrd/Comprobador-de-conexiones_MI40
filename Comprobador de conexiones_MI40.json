@@ -458,7 +458,7 @@
         "tab": "e7174bcf0bf8f174",
         "order": 1,
         "disp": true,
-        "width": 15,
+        "width": 14,
         "collapse": false,
         "className": ""
     },
@@ -579,6 +579,16 @@
         "icon": "dashboard",
         "disabled": false,
         "hidden": false
+    },
+    {
+        "id": "1765c962935eaf48",
+        "type": "ui_spacer",
+        "z": "4e702d50e851e07d",
+        "name": "spacer",
+        "group": "af9022af948df047",
+        "order": 2,
+        "width": 14,
+        "height": 1
     },
     {
         "id": "eabb9ee36b27428c",
@@ -2677,7 +2687,7 @@
         "label": "Coil 0",
         "tooltip": "",
         "group": "af9022af948df047",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -2709,8 +2719,8 @@
         "z": "4e702d50e851e07d",
         "group": "af9022af948df047",
         "order": 1,
-        "width": 15,
-        "height": 4,
+        "width": 14,
+        "height": 3,
         "svgString": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 300' width='600' height='300'>\n  <!-- Fila 1 -->\n  <g id='coil0' class='coil'>\n    <rect x='20' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='70' y='50' text-anchor='middle' fill='white'>Coil 0</text>\n  </g>\n  <g id='coil1' class='coil'>\n    <rect x='140' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='190' y='50' text-anchor='middle' fill='white'>Coil 1</text>\n  </g>\n  <g id='coil2' class='coil'>\n    <rect x='260' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='310' y='50' text-anchor='middle' fill='white'>Coil 2</text>\n  </g>\n  <g id='coil3' class='coil'>\n    <rect x='380' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='430' y='50' text-anchor='middle' fill='white'>Coil 3</text>\n  </g>\n  <g id='coil4' class='coil'>\n    <rect x='500' y='20' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='550' y='50' text-anchor='middle' fill='white'>Coil 4</text>\n  </g>\n  <!-- Fila 2 -->\n  <g id='coil5' class='coil'>\n    <rect x='20' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='70' y='130' text-anchor='middle' fill='white'>Coil 5</text>\n  </g>\n  <g id='coil6' class='coil'>\n    <rect x='140' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='190' y='130' text-anchor='middle' fill='white'>Coil 6</text>\n  </g>\n  <g id='coil7' class='coil'>\n    <rect x='260' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='310' y='130' text-anchor='middle' fill='white'>Coil 7</text>\n  </g>\n  <g id='coil8' class='coil'>\n    <rect x='380' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='430' y='130' text-anchor='middle' fill='white'>Coil 8</text>\n  </g>\n  <g id='coil9' class='coil'>\n    <rect x='500' y='100' width='100' height='50' fill='gray' rx='5' ry='5' style='cursor: pointer;' />\n    <text x='550' y='130' text-anchor='middle' fill='white'>Coil 9</text>\n  </g>\n</svg>",
         "clickableShapes": [],
         "javascriptHandlers": [],
@@ -2752,7 +2762,7 @@
         "showWarnings": true,
         "unitid": "1",
         "dataType": "Coil",
-        "adr": "0",
+        "adr": "1",
         "quantity": "10",
         "rate": "2",
         "rateUnit": "s",
@@ -2767,7 +2777,8 @@
         "y": 740,
         "wires": [
             [
-                "ffc2927acd39dfe2"
+                "ffc2927acd39dfe2",
+                "59ce0f05524ff032"
             ],
             []
         ]
@@ -2789,6 +2800,23 @@
                 "cce412905e6d92cc"
             ]
         ]
+    },
+    {
+        "id": "59ce0f05524ff032",
+        "type": "debug",
+        "z": "4e702d50e851e07d",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 780,
+        "wires": []
     },
     {
         "id": "c66fc8c34285ef23",
