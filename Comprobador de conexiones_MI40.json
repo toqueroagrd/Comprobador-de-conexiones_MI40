@@ -589,6 +589,16 @@
         "height": "0"
     },
     {
+        "id": "da8f65748819176f",
+        "type": "ui_spacer",
+        "z": "c3367d12564d11c6",
+        "name": "spacer",
+        "group": "a7ed64dd462a9d40",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
         "id": "eabb9ee36b27428c",
         "type": "change",
         "z": "c3367d12564d11c6",
@@ -3403,6 +3413,27 @@
         "color": "#000000",
         "x": 260,
         "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "eb91782d75a665de",
+        "type": "ui_text",
+        "z": "4e702d50e851e07d",
+        "group": "a7ed64dd462a9d40",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "-------------------------------------------",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 530,
+        "y": 160,
         "wires": []
     }
 ]
