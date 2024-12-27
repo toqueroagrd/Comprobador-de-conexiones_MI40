@@ -1035,15 +1035,15 @@
         "id": "8ef919da2f76992b",
         "type": "function",
         "z": "a4a07f451bd4dad9",
-        "name": "Generador de Se�al Senoidal Configurable",
-        "func": "// En el nodo de funci�n\nconst max = msg.topic === \"maxValue\" ? parseFloat(msg.payload) : flow.get('max') || 5;\nconst min = msg.topic === \"minValue\" ? parseFloat(msg.payload) : flow.get('min') || -5;\nconst enable = flow.get('enable') || false;\n\n// Guardar los valores en el contexto de flujo para uso futuro\nif (msg.topic === \"maxValue\") {\n    flow.set('max', max);\n} else if (msg.topic === \"minValue\") {\n    flow.set('min', min);\n}\n\nconst amplitude = (max - min) / 2;\nconst offset = (max + min) / 2;\nconst frequency = 0.7; // Frecuencia en Hz\nconst currentTime = Date.now();\n\n// C�lculo de la se�al senoidal\nconst period = 1000 / frequency;\nconst angle = 2 * Math.PI * (currentTime % period) / period;\n    msg.payload = amplitude * Math.sin(angle) + offset;\n    \nreturn msg;\n",
+        "name": "Senoidal signal generator",
+        "func": "\nconst max = msg.topic === \"maxValue\" ? parseFloat(msg.payload) : flow.get('max') || 5;\nconst min = msg.topic === \"minValue\" ? parseFloat(msg.payload) : flow.get('min') || -5;\nconst enable = flow.get('enable') || false;\n\n\nif (msg.topic === \"maxValue\") {\n    flow.set('max', max);\n} else if (msg.topic === \"minValue\") {\n    flow.set('min', min);\n}\n\nconst amplitude = (max - min) / 2;\nconst offset = (max + min) / 2;\nconst frequency = 0.7; \nconst currentTime = Date.now();\n\nconst period = 1000 / frequency;\nconst angle = 2 * Math.PI * (currentTime % period) / period;\n    msg.payload = amplitude * Math.sin(angle) + offset;\n    \nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 550,
+        "x": 490,
         "y": 1240,
         "wires": [
             [
