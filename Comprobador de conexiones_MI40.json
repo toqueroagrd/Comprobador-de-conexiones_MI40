@@ -3049,11 +3049,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
+        "x": 510,
         "y": 1000,
         "wires": [
             [
-                "88c16f2aebfab101"
+                "88c16f2aebfab101",
+                "401d785386c467b8"
             ]
         ]
     },
@@ -3069,7 +3070,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 760,
+        "x": 780,
         "y": 1040,
         "wires": []
     },
@@ -3328,8 +3329,89 @@
         "seg2": "66",
         "diff": false,
         "className": "",
-        "x": 630,
-        "y": 1240,
+        "x": 510,
+        "y": 1280,
         "wires": []
+    },
+    {
+        "id": "cc9cbf4540fcee32",
+        "type": "inject",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "4",
+        "payload": "Math.floor(Math.random() * 101)",
+        "payloadType": "jsonata",
+        "x": 280,
+        "y": 1240,
+        "wires": [
+            [
+                "04a29447d0c7d272"
+            ]
+        ]
+    },
+    {
+        "id": "401d785386c467b8",
+        "type": "modbus-flex-write",
+        "z": "4e702d50e851e07d",
+        "name": "Escribir modbus",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "server": "3b81367c79146636",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 800,
+        "y": 1000,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "734c4c03ecc638d8",
+        "type": "modbus-read",
+        "z": "4e702d50e851e07d",
+        "name": "Leer Holding Registers",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "4",
+        "quantity": "1",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "3b81367c79146636",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 220,
+        "y": 1300,
+        "wires": [
+            [
+                "ef9aa0f255ed90d0"
+            ],
+            []
+        ]
     }
 ]
