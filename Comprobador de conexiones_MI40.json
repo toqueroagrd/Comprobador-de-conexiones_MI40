@@ -2673,7 +2673,7 @@
         "unitid": "1",
         "dataType": "Coil",
         "adr": "0",
-        "quantity": "10",
+        "quantity": "8",
         "rate": "5",
         "rateUnit": "s",
         "delayOnStart": false,
@@ -2956,7 +2956,7 @@
         "type": "function",
         "z": "4e702d50e851e07d",
         "name": "Mapeo coils",
-        "func": "// Toma los primeros 10 elementos del array\nlet coilStates = msg.payload.slice(0, 7);\n\n// Convierte true/false en 1/0\nlet formattedStates = coilStates.map(state => state ? 1 : 0);\n\n// Une los números en una sola línea\nmsg.payload = formattedStates.join(' ');\nreturn msg;\n",
+        "func": "// Toma los primeros 10 elementos del array\nlet coilStates = msg.payload.slice(0, 8);\n\n// Convierte true/false en 1/0\nlet formattedStates = coilStates.map(state => state ? 1 : 0);\n\n// Une los números en una sola línea\nmsg.payload = formattedStates.join(' ');\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3219,7 +3219,7 @@
         "showWarnings": true,
         "unitid": "1",
         "dataType": "Coil",
-        "adr": "9",
+        "adr": "8",
         "quantity": "8",
         "rate": "5",
         "rateUnit": "s",
@@ -3277,6 +3277,40 @@
         "wires": [
             [
                 "4bf8d1ead2588507"
+            ]
+        ]
+    },
+    {
+        "id": "fb522e893ff3f5cb",
+        "type": "ui_switch",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "label": "Coil 8",
+        "tooltip": "",
+        "group": "a7ed64dd462a9d40",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "8",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 230,
+        "y": 780,
+        "wires": [
+            [
+                "216a3822e523ae7a"
             ]
         ]
     },
