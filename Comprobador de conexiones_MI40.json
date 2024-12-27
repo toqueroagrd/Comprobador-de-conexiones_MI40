@@ -3049,7 +3049,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 510,
+        "x": 490,
         "y": 1000,
         "wires": [
             [
@@ -3070,7 +3070,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 780,
+        "x": 760,
         "y": 1040,
         "wires": []
     },
@@ -3269,129 +3269,6 @@
             [
                 "4bf8d1ead2588507"
             ]
-        ]
-    },
-    {
-        "id": "fb522e893ff3f5cb",
-        "type": "ui_switch",
-        "z": "4e702d50e851e07d",
-        "name": "",
-        "label": "Coil 8",
-        "tooltip": "",
-        "group": "a7ed64dd462a9d40",
-        "order": 9,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "8",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 230,
-        "y": 840,
-        "wires": [
-            [
-                "216a3822e523ae7a"
-            ]
-        ]
-    },
-    {
-        "id": "ef9aa0f255ed90d0",
-        "type": "ui_gauge",
-        "z": "4e702d50e851e07d",
-        "name": "",
-        "group": "df3931bb045e7b4f",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "Variable analógica",
-        "label": "units",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "33",
-        "seg2": "66",
-        "diff": false,
-        "className": "",
-        "x": 510,
-        "y": 1280,
-        "wires": []
-    },
-    {
-        "id": "cc9cbf4540fcee32",
-        "type": "inject",
-        "z": "4e702d50e851e07d",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "2",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "4",
-        "payload": "Math.floor(Math.random() * 101)",
-        "payloadType": "jsonata",
-        "x": 280,
-        "y": 1240,
-        "wires": [
-            [
-                "04a29447d0c7d272"
-            ]
-        ]
-    },
-    {
-        "id": "734c4c03ecc638d8",
-        "type": "modbus-read",
-        "z": "4e702d50e851e07d",
-        "name": "Leer Holding Registers",
-        "topic": "",
-        "showStatusActivities": false,
-        "logIOActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "unitid": "1",
-        "dataType": "HoldingRegister",
-        "adr": "4",
-        "quantity": "1",
-        "rate": "1",
-        "rateUnit": "s",
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "server": "3b81367c79146636",
-        "useIOFile": false,
-        "ioFile": "",
-        "useIOForPayload": false,
-        "emptyMsgOnFail": false,
-        "x": 220,
-        "y": 1300,
-        "wires": [
-            [
-                "ef9aa0f255ed90d0"
-            ],
-            []
         ]
     }
 ]
