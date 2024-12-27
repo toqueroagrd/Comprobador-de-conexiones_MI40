@@ -3054,7 +3054,7 @@
         "wires": [
             [
                 "88c16f2aebfab101",
-                "401d785386c467b8"
+                "e1b0a71750230317"
             ]
         ]
     },
@@ -3360,26 +3360,6 @@
             [
                 "04a29447d0c7d272"
             ]
-        ]
-    },
-    {
-        "id": "401d785386c467b8",
-        "type": "modbus-flex-write",
-        "z": "4e702d50e851e07d",
-        "name": "Escribir modbus",
-        "showStatusActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "server": "3b81367c79146636",
-        "emptyMsgOnFail": false,
-        "keepMsgProperties": false,
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "x": 800,
-        "y": 1000,
-        "wires": [
-            [],
-            []
         ]
     },
     {
