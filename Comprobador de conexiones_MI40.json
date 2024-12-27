@@ -579,6 +579,46 @@
         "width": 6
     },
     {
+        "id": "0bcfbbcb285e4b24",
+        "type": "ui_spacer",
+        "z": "4e702d50e851e07d",
+        "name": "spacer",
+        "group": "a7ed64dd462a9d40",
+        "order": 1,
+        "width": "1",
+        "height": "1"
+    },
+    {
+        "id": "6351cfda782a8780",
+        "type": "ui_spacer",
+        "z": "4e702d50e851e07d",
+        "name": "spacer",
+        "group": "a9d511a6d1931d73",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "bb71038db3c73dba",
+        "type": "ui_spacer",
+        "z": "4e702d50e851e07d",
+        "name": "spacer",
+        "group": "a9d511a6d1931d73",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "9b1c9936d10240c4",
+        "type": "ui_spacer",
+        "z": "4e702d50e851e07d",
+        "name": "spacer",
+        "group": "a7ed64dd462a9d40",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
         "id": "eabb9ee36b27428c",
         "type": "change",
         "z": "c3367d12564d11c6",
@@ -2530,7 +2570,7 @@
         "showErrors": false,
         "showStatusActivities": false,
         "x": 240,
-        "y": 120,
+        "y": 60,
         "wires": [
             [
                 "b5de69b61aeed542"
@@ -2572,7 +2612,7 @@
         "delayOnStart": false,
         "startDelayTime": "",
         "x": 660,
-        "y": 360,
+        "y": 400,
         "wires": [
             [
                 "553555eadb4f9f44"
@@ -2594,7 +2634,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 860,
-        "y": 340,
+        "y": 380,
         "wires": []
     },
     {
@@ -2610,7 +2650,7 @@
         "finalize": "",
         "libs": [],
         "x": 450,
-        "y": 360,
+        "y": 400,
         "wires": [
             [
                 "e1b0a71750230317"
@@ -2625,7 +2665,7 @@
         "label": "Coil 0",
         "tooltip": "",
         "group": "a7ed64dd462a9d40",
-        "order": 2,
+        "order": 7,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -2644,7 +2684,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 360,
+        "y": 400,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2691,7 +2731,7 @@
         "label": "Coil 1",
         "tooltip": "",
         "group": "a7ed64dd462a9d40",
-        "order": 3,
+        "order": 8,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -2710,7 +2750,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 420,
+        "y": 460,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2725,7 +2765,7 @@
         "label": "Coil 2",
         "tooltip": "",
         "group": "a7ed64dd462a9d40",
-        "order": 4,
+        "order": 9,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -2744,7 +2784,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 480,
+        "y": 520,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2759,7 +2799,7 @@
         "label": "Coil 3",
         "tooltip": "",
         "group": "a7ed64dd462a9d40",
-        "order": 5,
+        "order": 10,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -2778,7 +2818,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 540,
+        "y": 580,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2793,7 +2833,7 @@
         "label": "Coil 4",
         "tooltip": "",
         "group": "a7ed64dd462a9d40",
-        "order": 6,
+        "order": 11,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -2812,7 +2852,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 600,
+        "y": 640,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2827,7 +2867,7 @@
         "label": "Coil 5",
         "tooltip": "",
         "group": "a7ed64dd462a9d40",
-        "order": 7,
+        "order": 12,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -2846,7 +2886,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 660,
+        "y": 700,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2861,7 +2901,7 @@
         "label": "Coil 6",
         "tooltip": "",
         "group": "a7ed64dd462a9d40",
-        "order": 8,
+        "order": 13,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -2880,7 +2920,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 720,
+        "y": 760,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2895,7 +2935,7 @@
         "label": "Coil 7",
         "tooltip": "",
         "group": "a7ed64dd462a9d40",
-        "order": 9,
+        "order": 14,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -2914,7 +2954,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 780,
+        "y": 820,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2926,7 +2966,7 @@
         "type": "ui_text",
         "z": "4e702d50e851e07d",
         "group": "a7ed64dd462a9d40",
-        "order": 1,
+        "order": 3,
         "width": 0,
         "height": 0,
         "name": "",
@@ -3022,7 +3062,7 @@
         "type": "ui_text",
         "z": "4e702d50e851e07d",
         "group": "a9d511a6d1931d73",
-        "order": 1,
+        "order": 3,
         "width": 0,
         "height": 0,
         "name": "",
@@ -3043,7 +3083,7 @@
         "type": "function",
         "z": "4e702d50e851e07d",
         "name": "Escribir Holding Register",
-        "func": "msg.payload = {\n    value: [parseInt(msg.payload)],\n    fc: 6,                          // C�digo de funci�n Modbus\n    unitid: 1,                      // Unit ID del servidor\n    address: parseInt(msg.topic),   // Direcci�n del registro\n    quantity: 1                     // Solo un registro\n};\nreturn msg;",
+        "func": "msg.payload = {\n    value: [parseInt(msg.payload)],\n    fc: 6,                          \n    unitid: 1,                      \n    address: parseInt(msg.topic),   \n    quantity: 1                     \n};\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -3051,7 +3091,7 @@
         "finalize": "",
         "libs": [],
         "x": 490,
-        "y": 1080,
+        "y": 1160,
         "wires": [
             [
                 "e1b0a71750230317"
@@ -3066,7 +3106,7 @@
         "label": "Holding 0",
         "tooltip": "",
         "group": "a9d511a6d1931d73",
-        "order": 2,
+        "order": 6,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -3078,7 +3118,7 @@
         "step": 1,
         "className": "",
         "x": 260,
-        "y": 1080,
+        "y": 1160,
         "wires": [
             [
                 "04a29447d0c7d272"
@@ -3093,7 +3133,7 @@
         "label": "Holding 1",
         "tooltip": "",
         "group": "a9d511a6d1931d73",
-        "order": 3,
+        "order": 7,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -3105,7 +3145,7 @@
         "step": 1,
         "className": "",
         "x": 260,
-        "y": 1140,
+        "y": 1220,
         "wires": [
             [
                 "04a29447d0c7d272"
@@ -3120,7 +3160,7 @@
         "label": "Holding 2",
         "tooltip": "",
         "group": "a9d511a6d1931d73",
-        "order": 4,
+        "order": 8,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -3132,7 +3172,7 @@
         "step": 1,
         "className": "",
         "x": 260,
-        "y": 1200,
+        "y": 1280,
         "wires": [
             [
                 "04a29447d0c7d272"
@@ -3147,7 +3187,7 @@
         "label": "Holding 3",
         "tooltip": "",
         "group": "a9d511a6d1931d73",
-        "order": 5,
+        "order": 9,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -3159,7 +3199,7 @@
         "step": 1,
         "className": "",
         "x": 260,
-        "y": 1260,
+        "y": 1340,
         "wires": [
             [
                 "04a29447d0c7d272"
@@ -3203,7 +3243,7 @@
         "type": "ui_text",
         "z": "4e702d50e851e07d",
         "group": "a7ed64dd462a9d40",
-        "order": 1,
+        "order": 4,
         "width": 0,
         "height": 0,
         "name": "",
@@ -3309,6 +3349,90 @@
         "statusType": "auto",
         "x": 960,
         "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "a246fae16c1dd6e7",
+        "type": "ui_text",
+        "z": "4e702d50e851e07d",
+        "group": "a7ed64dd462a9d40",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Function 0x01 - Read coil",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 270,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "1cd974280b93806b",
+        "type": "ui_text",
+        "z": "4e702d50e851e07d",
+        "group": "a7ed64dd462a9d40",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Function 0x05 - Write coil",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 270,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "407b60b54f2c46ec",
+        "type": "ui_text",
+        "z": "4e702d50e851e07d",
+        "group": "a9d511a6d1931d73",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Function 0x03 - Read holding",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 260,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "f2740361a35a7b57",
+        "type": "ui_text",
+        "z": "4e702d50e851e07d",
+        "group": "a9d511a6d1931d73",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Function 0x06 - Write holding",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 260,
+        "y": 1120,
         "wires": []
     }
 ]
