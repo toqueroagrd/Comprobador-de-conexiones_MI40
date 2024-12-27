@@ -3012,7 +3012,8 @@
         "y": 940,
         "wires": [
             [
-                "af11aa18fa5c50f2"
+                "af11aa18fa5c50f2",
+                "bf4d897873cfc1c2"
             ]
         ]
     },
@@ -3050,7 +3051,7 @@
         "finalize": "",
         "libs": [],
         "x": 490,
-        "y": 1000,
+        "y": 1080,
         "wires": [
             [
                 "88c16f2aebfab101",
@@ -3071,7 +3072,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 760,
-        "y": 1040,
+        "y": 1120,
         "wires": []
     },
     {
@@ -3110,7 +3111,7 @@
         "step": 1,
         "className": "",
         "x": 260,
-        "y": 1000,
+        "y": 1080,
         "wires": [
             [
                 "04a29447d0c7d272"
@@ -3137,7 +3138,7 @@
         "step": 1,
         "className": "",
         "x": 260,
-        "y": 1060,
+        "y": 1140,
         "wires": [
             [
                 "04a29447d0c7d272"
@@ -3164,7 +3165,7 @@
         "step": 1,
         "className": "",
         "x": 260,
-        "y": 1120,
+        "y": 1200,
         "wires": [
             [
                 "04a29447d0c7d272"
@@ -3191,7 +3192,7 @@
         "step": 1,
         "className": "",
         "x": 260,
-        "y": 1180,
+        "y": 1260,
         "wires": [
             [
                 "04a29447d0c7d272"
@@ -3268,6 +3269,47 @@
         "wires": [
             [
                 "4bf8d1ead2588507"
+            ]
+        ]
+    },
+    {
+        "id": "55708145d7130755",
+        "type": "ui_toast",
+        "z": "4e702d50e851e07d",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "CERRAR",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 990,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bf4d897873cfc1c2",
+        "type": "function",
+        "z": "4e702d50e851e07d",
+        "name": "Alarma valor",
+        "func": "// Revisa los valores y crea un mensaje para cada condición\nlet valores = msg.payload; // Array de valores\nlet limite = 500;\n\nvalores.forEach((valor, index) => {\n    if (valor > limite) {\n        msg.payload = `¡Alarma! Holding ${index} superó el límite con un valor de ${valor}.`;\n        msg.topic = `Alerta: Holding ${index}`;\n        node.send(msg); // Envía una notificación por cada alarma\n    }\n});\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1000,
+        "wires": [
+            [
+                "55708145d7130755"
             ]
         ]
     }
