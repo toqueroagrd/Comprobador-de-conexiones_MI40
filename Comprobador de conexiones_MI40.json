@@ -975,7 +975,7 @@
         "type": "function",
         "z": "a4a07f451bd4dad9",
         "name": "Obtener IPV4",
-        "func": "msg.Ipv4 = msg.payload[0].address;�\nreturn msg;",
+        "func": "msg.Ipv4 = msg.payload[0].address;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
