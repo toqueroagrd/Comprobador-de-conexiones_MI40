@@ -566,17 +566,6 @@
         "className": ""
     },
     {
-        "id": "8ca878b182ad523d",
-        "type": "ui_group",
-        "name": "Holding Registers",
-        "tab": "",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "a9d511a6d1931d73",
         "type": "ui_group",
         "name": "Holding registers",
@@ -586,6 +575,15 @@
         "width": "6",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "d48e16d012b281be",
+        "type": "ui_group",
+        "name": "Group",
+        "tab": "5de2241a797deeb4",
+        "order": null,
+        "disp": true,
+        "width": 6
     },
     {
         "id": "eabb9ee36b27428c",
@@ -1524,7 +1522,7 @@
         "id": "7e0b92f48157c750",
         "type": "ui_template",
         "z": "a4a07f451bd4dad9",
-        "group": "",
+        "group": "d48e16d012b281be",
         "name": "Virtual Keyboard",
         "order": 8,
         "width": 0,
@@ -2581,7 +2579,7 @@
         "delayOnStart": false,
         "startDelayTime": "",
         "x": 660,
-        "y": 300,
+        "y": 360,
         "wires": [
             [
                 "553555eadb4f9f44"
@@ -2603,7 +2601,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 860,
-        "y": 280,
+        "y": 340,
         "wires": []
     },
     {
@@ -2619,7 +2617,7 @@
         "finalize": "",
         "libs": [],
         "x": 450,
-        "y": 300,
+        "y": 360,
         "wires": [
             [
                 "e1b0a71750230317"
@@ -2653,7 +2651,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 300,
+        "y": 360,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2719,7 +2717,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 360,
+        "y": 420,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2753,7 +2751,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 420,
+        "y": 480,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2787,7 +2785,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 480,
+        "y": 540,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2821,7 +2819,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 540,
+        "y": 600,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2855,7 +2853,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 600,
+        "y": 660,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2889,7 +2887,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 660,
+        "y": 720,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2923,7 +2921,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 720,
+        "y": 780,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -2939,7 +2937,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Coils status (5 sec refresh)",
+        "label": "Coils status (0-7)",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
@@ -2947,7 +2945,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 720,
+        "x": 690,
         "y": 200,
         "wires": []
     },
@@ -3230,8 +3228,8 @@
         "ioFile": "",
         "useIOForPayload": false,
         "emptyMsgOnFail": false,
-        "x": 500,
-        "y": 140,
+        "x": 240,
+        "y": 280,
         "wires": [
             [
                 "a55c0c8b3e82f5a8"
@@ -3248,7 +3246,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Coils status (5 sec refresh)",
+        "label": "Coils status (8-15)",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
@@ -3256,8 +3254,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 980,
-        "y": 120,
+        "x": 690,
+        "y": 260,
         "wires": []
     },
     {
@@ -3272,8 +3270,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 710,
-        "y": 120,
+        "x": 450,
+        "y": 260,
         "wires": [
             [
                 "4bf8d1ead2588507"
@@ -3307,7 +3305,7 @@
         "animate": false,
         "className": "",
         "x": 230,
-        "y": 780,
+        "y": 840,
         "wires": [
             [
                 "216a3822e523ae7a"
@@ -3370,7 +3368,7 @@
         "id": "a45d046f3f88d8b5",
         "type": "ui_text",
         "z": "48b4dc49fafe0f14",
-        "group": "8ca878b182ad523d",
+        "group": "",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -3394,7 +3392,7 @@
         "name": "",
         "label": "Registro 0",
         "tooltip": "",
-        "group": "8ca878b182ad523d",
+        "group": "",
         "order": 2,
         "width": 3,
         "height": 1,
