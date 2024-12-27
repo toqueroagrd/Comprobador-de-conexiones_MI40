@@ -3243,24 +3243,20 @@
         "id": "55708145d7130755",
         "type": "ui_toast",
         "z": "4e702d50e851e07d",
-        "position": "dialog",
+        "position": "top right",
         "displayTime": "3",
         "highlight": "",
         "sendall": true,
-        "outputs": 1,
+        "outputs": 0,
         "ok": "CERRAR",
         "cancel": "",
         "raw": false,
         "className": "",
         "topic": "",
         "name": "",
-        "x": 790,
+        "x": 810,
         "y": 1000,
-        "wires": [
-            [
-                "c617f49a49d0cadf"
-            ]
-        ]
+        "wires": []
     },
     {
         "id": "bf4d897873cfc1c2",
