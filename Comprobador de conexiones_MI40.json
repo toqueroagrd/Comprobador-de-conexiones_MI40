@@ -3060,8 +3060,8 @@
         "y": 1000,
         "wires": [
             [
-                "e1b0a71750230317",
-                "88c16f2aebfab101"
+                "88c16f2aebfab101",
+                "77a794156bea6d16"
             ]
         ]
     },
@@ -3311,6 +3311,135 @@
                 "216a3822e523ae7a"
             ]
         ]
+    },
+    {
+        "id": "f0494cef9267dda7",
+        "type": "inject",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "4",
+        "payload": "Math.floor(Math.random() * 101)",
+        "payloadType": "jsonata",
+        "x": 220,
+        "y": 1300,
+        "wires": [
+            [
+                "5e1d83ecc513499d"
+            ]
+        ]
+    },
+    {
+        "id": "5e1d83ecc513499d",
+        "type": "function",
+        "z": "4e702d50e851e07d",
+        "name": "Escribir Holding Register",
+        "func": "msg.payload = {\n    value: [parseInt(msg.payload)],\n    fc: 6,                          // Código de función Modbus\n    unitid: 1,                      // Unit ID del servidor\n    address: parseInt(msg.topic),   // Dirección del registro\n    quantity: 1                     // Solo un registro\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 1300,
+        "wires": [
+            [
+                "77a794156bea6d16"
+            ]
+        ]
+    },
+    {
+        "id": "77a794156bea6d16",
+        "type": "modbus-flex-write",
+        "z": "4e702d50e851e07d",
+        "name": "Escribir modbus",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "server": "3b81367c79146636",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 740,
+        "y": 1120,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "7ca5c8af66d0d2b2",
+        "type": "modbus-read",
+        "z": "4e702d50e851e07d",
+        "name": "Leer Holding Registers",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "4",
+        "quantity": "1",
+        "rate": "5",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "3b81367c79146636",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 180,
+        "y": 1360,
+        "wires": [
+            [
+                "fd779f88cc9a6b97"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "fd779f88cc9a6b97",
+        "type": "ui_gauge",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "group": "df3931bb045e7b4f",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Analog Varaible",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": true,
+        "className": "",
+        "x": 460,
+        "y": 1340,
+        "wires": []
     },
     {
         "id": "a94563fac236df23",
