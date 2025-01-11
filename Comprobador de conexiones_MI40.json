@@ -2985,7 +2985,7 @@
         "unitid": "1",
         "dataType": "HoldingRegister",
         "adr": "0",
-        "quantity": "8",
+        "quantity": "4",
         "rate": "5",
         "rateUnit": "s",
         "delayOnStart": false,
@@ -3318,7 +3318,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1000,
-        "y": 1000,
+        "y": 900,
         "wires": []
     },
     {
