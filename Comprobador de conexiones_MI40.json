@@ -2999,8 +2999,7 @@
         "y": 940,
         "wires": [
             [
-                "0f29104e26f61a98",
-                "bf4d897873cfc1c2"
+                "0f29104e26f61a98"
             ],
             [
                 "bf4d897873cfc1c2"
@@ -3317,7 +3316,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 960,
+        "x": 1000,
         "y": 1000,
         "wires": []
     },
