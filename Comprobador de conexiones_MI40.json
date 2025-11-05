@@ -2581,8 +2581,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 660,
-        "y": 400,
+        "x": 1080,
+        "y": 640,
         "wires": [
             [
                 "553555eadb4f9f44"
@@ -3273,7 +3273,7 @@
         "type": "function",
         "z": "4e702d50e851e07d",
         "name": "Alarma valor",
-        "func": "// Revisa los valores y crea un mensaje para cada condición\nlet valores = msg.payload; // Array de valores\nlet limite = 500;\n\nvalores.forEach((valor, index) => {\n    if (valor > limite) {\n        msg.payload = `¡Alarma! Holding ${index} superó el límite con un valor de ${valor}.`;\n        msg.topic = `Alerta: Holding ${index}`;\n        node.send(msg); // Envía una notificación por cada alarma\n    }\n});\nreturn null;\n",
+        "func": "// --- CONFIGURACIÓN ---\nconst limites = [500, 500, 500, 500];     // Umbral por cada holding\nconst coilsAlarma = [12, 13, 14, 15];     // Coil a activar por cada holding\nconst unitid = 1;\n\n// --- PROCESAMIENTO ---\nlet valores = msg.payload; // array con los 4 valores leídos\nlet mensajes = [];\n\nfor (let i = 0; i < valores.length; i++) {\n    let valor = valores[i];\n    if (valor > limites[i]) {\n        // Crear mensaje de alerta\n        mensajes.push(`⚠️ Holding ${i} superó el límite (${valor})`);\n\n        // Enviar coil ON\n        node.send([\n            null, // salida 1: mensajes de texto\n            {\n                payload: {\n                    value: true,\n                    fc: 5,\n                    unitid: unitid,\n                    address: coilsAlarma[i],\n                    quantity: 1\n                }\n            }\n        ]);\n    } else {\n        // Asegurar coil apagada\n        node.send([\n            null,\n            {\n                payload: {\n                    value: false,\n                    fc: 5,\n                    unitid: unitid,\n                    address: coilsAlarma[i],\n                    quantity: 1\n                }\n            }\n        ]);\n    }\n}\n\n// Si hay alguna alerta, crear un mensaje conjunto\nif (mensajes.length > 0) {\n    msg.payload = mensajes.join('\\n');\n    return [msg, null]; // salida 1 = texto alerta\n}\nreturn [null, null];\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3285,7 +3285,8 @@
         "wires": [
             [
                 "55708145d7130755",
-                "2fdf21661b904473"
+                "2fdf21661b904473",
+                "e1b0a71750230317"
             ]
         ]
     },
@@ -3488,5 +3489,46 @@
         "x": 550,
         "y": 1120,
         "wires": []
+    },
+    {
+        "id": "ecdc5c220c8bc143",
+        "type": "ui_text",
+        "z": "4e702d50e851e07d",
+        "group": "af9022af948df047",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Estado de conexión",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 710,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "6f33591cbcf3b223",
+        "type": "function",
+        "z": "4e702d50e851e07d",
+        "name": "Conection status",
+        "func": "if (msg.status.text.includes(\"connected\")) {\n    msg.payload = \"🟢 Conectado al servidor\";\n} else {\n    msg.payload = \"🔴 Desconectado\";\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 1440,
+        "wires": [
+            [
+                "ecdc5c220c8bc143"
+            ]
+        ]
     }
 ]
