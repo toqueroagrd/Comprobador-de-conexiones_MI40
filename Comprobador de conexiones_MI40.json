@@ -3286,7 +3286,8 @@
             [
                 "55708145d7130755",
                 "2fdf21661b904473",
-                "e1b0a71750230317"
+                "e1b0a71750230317",
+                "a0e2044a789a3610"
             ]
         ]
     },
@@ -3530,5 +3531,26 @@
                 "ecdc5c220c8bc143"
             ]
         ]
+    },
+    {
+        "id": "a0e2044a789a3610",
+        "type": "ui_text",
+        "z": "4e702d50e851e07d",
+        "group": "af9022af948df047",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Alarma",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 800,
+        "y": 1080,
+        "wires": []
     }
 ]
