@@ -3034,7 +3034,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Valores Holding Registers",
+        "label": "Valores Holding Registers (0-3)",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
@@ -3042,7 +3042,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 830,
+        "x": 850,
         "y": 940,
         "wires": []
     },
@@ -3448,8 +3448,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 870,
-        "y": 1280,
+        "x": 490,
+        "y": 1520,
         "wires": []
     },
     {
@@ -3464,8 +3464,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
-        "y": 1280,
+        "x": 270,
+        "y": 1520,
         "wires": [
             [
                 "ecdc5c220c8bc143"
@@ -3531,7 +3531,7 @@
         "width": 0,
         "height": 0,
         "gtype": "gage",
-        "title": "gauge",
+        "title": "Holding 4",
         "label": "units",
         "format": "{{value}}",
         "min": 0,
@@ -3545,7 +3545,7 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 770,
+        "x": 780,
         "y": 1000,
         "wires": []
     },
