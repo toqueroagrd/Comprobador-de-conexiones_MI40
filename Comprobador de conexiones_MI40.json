@@ -3448,7 +3448,7 @@
         "type": "function",
         "z": "4e702d50e851e07d",
         "name": "Conection status",
-        "func": "let estado = msg.status.text || \"\";\nlet color = \"🔴\", texto = \"Desconectado\";\n\nif (estado.includes(\"connected\")) {\n    color = \"🟢\"; texto = \"Conectado al servidor Modbus\";\n} else if (estado.includes(\"reconnect\")) {\n    color = \"🟠\"; texto = \"Reconectando...\";\n}\nmsg.payload = `${color} ${texto}`;\nreturn msg;\n",
+        "func": "let estado = msg.status.text || \"\";\nlet color = \"🔴\";\nlet texto = \"Desconectado\";\n\nif (estado.includes(\"connected\")) {\n    color = \"🟢\";\n    texto = \"Conectado al servidor Modbus\";\n} else if (estado.includes(\"reconnect\")) {\n    color = \"🟠\";\n    texto = \"Reconectando...\";\n} else if (estado.includes(\"error\") || estado.includes(\"timeout\")) {\n    color = \"🔴\";\n    texto = \"Error o sin conexión\";\n}\n\nmsg.payload = `${color} ${texto}`;\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
