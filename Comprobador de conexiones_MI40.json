@@ -2986,7 +2986,7 @@
         "dataType": "HoldingRegister",
         "adr": "0",
         "quantity": "4",
-        "rate": "5",
+        "rate": "1",
         "rateUnit": "s",
         "delayOnStart": false,
         "startDelayTime": "",
@@ -3002,9 +3002,7 @@
                 "0f29104e26f61a98",
                 "c617f49a49d0cadf"
             ],
-            [
-                "bf4d897873cfc1c2"
-            ]
+            []
         ]
     },
     {
@@ -3250,66 +3248,6 @@
         ]
     },
     {
-        "id": "55708145d7130755",
-        "type": "ui_toast",
-        "z": "4e702d50e851e07d",
-        "position": "top right",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "CERRAR",
-        "cancel": "",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "",
-        "x": 810,
-        "y": 1000,
-        "wires": []
-    },
-    {
-        "id": "bf4d897873cfc1c2",
-        "type": "function",
-        "z": "4e702d50e851e07d",
-        "name": "Alarma valor",
-        "func": "// --- CONFIGURACIÓN ---\nconst limites = [500, 500, 500, 500];     // Umbral por cada holding\nconst coilsAlarma = [12, 13, 14, 15];     // Coil asociado\nconst unitid = 1;\n\n// --- DATOS DE ENTRADA ---\nlet valores = msg.payload; // ← tu caso\n\n// --- SALIDAS ---\nlet alertas = [];       // salida 1 → texto o toast\nlet comandos = [];      // salida 2 → escrituras modbus\n\nfor (let i = 0; i < valores.length; i++) {\n    let valor = valores[i];\n    let coil = coilsAlarma[i];\n\n    if (valor > limites[i]) {\n        alertas.push(`⚠️ Holding ${i} superó el límite (${valor})`);\n        comandos.push({\n            payload: {\n                value: true,\n                fc: 5,\n                unitid: unitid,\n                address: coil,\n                quantity: 1\n            }\n        });\n    } else {\n        comandos.push({\n            payload: {\n                value: false,\n                fc: 5,\n                unitid: unitid,\n                address: coil,\n                quantity: 1\n            }\n        });\n    }\n}\n\n// --- ENVÍOS ---\nlet salida1 = alertas.length > 0 ? { payload: alertas.join('\\n') } : null;\nreturn [salida1, comandos];\n",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 490,
-        "y": 1020,
-        "wires": [
-            [
-                "55708145d7130755",
-                "2fdf21661b904473",
-                "a0e2044a789a3610"
-            ],
-            [
-                "e1b0a71750230317"
-            ]
-        ]
-    },
-    {
-        "id": "2fdf21661b904473",
-        "type": "debug",
-        "z": "4e702d50e851e07d",
-        "name": "debug 15",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 780,
-        "y": 1040,
-        "wires": []
-    },
-    {
         "id": "c617f49a49d0cadf",
         "type": "debug",
         "z": "4e702d50e851e07d",
@@ -3510,8 +3448,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 710,
-        "y": 1440,
+        "x": 870,
+        "y": 1280,
         "wires": []
     },
     {
@@ -3526,8 +3464,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
-        "y": 1440,
+        "x": 650,
+        "y": 1280,
         "wires": [
             [
                 "ecdc5c220c8bc143"
@@ -3535,24 +3473,52 @@
         ]
     },
     {
-        "id": "a0e2044a789a3610",
-        "type": "ui_text",
+        "id": "0e2167ab6c017aaf",
+        "type": "inject",
         "z": "4e702d50e851e07d",
-        "group": "af9022af948df047",
-        "order": 1,
-        "width": 0,
-        "height": 0,
         "name": "",
-        "label": "Alarma",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 800,
-        "y": 1080,
-        "wires": []
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 280,
+        "y": 1440,
+        "wires": [
+            [
+                "974a87fa0717b396"
+            ]
+        ]
+    },
+    {
+        "id": "974a87fa0717b396",
+        "type": "function",
+        "z": "4e702d50e851e07d",
+        "name": "Senoidal",
+        "func": "let val = Math.round(512 + 512*Math.sin(Date.now()/1500));\nmsg.payload = {\n    value:[val],\n    fc:6,\n    unitid:1,\n    address:0,\n    quantity:1\n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 1440,
+        "wires": [
+            [
+                "e1b0a71750230317"
+            ]
+        ]
     }
 ]
