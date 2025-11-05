@@ -3200,6 +3200,7 @@
         "id": "4bf8d1ead2588507",
         "type": "ui_text",
         "z": "4e702d50e851e07d",
+        "d": true,
         "group": "a7ed64dd462a9d40",
         "order": 5,
         "width": 0,
