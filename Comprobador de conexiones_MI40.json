@@ -3506,7 +3506,7 @@
         "type": "function",
         "z": "4e702d50e851e07d",
         "name": "Senoidal",
-        "func": "let val = Math.round(512 + 512*Math.sin(Date.now()/1500));\nmsg.payload = {\n    value:[val],\n    fc:6,\n    unitid:1,\n    address:0,\n    quantity:1\n};\nreturn msg;\n",
+        "func": "let val = Math.round(512 + 512*Math.sin(Date.now()/1500));\nmsg.payload = {\n    value:[val],\n    fc:6,\n    unitid:1,\n    address:4,\n    quantity:1\n};\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
