@@ -3273,8 +3273,8 @@
         "type": "function",
         "z": "4e702d50e851e07d",
         "name": "Alarma valor",
-        "func": "// --- CONFIGURACIÓN ---\nconst limites = [500, 500, 500, 500];     // Umbral por cada holding\nconst coilsAlarma = [12, 13, 14, 15];     // Coil a activar por cada holding\nconst unitid = 1;\n\n// --- PROCESAMIENTO ---\nlet valores = msg.payload; // array con los 4 valores leídos\nlet mensajes = [];\n\nfor (let i = 0; i < valores.length; i++) {\n    let valor = valores[i];\n    if (valor > limites[i]) {\n        // Crear mensaje de alerta\n        mensajes.push(`⚠️ Holding ${i} superó el límite (${valor})`);\n\n        // Enviar coil ON\n        node.send([\n            null, // salida 1: mensajes de texto\n            {\n                payload: {\n                    value: true,\n                    fc: 5,\n                    unitid: unitid,\n                    address: coilsAlarma[i],\n                    quantity: 1\n                }\n            }\n        ]);\n    } else {\n        // Asegurar coil apagada\n        node.send([\n            null,\n            {\n                payload: {\n                    value: false,\n                    fc: 5,\n                    unitid: unitid,\n                    address: coilsAlarma[i],\n                    quantity: 1\n                }\n            }\n        ]);\n    }\n}\n\n// Si hay alguna alerta, crear un mensaje conjunto\nif (mensajes.length > 0) {\n    msg.payload = mensajes.join('\\n');\n    return [msg, null]; // salida 1 = texto alerta\n}\nreturn [null, null];\n",
-        "outputs": 1,
+        "func": "\n// --- CONFIGURACIÓN ---\nconst limites = [500, 500, 500, 500];     // Umbral por cada holding\nconst coilsAlarma = [12, 13, 14, 15];     // Coil a activar por cada holding\nconst unitid = 1;\n\n// --- PROCESAMIENTO ---\nlet valores = msg.payload; // array con los 4 valores leídos\nlet mensajes = [];\n\nfor (let i = 0; i < valores.length; i++) {\n    let valor = valores[i];\n    if (valor > limites[i]) {\n        // Crear mensaje de alerta\n        mensajes.push(`⚠️ Holding ${i} superó el límite (${valor})`);\n\n        // Enviar coil ON\n        node.send([\n            null, // salida 1: mensajes de texto\n            {\n                payload: {\n                    value: true,\n                    fc: 5,\n                    unitid: unitid,\n                    address: coilsAlarma[i],\n                    quantity: 1\n                }\n            }\n        ]);\n    } else {\n        // Asegurar coil apagada\n        node.send([\n            null,\n            {\n                payload: {\n                    value: false,\n                    fc: 5,\n                    unitid: unitid,\n                    address: coilsAlarma[i],\n                    quantity: 1\n                }\n            }\n        ]);\n    }\n}\n\n// Si hay alguna alerta, crear un mensaje conjunto\nif (mensajes.length > 0) {\n    msg.payload = mensajes.join('\\n');\n    return [msg, null]; // salida 1 = texto alerta\n}\nreturn [null, null];\n",
+        "outputs": 2,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -3286,8 +3286,10 @@
             [
                 "55708145d7130755",
                 "2fdf21661b904473",
-                "e1b0a71750230317",
                 "a0e2044a789a3610"
+            ],
+            [
+                "e1b0a71750230317"
             ]
         ]
     },
