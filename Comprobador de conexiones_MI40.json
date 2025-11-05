@@ -2675,7 +2675,7 @@
         "dataType": "Coil",
         "adr": "0",
         "quantity": "8",
-        "rate": "5",
+        "rate": "2",
         "rateUnit": "s",
         "delayOnStart": false,
         "startDelayTime": "",
@@ -2986,7 +2986,7 @@
         "dataType": "HoldingRegister",
         "adr": "0",
         "quantity": "4",
-        "rate": "0.5",
+        "rate": "2",
         "rateUnit": "s",
         "delayOnStart": false,
         "startDelayTime": "",
@@ -3519,6 +3519,66 @@
             [
                 "e1b0a71750230317"
             ]
+        ]
+    },
+    {
+        "id": "5c6707ef277fc022",
+        "type": "ui_gauge",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "group": "df3931bb045e7b4f",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1024",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 770,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "9cc1c714bebe8092",
+        "type": "modbus-read",
+        "z": "4e702d50e851e07d",
+        "name": "Leer Holding 4",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "4",
+        "quantity": "1",
+        "rate": "100",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "3b81367c79146636",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 220,
+        "y": 1020,
+        "wires": [
+            [
+                "5c6707ef277fc022"
+            ],
+            []
         ]
     }
 ]
