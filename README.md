@@ -33,20 +33,21 @@ El sistema funcionará en una Raspberry PI y podrá ser conectado a cualquier ha
 
 -Dispositivo conectado a la misma red con navegador para visualizar el dashboard.
 
--Sistema con capacidad de conexión en cualquiera de de los métodos de comunicación para testeo.
+-Sistema con capacidad de conexión en cualquiera de de los métodos de comunicación a testear.
 
 
 # Sistemas de comunicación:
 Los siguientes sistemas de comuncicación podrán ser testados con el mencionado software.
 
 ## MQTT
-Descripción de interfaz.
+<img width="466" height="1208" alt="image" src="https://github.com/user-attachments/assets/b21a38c8-eb45-431a-ab51-3720ccc98fab" />
 
 ## OPCUA
-Descripción de interfaz.
+<img width="915" height="477" alt="image" src="https://github.com/user-attachments/assets/1fe246fa-13f1-4764-80b2-b19deb77ad0e" />
 
 ## MODBUS
-Descripción de interfaz.
+<img width="434" height="572" alt="image" src="https://github.com/user-attachments/assets/098c49f3-d64c-4006-a39f-fd2e797a2a9f" />
+
 
 # Instalación
 
