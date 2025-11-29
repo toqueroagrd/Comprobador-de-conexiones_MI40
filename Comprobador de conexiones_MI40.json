@@ -3424,47 +3424,6 @@
         "wires": []
     },
     {
-        "id": "ecdc5c220c8bc143",
-        "type": "ui_text",
-        "z": "4e702d50e851e07d",
-        "group": "af9022af948df047",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Estado de conexión",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 690,
-        "y": 1500,
-        "wires": []
-    },
-    {
-        "id": "6f33591cbcf3b223",
-        "type": "function",
-        "z": "4e702d50e851e07d",
-        "name": "Conection status",
-        "func": "let estado = msg.status.text || \"\";\nlet color = \"🔴\";\nlet texto = \"Desconectado\";\n\nif (estado.includes(\"connected\")) {\n    color = \"🟢\";\n    texto = \"Conectado al servidor Modbus\";\n} else if (estado.includes(\"reconnect\")) {\n    color = \"🟠\";\n    texto = \"Reconectando...\";\n} else if (estado.includes(\"error\") || estado.includes(\"timeout\")) {\n    color = \"🔴\";\n    texto = \"Error o sin conexión\";\n}\n\nmsg.payload = `${color} ${texto}`;\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 470,
-        "y": 1500,
-        "wires": [
-            [
-                "ecdc5c220c8bc143"
-            ]
-        ]
-    },
-    {
         "id": "0e2167ab6c017aaf",
         "type": "inject",
         "z": "4e702d50e851e07d",
@@ -3572,38 +3531,5 @@
             ],
             []
         ]
-    },
-    {
-        "id": "f3c965057bb23d2b",
-        "type": "status",
-        "z": "4e702d50e851e07d",
-        "name": "",
-        "scope": [
-            "f2257bf6eb02ad79"
-        ],
-        "x": 240,
-        "y": 1500,
-        "wires": [
-            [
-                "6f33591cbcf3b223",
-                "ca370f54fa14fbc7"
-            ]
-        ]
-    },
-    {
-        "id": "ca370f54fa14fbc7",
-        "type": "debug",
-        "z": "4e702d50e851e07d",
-        "name": "debug 17",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 440,
-        "y": 1560,
-        "wires": []
     }
 ]
