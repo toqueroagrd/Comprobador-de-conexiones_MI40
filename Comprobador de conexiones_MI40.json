@@ -303,6 +303,7 @@
     {
         "id": "512391c17844a41a",
         "type": "OPCUA-IIoT-Connector",
+        "z": null,
         "discoveryUrl": "",
         "endpoint": "opc.tcp://127.0.0.1:55489",
         "endpointMustExist": false,
@@ -2511,6 +2512,26 @@
             [
                 "d4b770e7f5548adb"
             ]
+        ]
+    },
+    {
+        "id": "44b6c47b52fbbf32",
+        "type": "OPCUA-IIoT-Read",
+        "z": "e340100c9b9fe682",
+        "attributeId": 0,
+        "maxAge": 1,
+        "depth": 1,
+        "connector": "77fdc29e.3c49ec",
+        "name": "Lecture variables",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "parseStrings": false,
+        "historyDays": 1,
+        "x": 1750,
+        "y": 620,
+        "wires": [
+            []
         ]
     },
     {
