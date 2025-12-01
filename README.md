@@ -43,10 +43,10 @@ Los siguientes sistemas de comuncicación podrán ser testados con el mencionado
 <img width="233" height="604" alt="image" src="https://github.com/user-attachments/assets/b21a38c8-eb45-431a-ab51-3720ccc98fab" />
 
 ## OPCUA
-<img width="915" height="477" alt="image" src="https://github.com/user-attachments/assets/1fe246fa-13f1-4764-80b2-b19deb77ad0e" />
+<img width="458" height="239" alt="image" src="https://github.com/user-attachments/assets/1fe246fa-13f1-4764-80b2-b19deb77ad0e" />
 
 ## MODBUS
-<img width="434" height="572" alt="image" src="https://github.com/user-attachments/assets/098c49f3-d64c-4006-a39f-fd2e797a2a9f" />
+<img width="267" height="286" alt="image" src="https://github.com/user-attachments/assets/098c49f3-d64c-4006-a39f-fd2e797a2a9f" />
 
 
 # Instalación
