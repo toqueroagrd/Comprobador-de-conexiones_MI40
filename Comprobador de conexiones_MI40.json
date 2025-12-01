@@ -2088,8 +2088,8 @@
             }
         ],
         "xmlsets": [],
-        "publicCertificateFile": "/home/pi/.node-red/node_modules/node-red-contrib-iiot-opcua/certificates/server_selfsigned_cert_2048.pem",
-        "privateCertificateFile": "/home/pi/.node-red/node_modules/node-red-contrib-iiot-opcua/certificates/server_key_2048.pem",
+        "publicCertificateFile": "/home/pi/Desktop/Certificados_OPCUA/server_selfsigned_cert_2048.der",
+        "privateCertificateFile": "/home/pi/Desktop/Certificados_OPCUA/server_key_2048.pem",
         "registerServerMethod": "1",
         "discoveryServerEndpointUrl": "",
         "capabilitiesForMDNS": "",
