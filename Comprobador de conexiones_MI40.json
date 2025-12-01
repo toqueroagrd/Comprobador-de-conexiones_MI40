@@ -313,7 +313,7 @@
         "securityPolicy": "Basic256Sha256",
         "securityMode": "Sign",
         "individualCerts": true,
-        "publicCertificateFile": "/home/pi/Desktop/Certificados_OPCUA/server_selfsigned_cert_2048.pem",
+        "publicCertificateFile": "/home/pi/Desktop/Certificados_OPCUA/server_selfsigned_cert_2048.der",
         "privateKeyFile": "/home/pi/Desktop/Certificados_OPCUA/server_key_2048.pem",
         "defaultSecureTokenLifetime": "",
         "autoSelectRightEndpoint": false,
