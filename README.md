@@ -40,7 +40,7 @@ El sistema funcionará en una Raspberry PI y podrá ser conectado a cualquier ha
 Los siguientes sistemas de comuncicación podrán ser testados con el mencionado software.
 
 ## MQTT
-<img width="466" height="1208" alt="image" src="https://github.com/user-attachments/assets/b21a38c8-eb45-431a-ab51-3720ccc98fab" />
+<img width="233" height="604" alt="image" src="https://github.com/user-attachments/assets/b21a38c8-eb45-431a-ab51-3720ccc98fab" />
 
 ## OPCUA
 <img width="915" height="477" alt="image" src="https://github.com/user-attachments/assets/1fe246fa-13f1-4764-80b2-b19deb77ad0e" />
