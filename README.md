@@ -83,7 +83,7 @@ Tras la instalación de Node-red se pasaría a importar el proyecto y desplegar 
 ```sudo systemctl enable nodered.service```
 
 **7.** Importamos el proyecto desde github tomando el enlace de este repositorio
-<img width="636" height="773" alt="image" src="https://github.com/user-attachments/assets/a078cc65-9d73-4e49-802c-fc573cf698ca" />
+<img width="368" height="386" alt="image" src="https://github.com/user-attachments/assets/a078cc65-9d73-4e49-802c-fc573cf698ca" />
 
 
 # Licencia
