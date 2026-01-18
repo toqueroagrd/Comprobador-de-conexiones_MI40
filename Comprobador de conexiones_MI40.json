@@ -791,7 +791,7 @@
         "id": "8cf8039fb4ece043",
         "type": "mqtt out",
         "z": "a4a07f451bd4dad9",
-        "name": "Enviar señal booleana - Safe",
+        "name": "Enviar señal booleana - Seguro",
         "topic": "E_Señal_Fija",
         "qos": "",
         "retain": "",
@@ -801,7 +801,7 @@
         "correl": "",
         "expiry": "",
         "broker": "389b7dfe828d514b",
-        "x": 820,
+        "x": 830,
         "y": 700,
         "wires": []
     },
