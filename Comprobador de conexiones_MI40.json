@@ -611,6 +611,16 @@
         "className": ""
     },
     {
+        "id": "4c1d83ccf4f071a5",
+        "type": "ui_spacer",
+        "z": "4e702d50e851e07d",
+        "name": "spacer",
+        "group": "af9022af948df047",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
         "id": "eabb9ee36b27428c",
         "type": "change",
         "z": "c3367d12564d11c6",
@@ -3709,7 +3719,7 @@
         "id": "49856ea950f67ef4",
         "type": "ui_text",
         "z": "4e702d50e851e07d",
-        "group": "4361aa01fca1a200",
+        "group": "af9022af948df047",
         "order": 2,
         "width": 0,
         "height": 0,
@@ -3730,7 +3740,7 @@
         "id": "fa4caadb7e6169b6",
         "type": "ui_text",
         "z": "4e702d50e851e07d",
-        "group": "b802e2f198ba7a08",
+        "group": "af9022af948df047",
         "order": 3,
         "width": 0,
         "height": 0,
