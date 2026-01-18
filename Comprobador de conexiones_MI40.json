@@ -579,6 +579,27 @@
         "width": 6
     },
     {
+        "id": "b802e2f198ba7a08",
+        "type": "ui_group",
+        "name": "Información del servidor",
+        "tab": "d1d1fb83e7cc8da6",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "703e1ea5cce91acf",
+        "type": "ui_spacer",
+        "z": "a4a07f451bd4dad9",
+        "name": "spacer",
+        "group": "b802e2f198ba7a08",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
         "id": "eabb9ee36b27428c",
         "type": "change",
         "z": "c3367d12564d11c6",
@@ -1431,7 +1452,7 @@
         "id": "ca26a58e12289d34",
         "type": "ui_text",
         "z": "a4a07f451bd4dad9",
-        "group": "5c77a99695e85ecb",
+        "group": "b802e2f198ba7a08",
         "order": 1,
         "width": "0",
         "height": "0",
@@ -1536,7 +1557,7 @@
         "id": "98b0bc483a6c805b",
         "type": "ui_text",
         "z": "a4a07f451bd4dad9",
-        "group": "5c77a99695e85ecb",
+        "group": "b802e2f198ba7a08",
         "order": 2,
         "width": 0,
         "height": 0,
