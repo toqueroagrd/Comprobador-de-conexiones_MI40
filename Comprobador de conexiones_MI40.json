@@ -1595,7 +1595,7 @@
         "height": 0,
         "name": "",
         "label": "Credenciales:",
-        "format": "Usuario: MI4.0 - Contraseña: MI4.0",
+        "format": "Usuario: MI40 - Contraseña: MI40",
         "layout": "col-center",
         "className": "",
         "style": false,
