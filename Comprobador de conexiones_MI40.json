@@ -1321,7 +1321,7 @@
         "type": "ui_slider",
         "z": "a4a07f451bd4dad9",
         "name": "Max Value",
-        "label": "Valor Maximo",
+        "label": "Valor Máximo",
         "tooltip": "Ajusta el valor máximo de la señal",
         "group": "cc05999d36b01e18",
         "order": 15,
