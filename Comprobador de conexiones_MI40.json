@@ -3625,5 +3625,126 @@
             ],
             []
         ]
+    },
+    {
+        "id": "16eaf47ac1da23ec",
+        "type": "inject",
+        "z": "4e702d50e851e07d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 830,
+        "y": 60,
+        "wires": [
+            [
+                "de5cdba3b2342e95"
+            ]
+        ]
+    },
+    {
+        "id": "9f9beb15d7a451fa",
+        "type": "debug",
+        "z": "4e702d50e851e07d",
+        "name": "debug 17",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "de5cdba3b2342e95",
+        "type": "hostip",
+        "z": "4e702d50e851e07d",
+        "name": "Host IP",
+        "x": 1000,
+        "y": 60,
+        "wires": [
+            [
+                "9f9beb15d7a451fa",
+                "976f2305c0715350"
+            ]
+        ]
+    },
+    {
+        "id": "976f2305c0715350",
+        "type": "function",
+        "z": "4e702d50e851e07d",
+        "name": "Obtener IPV4",
+        "func": "msg.Ipv4 = msg.payload[0].address;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 60,
+        "wires": [
+            [
+                "49856ea950f67ef4"
+            ]
+        ]
+    },
+    {
+        "id": "49856ea950f67ef4",
+        "type": "ui_text",
+        "z": "4e702d50e851e07d",
+        "group": "4361aa01fca1a200",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Master IP",
+        "format": "{{msg.Ipv4}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1460,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "fa4caadb7e6169b6",
+        "type": "ui_text",
+        "z": "4e702d50e851e07d",
+        "group": "b802e2f198ba7a08",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Puerto:",
+        "format": "502",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1460,
+        "y": 120,
+        "wires": []
     }
 ]
