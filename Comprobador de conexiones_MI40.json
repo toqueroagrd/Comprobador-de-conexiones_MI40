@@ -595,6 +595,16 @@
         "z": "a4a07f451bd4dad9",
         "name": "spacer",
         "group": "b802e2f198ba7a08",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "1f4d6ed00e8309ba",
+        "type": "ui_spacer",
+        "z": "a4a07f451bd4dad9",
+        "name": "spacer",
+        "group": "b802e2f198ba7a08",
         "order": 2,
         "width": 1,
         "height": 1
@@ -1579,7 +1589,7 @@
         "type": "ui_text",
         "z": "a4a07f451bd4dad9",
         "group": "b802e2f198ba7a08",
-        "order": 6,
+        "order": 5,
         "width": 0,
         "height": 0,
         "name": "",
