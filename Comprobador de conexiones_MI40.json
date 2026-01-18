@@ -3747,7 +3747,7 @@
         "name": "",
         "label": "Puerto:",
         "format": "502",
-        "layout": "col-center",
+        "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
