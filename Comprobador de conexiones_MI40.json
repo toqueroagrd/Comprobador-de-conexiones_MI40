@@ -489,16 +489,6 @@
         "height": 1
     },
     {
-        "id": "d19e1d84f5a19cb6",
-        "type": "ui_spacer",
-        "z": "a4a07f451bd4dad9",
-        "name": "spacer",
-        "group": "5c77a99695e85ecb",
-        "order": 3,
-        "width": "0",
-        "height": "0"
-    },
-    {
         "id": "5c192cfbaaea1c3c",
         "type": "ui_spacer",
         "z": "a4a07f451bd4dad9",
@@ -608,6 +598,15 @@
         "order": 2,
         "width": 1,
         "height": 1
+    },
+    {
+        "id": "cc05999d36b01e18",
+        "type": "ui_group",
+        "name": "Group 3",
+        "tab": "d1d1fb83e7cc8da6",
+        "order": 3,
+        "disp": true,
+        "width": 6
     },
     {
         "id": "eabb9ee36b27428c",
@@ -1295,7 +1294,7 @@
         "name": "Min Value",
         "label": "Min Value",
         "tooltip": "Ajusta el valor m�nimo de la se�al",
-        "group": "5c77a99695e85ecb",
+        "group": "cc05999d36b01e18",
         "order": 16,
         "width": 0,
         "height": 0,
@@ -1322,7 +1321,7 @@
         "name": "Max Value",
         "label": "Max Value",
         "tooltip": "Ajusta el valor m�ximo de la se�al",
-        "group": "5c77a99695e85ecb",
+        "group": "cc05999d36b01e18",
         "order": 15,
         "width": 0,
         "height": 0,
@@ -1441,7 +1440,7 @@
         "id": "0511dff8aaaf44e5",
         "type": "ui_text",
         "z": "a4a07f451bd4dad9",
-        "group": "5c77a99695e85ecb",
+        "group": "cc05999d36b01e18",
         "order": 14,
         "width": 0,
         "height": 0,
@@ -1505,7 +1504,7 @@
         "type": "ui_chart",
         "z": "a4a07f451bd4dad9",
         "name": "Periodical signal plot",
-        "group": "5c77a99695e85ecb",
+        "group": "cc05999d36b01e18",
         "order": 17,
         "width": 0,
         "height": 0,
