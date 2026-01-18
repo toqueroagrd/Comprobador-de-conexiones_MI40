@@ -1447,7 +1447,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Señal Predecible",
+        "label": "Señal Previsible",
         "format": "",
         "layout": "col-center",
         "className": "",
@@ -1455,7 +1455,7 @@
         "font": "Tahoma,Geneva,sans-serif",
         "fontSize": "19",
         "color": "#000000",
-        "x": 240,
+        "x": 230,
         "y": 1120,
         "wires": []
     },
