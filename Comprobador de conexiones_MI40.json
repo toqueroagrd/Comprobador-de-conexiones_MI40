@@ -18,7 +18,7 @@
     {
         "id": "e340100c9b9fe682",
         "type": "tab",
-        "label": "OPCUA",
+        "label": "OPC UA",
         "disabled": false,
         "info": "",
         "env": []
@@ -26,7 +26,7 @@
     {
         "id": "4e702d50e851e07d",
         "type": "tab",
-        "label": "MODBUS",
+        "label": "Modbus TCP",
         "disabled": false,
         "info": "",
         "env": []
@@ -647,7 +647,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"tab\" : \"OPCUA\"}",
+                "to": "{\"tab\" : \"OPC UA\"}",
                 "tot": "json"
             }
         ],
@@ -674,7 +674,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"tab\" : \"MODBUS\"}",
+                "to": "{\"tab\" : \"Modbus TCP\"}",
                 "tot": "json"
             }
         ],
