@@ -602,11 +602,13 @@
     {
         "id": "cc05999d36b01e18",
         "type": "ui_group",
-        "name": "Group 3",
+        "name": "",
         "tab": "d1d1fb83e7cc8da6",
         "order": 3,
         "disp": true,
-        "width": 6
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "eabb9ee36b27428c",
