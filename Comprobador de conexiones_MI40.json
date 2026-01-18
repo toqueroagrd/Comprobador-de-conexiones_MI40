@@ -611,16 +611,6 @@
         "className": ""
     },
     {
-        "id": "c087fd3d7b09f550",
-        "type": "ui_spacer",
-        "z": "4e702d50e851e07d",
-        "name": "spacer",
-        "group": "af9022af948df047",
-        "order": 3,
-        "width": 6,
-        "height": 1
-    },
-    {
         "id": "eabb9ee36b27428c",
         "type": "change",
         "z": "c3367d12564d11c6",
@@ -3726,7 +3716,7 @@
         "name": "",
         "label": "Master IP",
         "format": "{{msg.Ipv4}}",
-        "layout": "row-left",
+        "layout": "col-center",
         "className": "",
         "style": false,
         "font": "",
@@ -3747,7 +3737,7 @@
         "name": "",
         "label": "Puerto:",
         "format": "502",
-        "layout": "row-left",
+        "layout": "col-center",
         "className": "",
         "style": false,
         "font": "",
@@ -3755,27 +3745,6 @@
         "color": "#000000",
         "x": 1460,
         "y": 100,
-        "wires": []
-    },
-    {
-        "id": "1a671dce7e73785a",
-        "type": "ui_text",
-        "z": "4e702d50e851e07d",
-        "group": "af9022af948df047",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Información de conexión:",
-        "format": "",
-        "layout": "row-left",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1510,
-        "y": 140,
         "wires": []
     }
 ]
