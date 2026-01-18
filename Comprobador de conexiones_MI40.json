@@ -399,7 +399,7 @@
     {
         "id": "e97cb207c443df1f",
         "type": "ui_tab",
-        "name": "OPCUA",
+        "name": "OPC UA",
         "icon": "dashboard",
         "order": 4,
         "disabled": false,
@@ -439,18 +439,18 @@
     {
         "id": "af9022af948df047",
         "type": "ui_group",
-        "name": "MODBUS",
+        "name": "Modbus TCP - Info de conexión",
         "tab": "e7174bcf0bf8f174",
         "order": 1,
         "disp": true,
-        "width": 6,
+        "width": "6",
         "collapse": false,
         "className": ""
     },
     {
         "id": "4361aa01fca1a200",
         "type": "ui_group",
-        "name": "OPCUA - Info de conexion",
+        "name": "OPC UA - Info de conexión",
         "tab": "e97cb207c443df1f",
         "order": 1,
         "disp": true,
@@ -571,7 +571,7 @@
     {
         "id": "b802e2f198ba7a08",
         "type": "ui_group",
-        "name": "Información del servidor",
+        "name": "MQTT - Info de conexión",
         "tab": "d1d1fb83e7cc8da6",
         "order": 1,
         "disp": true,
