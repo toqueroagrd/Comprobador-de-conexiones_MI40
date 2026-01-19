@@ -2665,32 +2665,12 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 1080,
-        "y": 640,
+        "x": 1580,
+        "y": 880,
         "wires": [
-            [
-                "553555eadb4f9f44"
-            ],
+            [],
             []
         ]
-    },
-    {
-        "id": "553555eadb4f9f44",
-        "type": "debug",
-        "z": "4e702d50e851e07d",
-        "d": true,
-        "name": "debug 12",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
-        "y": 380,
-        "wires": []
     },
     {
         "id": "216a3822e523ae7a",
@@ -2770,7 +2750,7 @@
         "useIOForPayload": false,
         "emptyMsgOnFail": false,
         "x": 240,
-        "y": 220,
+        "y": 260,
         "wires": [
             [
                 "b9119c64a1539248"
@@ -3034,7 +3014,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 690,
-        "y": 200,
+        "y": 240,
         "wires": []
     },
     {
@@ -3042,7 +3022,7 @@
         "type": "function",
         "z": "4e702d50e851e07d",
         "name": "Mapeo coils",
-        "func": "// Toma los primeros 10 elementos del array\nlet coilStates = msg.payload.slice(0, 8);\n\n// Convierte true/false en 1/0\nlet formattedStates = coilStates.map(state => state ? 1 : 0);\n\n// Une los n�meros en una sola l�nea\nmsg.payload = formattedStates.join(' ');\nreturn msg;\n",
+        "func": "\nlet coilStates = msg.payload.slice(0, 8);\n\nlet formattedStates = coilStates.map(state => state ? 1 : 0);\n\nmsg.payload = formattedStates.join(' ');\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3050,7 +3030,7 @@
         "finalize": "",
         "libs": [],
         "x": 450,
-        "y": 200,
+        "y": 240,
         "wires": [
             [
                 "27e6548e6e66f448"
@@ -3256,80 +3236,6 @@
         "wires": [
             [
                 "04a29447d0c7d272"
-            ]
-        ]
-    },
-    {
-        "id": "5de78b437c9d92ab",
-        "type": "modbus-read",
-        "z": "4e702d50e851e07d",
-        "name": "Leer Coils",
-        "topic": "",
-        "showStatusActivities": false,
-        "logIOActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "unitid": "1",
-        "dataType": "Coil",
-        "adr": "8",
-        "quantity": "8",
-        "rate": "5",
-        "rateUnit": "s",
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "server": "3b81367c79146636",
-        "useIOFile": false,
-        "ioFile": "",
-        "useIOForPayload": false,
-        "emptyMsgOnFail": false,
-        "x": 240,
-        "y": 280,
-        "wires": [
-            [
-                "a55c0c8b3e82f5a8"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "4bf8d1ead2588507",
-        "type": "ui_text",
-        "z": "4e702d50e851e07d",
-        "d": true,
-        "group": "a7ed64dd462a9d40",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Coils status (8-15)",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 690,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "a55c0c8b3e82f5a8",
-        "type": "function",
-        "z": "4e702d50e851e07d",
-        "name": "Mapeo coils",
-        "func": "// Toma los primeros 10 elementos del array\nlet coilStates = msg.payload.slice(0, 8);\n\n// Convierte true/false en 1/0\nlet formattedStates = coilStates.map(state => state ? 1 : 0);\n\n// Une los n�meros en una sola l�nea\nmsg.payload = formattedStates.join(' ');\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 450,
-        "y": 260,
-        "wires": [
-            [
-                "4bf8d1ead2588507"
             ]
         ]
     },
