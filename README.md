@@ -1,4 +1,4 @@
-<h1 align="center"> TFM_MI40_Raspberry PI </h1>
+<h1 align="center"> TFM_MI4.0 </h1>
 <h1 align="center"> ============================================= </h1>
 
 Herramienta de comprobación de conexiones diseñado por Ángel Rubio Calvo para el TFM del Máster Interniversitario en Industria 4.0
