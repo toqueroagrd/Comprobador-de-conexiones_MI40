@@ -1,7 +1,7 @@
-<h1 align="center"> TFM_MI40_Raspberry PI </h1>
+<h1 align="center"> TFM_MI4.0 </h1>
 <h1 align="center"> ============================================= </h1>
 
-Sistema de comprobación de conexiones diseñado por Ángel Rubio Calvo para el TFM del Máster Interniversitario en Industria 4.0
+Herramienta de comprobación de red, diseñado por Ángel Rubio Calvo para el TFM del Máster Interniversitario en Industria 4.0
 
 
 # Índice:
@@ -36,7 +36,7 @@ El sistema funcionará en una Raspberry PI y podrá ser conectado a cualquier ha
 -Sistema con capacidad de conexión en cualquiera de de los métodos de comunicación a testear.
 
 
-# Sistemas de comunicación:
+# Tecnologías de comunicación:
 Los siguientes sistemas de comuncicación podrán ser testados con el mencionado software.
 
 ## MQTT
@@ -46,7 +46,8 @@ Los siguientes sistemas de comuncicación podrán ser testados con el mencionado
 <img width="458" height="239" alt="image" src="https://github.com/user-attachments/assets/1fe246fa-13f1-4764-80b2-b19deb77ad0e" />
 
 ## Modbus TCP
-<img width="267" height="286" alt="image" src="https://github.com/user-attachments/assets/098c49f3-d64c-4006-a39f-fd2e797a2a9f" />
+<img width="785" height="686" alt="image" src="https://github.com/user-attachments/assets/78672dff-1186-4039-b18f-ad06aaf71b7e" />
+
 
 
 # Instalación
