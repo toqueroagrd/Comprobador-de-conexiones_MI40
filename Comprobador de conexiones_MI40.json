@@ -3064,8 +3064,7 @@
         "y": 940,
         "wires": [
             [
-                "0f29104e26f61a98",
-                "c617f49a49d0cadf"
+                "0f29104e26f61a98"
             ],
             []
         ]
@@ -3075,7 +3074,7 @@
         "type": "function",
         "z": "4e702d50e851e07d",
         "name": "Formatear Holding Registers",
-        "func": "msg.payload = msg.payload.map((value, index) => `Holding ${index}: ${value}`).join('\\n');\nreturn msg;\n",
+        "func": "msg.payload = msg.payload.map((value, index) => `Holding ${index}: ${value}`).join('CHAR (10)');\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3238,22 +3237,6 @@
                 "04a29447d0c7d272"
             ]
         ]
-    },
-    {
-        "id": "c617f49a49d0cadf",
-        "type": "debug",
-        "z": "4e702d50e851e07d",
-        "name": "debug 16",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1000,
-        "y": 900,
-        "wires": []
     },
     {
         "id": "a246fae16c1dd6e7",
