@@ -2626,31 +2626,12 @@
         "x": 240,
         "y": 60,
         "wires": [
-            [
-                "b5de69b61aeed542"
-            ],
+            [],
             [],
             [],
             [],
             []
         ]
-    },
-    {
-        "id": "b5de69b61aeed542",
-        "type": "debug",
-        "z": "4e702d50e851e07d",
-        "name": "debug 11",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 480,
-        "y": 60,
-        "wires": []
     },
     {
         "id": "e1b0a71750230317",
@@ -2750,7 +2731,7 @@
         "useIOForPayload": false,
         "emptyMsgOnFail": false,
         "x": 240,
-        "y": 260,
+        "y": 280,
         "wires": [
             [
                 "b9119c64a1539248"
@@ -3014,7 +2995,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 690,
-        "y": 240,
+        "y": 280,
         "wires": []
     },
     {
@@ -3030,7 +3011,7 @@
         "finalize": "",
         "libs": [],
         "x": 450,
-        "y": 240,
+        "y": 280,
         "wires": [
             [
                 "27e6548e6e66f448"
@@ -3256,7 +3237,7 @@
         "fontSize": "19",
         "color": "#000000",
         "x": 270,
-        "y": 160,
+        "y": 220,
         "wires": []
     },
     {
@@ -3340,7 +3321,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 550,
-        "y": 160,
+        "y": 220,
         "wires": []
     },
     {
@@ -3536,8 +3517,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 830,
-        "y": 60,
+        "x": 450,
+        "y": 40,
         "wires": [
             [
                 "de5cdba3b2342e95"
@@ -3556,8 +3537,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1240,
-        "y": 100,
+        "x": 860,
+        "y": 80,
         "wires": []
     },
     {
@@ -3565,8 +3546,8 @@
         "type": "hostip",
         "z": "4e702d50e851e07d",
         "name": "Host IP",
-        "x": 1000,
-        "y": 60,
+        "x": 620,
+        "y": 40,
         "wires": [
             [
                 "9f9beb15d7a451fa",
@@ -3586,8 +3567,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1260,
-        "y": 60,
+        "x": 880,
+        "y": 40,
         "wires": [
             [
                 "49856ea950f67ef4"
@@ -3611,8 +3592,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1460,
-        "y": 60,
+        "x": 1080,
+        "y": 40,
         "wires": []
     },
     {
@@ -3632,8 +3613,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1460,
-        "y": 100,
+        "x": 1080,
+        "y": 80,
         "wires": []
     }
 ]
