@@ -3074,7 +3074,7 @@
         "type": "function",
         "z": "4e702d50e851e07d",
         "name": "Formatear Holding Registers",
-        "func": "msg.payload = msg.payload.map((value, index) => `Holding ${index}: ${value}`).join('\\n)');\nreturn msg;\n",
+        "func": "msg.payload = msg.payload.map((value, index) => `Holding ${index}: ${value}`).join(' \\n ');\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
